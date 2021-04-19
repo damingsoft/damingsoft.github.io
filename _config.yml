@@ -14,12 +14,12 @@ sass:
 plainwhite:
   name: 大名软件
   tagline: 文档扫描与图像处理
-  date_format: "%b %-d, %Y"
+  date_format: "%Y年%-m月%-d日"
   sitemap: true # set to true to generate sitemap.xml content
   search: true # set to true to enable searchbar
   dark_mode: true # set to true to add dark mode toggle
   portfolio_image: "assets/portfolio.png" # the path from the base directory of the site to the image to display (no / at the start)
-  html_lang: "en" # set the lang attribute of the <html> tag for the pages. See here for a list of codes: https://www.w3schools.com/tags/ref_country_codes.asp
+  html_lang: "zh" # set the lang attribute of the <html> tag for the pages. See here for a list of codes: https://www.w3schools.com/tags/ref_country_codes.asp
   condensed_mobile:
     #- home
     - page
@@ -52,7 +52,7 @@ plainwhite:
 # this and add the path to the pages in order as they should show up
 #header_pages:
 # - about.md
-
+permalink: /:title/
 # Build settings
 theme: plainwhite
 
