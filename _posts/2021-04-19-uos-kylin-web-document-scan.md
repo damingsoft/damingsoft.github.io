@@ -125,8 +125,7 @@ Dynamsoft.WebTwainEnv.ProductKey = "序列号";
 ## 视频 
 [https://www.bilibili.com/video/BV1yX4y137mg/](https://www.bilibili.com/video/BV1yX4y137mg/)
 
-<iframe src="//player.bilibili.com/player.html?aid=714674193&bvid=BV1yX4y137mg&cid=310664636&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
+<iframe id="test" src="//player.bilibili.com/player.html?aid=714674193&bvid=BV1yX4y137mg&cid=310664636&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true" style="width: 100%; height: 400px"> </iframe>
 
 ## 源码
 [https://github.com/Dynamsoft/Dynamic-Web-TWAIN](https://github.com/Dynamsoft/Dynamic-Web-TWAIN)
