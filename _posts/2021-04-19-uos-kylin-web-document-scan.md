@@ -18,7 +18,7 @@ categories: 文档扫描
 
 首次打开会提示下载服务安装包：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316105538419.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1c2h1bHg=,size_16,color_FFFFFF,t_70)
+![统信UOS安装Dynamic Web TWAIN](/album/2021/china-os-web-twain/install.png)
 下载`deb`文件。并通过命令行安装：
 
 ```bash
@@ -27,10 +27,11 @@ sudo dpkg -i DynamsoftServiceSetup.deb
 
 安装之后打开页面`https://127.0.0.1:18623/`确认状态。如果看到以下页面，说明安装成功：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316105853450.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1c2h1bHg=,size_16,color_FFFFFF,t_70)
+![Dynamsoft service](/album/2021/china-os-web-twain/dynamsoft-service.png)
+
 接下来刷新在线示例页面，可以获得连接的扫描仪列表：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/2021031611034663.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1c2h1bHg=,size_16,color_FFFFFF,t_70)
+![web 扫描仪列表](/album/2021/china-os-web-twain/scanner-list.png)
 现在需要一个有效的序列号。可以在线申请一个[30天免费试用](https://www.dynamsoft.com/customer/license/trialLicense/?product=dwt)的。
 
 获取之后打开开发者控制栏，输入代码：
@@ -41,7 +42,7 @@ DWObject.ProductKey="序列号"
 
 现在可以点击按钮体验在线文档扫描了。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316110928545.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1c2h1bHg=,size_16,color_FFFFFF,t_70)
+![统信UOS文档扫描](/album/2021/china-os-web-twain/uos-document-scan.png)
 
 #### 手动编写
 开发者可以集成SDK实现自己的Web程序。
@@ -110,16 +111,16 @@ Dynamsoft.WebTwainEnv.ProductKey = "序列号";
 
 保存之后在浏览器中打开就可以运行了：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316111853828.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1c2h1bHg=,size_16,color_FFFFFF,t_70)
+![统信UOS文档扫描编程](/album/2021/china-os-web-twain/uos-document-scan-programming.png)
 
 
 ### MIPS64 银河麒麟
 测试用的银河麒麟也是MIPS64的系统：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316112129758.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1c2h1bHg=,size_16,color_FFFFFF,t_70)
+![银河麒麟安装web twain](/album/2021/china-os-web-twain/kylin-web-twain-install.png)
 银河麒麟用的是360浏览器，和统信UOS使用相同的操作没有任何问题。
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/20210316112255848.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3l1c2h1bHg=,size_16,color_FFFFFF,t_70)
+![银河麒麟文档扫描](/album/2021/china-os-web-twain/kylin-os-document-scan.png)
 
 ## 视频 
 [https://www.bilibili.com/video/BV1yX4y137mg/](https://www.bilibili.com/video/BV1yX4y137mg/)
