@@ -11,14 +11,14 @@ layout: default
 {%- if site.posts.size > 0 -%}
   <ul class="posts">
     <li class="posts-labelgroup" id="posts-labelgroup">
-      <h1 id="posts-label">posts</h1>
+      <h1 id="posts-label">搜索</h1>
       {% if site.plainwhite.search %}
       <div class="search-container">
         <div class="search-section">
           <i class="icon-search"></i>
           <input type="text" name="search" id="searchbar" autocomplete="off" aria-label="search in posts">
         </div>
-        <div class="search-results" id="search-results" data-placeholder="No Results" style="display: none;"></div>
+        <div class="search-results" id="search-results" data-placeholder="没有结果" style="display: none;"></div>
       </div>
       {% endif %}
     </li>
