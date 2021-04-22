@@ -3,6 +3,7 @@ layout: post
 title: 构建一个文档扫描HTML5移动应用
 date:   2021-04-19 09:57:36 +0530
 categories: 文档扫描
+author: Tony
 ---
 
 Dynamic Web TWAIN 16添加了一系列针对移动平台的新功能。
