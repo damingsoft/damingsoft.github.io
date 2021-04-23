@@ -206,7 +206,6 @@ main {
 }
 .post-meta {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   min-height: 30px;
   @media screen and (max-width: $mobileW) {
