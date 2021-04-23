@@ -14,7 +14,7 @@ layout: default
     {%- if page.categories.size > 0 -%}
     <ul class="post-categories">
       {%- for tag in page.categories -%}
-      <li><a class="category-link" href="/categories#{{ tag }}">分类：{{ tag }}</a></li>
+      <li>分类：<a class="category-link" href="/categories#{{ tag }}">{{ tag }}</a></li>
       {%- endfor -%}
     </ul>
     {%- endif -%}
