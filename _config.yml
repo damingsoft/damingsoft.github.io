@@ -52,7 +52,7 @@ plainwhite:
 # - about.md
 permalink: /:title/
 # Build settings
-theme: plainwhite
+# theme: plainwhite
 
 plugins:
   - jekyll-seo-tag
