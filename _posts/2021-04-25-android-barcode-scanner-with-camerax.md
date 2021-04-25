@@ -193,7 +193,7 @@ CameraX有三个基本用例：预览、图像分析和图像拍摄。
            e.printStackTrace();
        }
        DMLTSConnectionParameters parameters = new DMLTSConnectionParameters();
-       parameters.organizationID = "200001";
+       parameters.organizationID = "******";
        dbr.initLicenseFromLTS(parameters, new DBRLTSLicenseVerificationListener() {
            @Override
            public void LTSLicenseVerificationCallback(boolean isSuccess, Exception error) {
