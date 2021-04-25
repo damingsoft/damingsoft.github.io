@@ -340,6 +340,6 @@ ext.setCaptureRequestOption(CaptureRequest.CONTROL_EFFECT_MODE,CaptureRequest.CO
 
 # 参考文献
 
-* [^camera2]: https://developer.android.com/training/camera2
-* [^camerax]: https://developer.android.com/training/camerax
+[^camera2]: https://developer.android.com/training/camera2
+[^camerax]: https://developer.android.com/training/camerax
 
