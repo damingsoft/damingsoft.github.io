@@ -22,6 +22,15 @@ layout: default
   <div class="post">
     {{ content }}
   </div>
+  
+  {%- if page.tags.size > 0 -%}
+    <div class="tags">
+    {%- for tag in page.tags -%}
+    	<a class="tag-link" href="/tags#{{ tag }}">#{{ tag }}</a></li>
+    {%- endfor -%}
+    </div>
+  {%- endif -%}
+  
   {%- if site.plainwhite.disqus_shortname -%}
   <div id="disqus_thread" style="margin-top:25px"></div>
   <script>
