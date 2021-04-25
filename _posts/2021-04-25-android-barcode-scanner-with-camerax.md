@@ -1,18 +1,18 @@
 ---
 layout: post
-title: 基于CameraX的Android条码扫描应用
+title: 基于CameraX的安卓条码扫描应用
 date: 2021-04-25 13:44:53 +0800
 categories: 条码识别
 tags: Android
 ---
 
-相机控制和条码识别是条形扫描应用的两个重要组成部分。
+相机控制和条码识别是条码扫描应用的两个重要组成部分。
 
 [Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/overview/)是一个高级的条码识别SDK，包含一个易于使用的Android类库。我们不需花太多工夫就能集成条码识别功能。
 
 而制作一个好的相机应用程序则并不容易。在Android中，有三套相机API可供使用：`Camera`、`Camera2`和`CameraX`。
 
-`Camera`可以拍照和录制视频。但它的摄像头控制功能有限。`Camera2`为复杂的用例提供了深入的控制功能，但要求针对特定设备管理配置。[^Camera2]它的用法也很复杂（[之前的文章](https://www.dynamsoft.com/codepool/android-camera-preview-app-camera2.html)有对两者进行比较）。
+`Camera`可以拍照和录制视频。但它的摄像头控制功能有限。`Camera2`为复杂的用例提供了深入的控制功能，但要求针对特定设备管理配置。[^camera2]它的用法也很复杂（[之前的文章](/android-camera-preview-app-camera2/)有对两者进行比较）。
 
 CameraX则是最新的一套API。以下是来自Google[^camerax]的描述：
 
