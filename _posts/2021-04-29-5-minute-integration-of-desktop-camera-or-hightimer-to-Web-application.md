@@ -29,7 +29,7 @@ tags: TWAIN
 npm install dwt@14.0.3
 ```
 2. 打开到目录node_modules\dwt\samples，可以看到
-3. 
+
 ![samples](/album/2021/5-minute-integration-of-desktop-camera-or-hightimer-to-Web-application/20180724163537279.png)
 
 3. 在本文中，我们要重点研究的是**ScanOrCapture.html**。直接双击打开。在浏览器中按照提示安装控件
