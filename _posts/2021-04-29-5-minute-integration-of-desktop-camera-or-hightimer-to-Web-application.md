@@ -1,7 +1,7 @@
 ---
 layout: post
 status: publish
-title: "TWAIN开发实战：10分钟内实现web应用中的扫描仪调用！"
+title: "5分钟集成桌面摄像头或高拍仪到Web程序！"
 date: 2021-04-29 11:17:48 +0800
 categories: 文档扫描
 tags: TWAIN
