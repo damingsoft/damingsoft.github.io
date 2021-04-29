@@ -15,7 +15,7 @@ $leftWidth: 220px;
 }
 
 body {
-  font-family: "Raleway", sans-serif;
+  font-family: "Microsoft YaHei", "Hiragino Sans GB W3", Tahoma, sans-serif;
   font-size: 16px;
   line-height: 1.2em;
   margin: 0;
@@ -206,7 +206,6 @@ main {
 }
 .post-meta {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   min-height: 30px;
   @media screen and (max-width: $mobileW) {
@@ -217,6 +216,16 @@ main {
     }
   }
 }
+
+.justify-with-space{
+  justify-content: space-between;
+}
+
+.author{
+    margin-right: 10px;
+}
+
+
 .post-link {
   text-decoration: none;
 }
