@@ -29,12 +29,19 @@ tags: TWAIN
 npm install dwt@14.0.3
 ```
 2. 打开到目录node_modules\dwt\samples，可以看到
+3. 
 ![samples](/album/2021/5-minute-integration-of-desktop-camera-or-hightimer-to-Web-application/20180724163537279.png)
+
 3. 在本文中，我们要重点研究的是**ScanOrCapture.html**。直接双击打开。在浏览器中按照提示安装控件
+
 ![控件](/album/2021/5-minute-integration-of-desktop-camera-or-hightimer-to-Web-application/20180726100437954.png)
+
 正常情况下，安装的文件可以在 C:\Windows\SysWOW64\Dynamsoft\DynamsoftService 目录中找到。这里的核心文件主要是
 **DynamsoftService.exe**, **dwt_trial_14.0.0.0618.dll**,**dcs_trial_6100907.dll**
+
 4. 安装完成后，刷新页面，如果本地有摄像头，则在页面的下拉菜单中会显示出来。选中一个摄像头并点击“Play Video”，然后点击“Grab An Image”。图中右侧为视频流，左侧为截取的一帧画面
+
+
  ![截图](/album/2021/5-minute-integration-of-desktop-camera-or-hightimer-to-Web-application/20180726101522446.png)
  
  我们还可以点击“Scan Documents”来调用本地扫描仪扫描一张图。
