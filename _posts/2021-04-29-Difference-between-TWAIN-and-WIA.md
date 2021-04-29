@@ -6,7 +6,7 @@ categories: 文档扫描
 tags: TWAIN
 ---
 
-如果您使用[Dynamsoft](https://www.dynamsoft.com/)的[Dynamic Web TWAIN](https://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx)或[Dynamic .NET TWAIN](https://www.dynamsoft.com/Products/.Net-TWAIN-Scanner.aspx)（用于桌面应用程序）开发应用程序，您可能会想知道TWAIN和WIA之间的异同点。
+如果您使用 [Dynamsoft](https://www.dynamsoft.com/) 的 [Dynamic Web TWAIN](https://www.dynamsoft.com/Products/WebTWAIN_Overview.aspx) 或 [Dynamic .NET TWAIN](https://www.dynamsoft.com/Products/.Net-TWAIN-Scanner.aspx) （用于桌面应用程序）开发应用程序，您可能会想知道TWAIN和WIA之间的异同点。
 
 ## 相似之处：
 1. 只要存在驱动程序，两者都能够从诸如扫描仪或相机之类的设备获取图像。
