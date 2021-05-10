@@ -44,27 +44,27 @@ https://www.damingsoft.com/products/dwt-register.aspx
 * 引用核心的两个JS文件，并创建一个叫做Scan的HTML按钮 和 添加按钮对应的 JS 代码。完整代码如下：
 
    ```html 
-<!DOCTYPE HTML>
-<html>
-<head>
-    <title>Hello World</title>
-    <script type="text/javascript" src="Resources/dynamsoft.webtwain.initiate.js"></script>
-    <script type="text/javascript" src="Resources/dynamsoft.webtwain.config.js"></script>
-</head>
-<body>
-    <input type="button" value="Scan" onclick="AcquireImage();" />
-    <div id="dwtcontrolContainer"></div>
-    <script type="text/javascript">
-      function AcquireImage(){
-          var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
-          DWObject.IfDisableSourceAfterAcquire = true;
-          DWObject.SelectSource();
-          DWObject.OpenSource();
-          DWObject.AcquireImage();
-      }
-    </script>
-</body>
-</html>
+         <!DOCTYPE HTML>
+         <html>
+         <head>
+          <title>Hello World</title>
+          <script type="text/javascript" src="Resources/dynamsoft.webtwain.initiate.js"></script>
+          <script type="text/javascript" src="Resources/dynamsoft.webtwain.config.js"></script>
+         </head>
+         <body>
+          <input type="button" value="Scan" onclick="AcquireImage();" />
+          <div id="dwtcontrolContainer"></div>
+          <script type="text/javascript">
+            function AcquireImage(){
+                var DWObject = Dynamsoft.WebTwainEnv.GetWebTwain('dwtcontrolContainer');
+                DWObject.IfDisableSourceAfterAcquire = true;
+                DWObject.SelectSource();
+                DWObject.OpenSource();
+                DWObject.AcquireImage();
+            }
+          </script>
+         </body>
+         </html>
    ```
 * 直接双击运行HTML页面，基本效果如下
 
