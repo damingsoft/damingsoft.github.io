@@ -51,7 +51,7 @@ categories: 条码识别
 ## 关于我们
 杭州大名软件有限公司成立于2004年，是一家民营软件企业。自成立以来，公司一直致力于为客户提供更稳定优质的服务。大名软件是加拿大软件公司 Dynamsoft 在中国大陆地区的唯一战略合作伙伴。独家负责 Dynamsoft 各项业务在中国的运营，包括产品销售、技术支持和市场营销。官网: www.damingsoft.com 
 
-## 关于Dynamsoft Barcode Reader SDK
+## 关于 Dynamsoft Barcode Reader SDK
 -	Dynamsoft Barcode Reader SDK 可以让您通过加入几行代码，高效地将条码、二维码识别功能嵌入您的应用中。它可以为您节省几个月的开发时间和额外的花费。
 -	支持平台：桌面端、服务器端、移动设备端、网页端。
 -	联系大名软件获取[30天免费试用版本](https://www.damingsoft.com/products/dbr-register.aspx) 。
