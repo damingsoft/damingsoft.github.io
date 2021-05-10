@@ -1,8 +1,8 @@
 ---
 layout: post
+title: Dynamsoft 的一维二维码识别 SDK 助力北京晓通宏志打造智能工业摄像头
 date: 2021-05-10 09:57:36 +0530
 categories: 条码识别
-title: Dynamsoft 的一维二维码识别 SDK 助力北京晓通宏志打造智能工业摄像头
 ---
 
 ## 案例简介
