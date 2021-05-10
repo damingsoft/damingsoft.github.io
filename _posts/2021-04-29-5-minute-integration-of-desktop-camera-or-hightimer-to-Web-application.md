@@ -9,7 +9,7 @@ tags: TWAIN
 
 ## 简介
 
-```
+  ```
 桌面摄像头几乎是每台个人电脑必备的附件之一。实时聊天，远程协助等很多的桌面应用可以直接调用摄像头。然而在目前将桌面搬到云端的技术热潮中，在浏览器中直接集成摄像头也是一个热门需求。类似的实际应用场景可能有
 * 在填写一些在线申请表格时，拍摄头像
 * 通过质量略好的摄像头在视频流中直接读取二维码
@@ -17,7 +17,7 @@ tags: TWAIN
 
 要文中笔者将和大家探讨一下如何快速的在同一个网页中调用本地扫描仪和摄像头来获取图像
 
-```
+  ```
 
 ## 环境要求
 
@@ -25,9 +25,10 @@ tags: TWAIN
 
 1. 新建一个目录，在里面打开命令行工具（快捷方式为Ctrl+Shift+右击）通过npm下载本文使用的核心控件
 
- ```bash
- npm install dwt@14.0.3
- ```
+   ```bash
+   npm install dwt@14.0.3
+   ```
+   
 2. 打开到目录node_modules\dwt\samples，可以看到
 
    ![samples](/album/2021/5-minute-integration-of-desktop-camera-or-hightimer-to-Web-application/20180724163537279.png)
