@@ -17,12 +17,12 @@ tags: TWAIN
 
 [node](https://nodejs.org/en/)
 
+
 1. 通过npm下载本文使用的[核心控件](https://www.npmjs.com/package/dwt)
 
   ```bash
       npm install dwt@14.0.3
   ```
-
   然后在这个目录可以看到
 
   ![目录](/album/2021/5-minutes-Scan-and-recognize-text-directly-in-the-browser/20180724163446373.png)
@@ -45,13 +45,11 @@ tags: TWAIN
 
   如果你看到以下提示则表示你用的授权过期了。
 
-
   ![过期](/album/2021/5-minutes-Scan-and-recognize-text-directly-in-the-browser/20180724123243669.png)
 
   解决方案为点击上图中标红的链接，获取一个新的授权并加上下面的代码中的第一句（在window.onload回调函数中）
+ 
   ```
-  ...
   Dynamsoft.WebTwainEnv.ProductKey = "<新的授权>";
   Dynamsoft.WebTwainEnv.Load();
-  ...
   ```
