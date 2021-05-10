@@ -12,21 +12,21 @@ title: Dynamsoft 的一维二维码识别 SDK 助力北京晓通宏志打造智�
 ## 业务需求
 晓通应用程序对扫码功能的需求主要由以下几部分组成。
 1. 设置传感器适应当前场景
-![传感器场景](https://github.com/damingsoft/damingsoft.github.io/blob/main/album/2021/beijing-xiaotong-Picture1.png)
+![传感器场景](/album/2021/beijing-xiaotong-Picture1.png)
 2. 配置目标的解码信息和解码模式
-![配置目标](https://github.com/damingsoft/damingsoft.github.io/blob/main/album/2021/beijing-xiaotong-Picture2.png)
+![配置目标](/album/2021/beijing-xiaotong-Picture2.png)
 3. 开始自动检测一维/二维码并解码，实时输出报表
-![自动检测](https://github.com/damingsoft/damingsoft.github.io/blob/main/album/2021/beijing-xiaotong-Picture3.png)
+![自动检测](/album/2021/beijing-xiaotong-Picture3.png)
 4. 设备采集新场景样例并下载，用户上传新样例到服务器，服务器优化深度学习模型后供用户下载更新
-![深度学习](https://github.com/damingsoft/damingsoft.github.io/blob/main/album/2021/beijing-xiaotong-Picture4.png)
+![深度学习](/album/2021/beijing-xiaotong-Picture4.png)
 
 ## 技术难点
 1. 多码识别（难度等级：一般）
 工业制造过程中常遇到多码型、多码量的识别场景，智能工业摄像头需要拥有快速、准确的解码能力。如果解码延迟或者解码失败会影响工厂生产效率。
-![多码识别](https://github.com/damingsoft/damingsoft.github.io/blob/main/album/2021/beijing-xiaotong-Picture5.png)
+![多码识别](/album/2021/beijing-xiaotong-Picture5.png)
 2. 打印质量问题（难度等级：高）
 工业场景中使用的条形码由激光打印或者印刷生成，有一定概率发生模糊、遮挡、残缺、偏移等质量问题，会影响解码成功率和速度。
-![打印问题](https://github.com/damingsoft/damingsoft.github.io/blob/main/album/2021/beijing-xiaotong-Picture6.png)
+![打印问题](/album/2021/beijing-xiaotong-Picture6.png)
 3. 嵌入式设备实时快速解码（难度等级：高）
 智能工业摄像头基于嵌入式设备工作，用于对生产线上的货品进行解码。在这种情况下，摄像头需要具备快速解码识别的能力，同时也要求解码算法在低算力设备上也能实现低延迟、快速识别。
 
