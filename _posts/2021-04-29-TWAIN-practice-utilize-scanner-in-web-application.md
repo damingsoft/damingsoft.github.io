@@ -1,10 +1,9 @@
 ---
-layout: default-layout
+layout: post
 status: publish
 title: "TWAIN开发实战：10分钟内实现web应用中的扫描仪调用！"
 date: 2021-04-29 11:17:48 +0800
 categories: 文档扫描
-needAutoGenerateSidebar: false
 tags: TWAIN
 ---
 
