@@ -7,13 +7,13 @@ categories: 文档扫描
 tags: TWAIN
 ---
 
-```
+   ```
 接触扫描仪集成开发的研发人员应该都知道，市面上的大多数扫描仪都是遵循TWAIN底层协议，各个扫描仪尽管外观、性能等不同，但是基本上厂商都提供了 TWAIN 驱动。
 
 想要在自己开发的应用中，实现扫描仪调用？ 简单来说，就是跟TWAIN驱动实现对接，这样才能调用扫描仪，获取到扫描仪扫描的文档图片。
 
 本文介绍一款第三方的扫描仪web集成开发包（SDK），叫做Dynamic Web TWAIN SDK。
-```
+   ```
 ## 下面介绍Dynamic Web TWAIN 这款SDK产品的基础使用步骤：
 
 1.  下载SDK
@@ -43,7 +43,7 @@ https://www.damingsoft.com/products/dwt-register.aspx
 
 * 引用核心的两个JS文件，并创建一个叫做Scan的HTML按钮 和 添加按钮对应的 JS 代码。完整代码如下：
 
-```html 
+   ```html 
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -65,7 +65,7 @@ https://www.damingsoft.com/products/dwt-register.aspx
     </script>
 </body>
 </html>
-```
+   ```
 * 直接双击运行HTML页面，基本效果如下
 
 ![HTML页面](/album/2021/TWAIN-practice-utilize-scanner-in-web-application/20180722211347462.png)
