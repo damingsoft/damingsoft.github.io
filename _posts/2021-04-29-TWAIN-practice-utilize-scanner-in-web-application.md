@@ -16,24 +16,24 @@ tags: TWAIN
    ```
 ## 下面介绍Dynamic Web TWAIN 这款SDK产品的基础使用步骤：
 
-1.  下载SDK
+1. 下载SDK
 
    有30天免费使用版本可以用，简单到网站上注册下载就行。链接在下面
    https://www.damingsoft.com/products/dwt-register.aspx
    大家大多数应该都是在Windows上开发吧，那就下载那个Windows版本的开发包就行。
 
-2.  安装
+2. 安装
 
    略。 谁不会安装的，自己去撞豆腐 ：D
 
-3.  查阅文档
+3. 查阅文档
 
    文档都在默认安装目录 C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 14.0 Trial
    心急的可以直奔这个安装目录下的 Samples 目录，里面都是各种示例项目 和 完整的JavaScript/HTML 代码
 
    ![安装路径](/album/2021/TWAIN-practice-utilize-scanner-in-web-application/20180722210230216.png)
 
-4.  自己开发一个hello world
+4. 自己开发一个hello world
 
    其实那个Samples目录里面已经有很多现成的示例项目，代码也都有，自己稍微修改下就直接能用。如果不嫌麻烦，可以自己按照下面步骤搞一个最简单的扫描页面：
    * 创建一个空的html页面，并放置于C:\Program Files (x86)\Dynamsoft\Dynamic Web TWAIN SDK 14.0 Trial\ 下
