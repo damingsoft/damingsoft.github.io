@@ -25,32 +25,31 @@ tags: TWAIN
 
 1. 新建一个目录，在里面打开命令行工具（快捷方式为Ctrl+Shift+右击）通过npm下载本文使用的核心控件
 
-```bash
-npm install dwt@14.0.3
-```
+ ```bash
+ npm install dwt@14.0.3
+ ```
 2. 打开到目录node_modules\dwt\samples，可以看到
 
-![samples](/album/2021/5-minute-integration-of-desktop-camera-or-hightimer-to-Web-application/20180724163537279.png)
+   ![samples](/album/2021/5-minute-integration-of-desktop-camera-or-hightimer-to-Web-application/20180724163537279.png)
 
 3. 在本文中，我们要重点研究的是**ScanOrCapture.html**。直接双击打开。在浏览器中按照提示安装控件
 
-![控件](/album/2021/5-minute-integration-of-desktop-camera-or-hightimer-to-Web-application/20180726100437954.png)
+   ![控件](/album/2021/5-minute-integration-of-desktop-camera-or-hightimer-to-Web-application/20180726100437954.png)
 
-正常情况下，安装的文件可以在 C:\Windows\SysWOW64\Dynamsoft\DynamsoftService 目录中找到。这里的核心文件主要是
+   正常情况下，安装的文件可以在 C:\Windows\SysWOW64\Dynamsoft\DynamsoftService 目录中找到。这里的核心文件主要是
 **DynamsoftService.exe**, **dwt_trial_14.0.0.0618.dll**,**dcs_trial_6100907.dll**
 
 4. 安装完成后，刷新页面，如果本地有摄像头，则在页面的下拉菜单中会显示出来。选中一个摄像头并点击“Play Video”，然后点击“Grab An Image”。图中右侧为视频流，左侧为截取的一帧画面
 
-
- ![截图](/album/2021/5-minute-integration-of-desktop-camera-or-hightimer-to-Web-application/20180726101522446.png)
+   ![截图](/album/2021/5-minute-integration-of-desktop-camera-or-hightimer-to-Web-application/20180726101522446.png)
  
- 我们还可以点击“Scan Documents”来调用本地扫描仪扫描一张图。
+   我们还可以点击“Scan Documents”来调用本地扫描仪扫描一张图。
  
-  ![本地图片](/album/2021/5-minute-integration-of-desktop-camera-or-hightimer-to-Web-application/20180726102018666.png)
+   ![本地图片](/album/2021/5-minute-integration-of-desktop-camera-or-hightimer-to-Web-application/20180726102018666.png)
   
-  如果需要了解更多技术细节，可以直接看**ScanOrCapture.html**的JS源码。也可以直接[联系免费快速的中国区技术支持](https://www.damingsoft.com/ContactUs.aspx)
+   如果需要了解更多技术细节，可以直接看**ScanOrCapture.html**的JS源码。也可以直接[联系免费快速的中国区技术支持](https://www.damingsoft.com/ContactUs.aspx)
   
-  ## 备注
+## 备注
   
   如果你看到以下提示则表示你用的授权过期了。
   
@@ -59,8 +58,6 @@ npm install dwt@14.0.3
   解决方案为点击上图中标红的链接，获取一个新的授权并加上下面的代码中的第一句（在window.onload回调函数中）
   
   ```
-  ...
 Dynamsoft.WebTwainEnv.ProductKey = "<新的授权>";
 Dynamsoft.WebTwainEnv.Load();
-...
   ```
