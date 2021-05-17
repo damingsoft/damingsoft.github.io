@@ -7,7 +7,7 @@ categories: 条码识别
 
 速度和准确率是条码识别的两个重要指标。在保证准确率的前提下，条码识别的速度可以有多快？我们使用 Dynamsoft Barcode Reader 做了一个简单的测试，模拟工业生产流水线上的扫码识别场景。得到的结果是在 30 秒内成功读取了 745 个条码并解析了 250 个单一的值。
 
-![观看视频](https://www.bilibili.com/video/BV1qv411L7M9?share_source=copy_web)
+[![观看视频](/album/2021/Video Banner fast barcode scanning.png)](https://www.bilibili.com/video/BV1qv411L7M9?share_source=copy_web)
 
 我们将在本文中详细介绍测试过程的各个方面，包括场景搭建，测试方法，硬件信息和结果分析。
 
