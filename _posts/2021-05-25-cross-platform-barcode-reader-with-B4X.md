@@ -544,7 +544,7 @@ End Sub
 
 <https://github.com/xulihang/BarcodeReader-B4X>
 
-该库已经在[ B4X论坛</ g1>​​上发布。](https://www.b4x.com/android/forum/threads/b4x-b4xpages-dynamsoft-barcode-reader-cross-platform-barcode-qr-code-scanning-library.130728/)
+该库已经在[B4X论坛](https://www.b4x.com/android/forum/threads/b4x-b4xpages-dynamsoft-barcode-reader-cross-platform-barcode-qr-code-scanning-library.130728/)上发布。
 
 ## 更多
 
