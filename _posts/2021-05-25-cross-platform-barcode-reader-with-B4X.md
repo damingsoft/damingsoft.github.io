@@ -22,7 +22,6 @@ B4X可以创建Android和iOS原生应用。B4X编程语言是一种Visual Basic�
 
 在本文中，我们将完成B4X库的封装，并创建Android、iOS和桌面平台上的演示应用。
 
-{% include cta.md %}
 
 ## 创建一个新项目
 
