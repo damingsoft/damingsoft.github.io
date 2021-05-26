@@ -10,7 +10,7 @@ show_excerpts: true # set to true to show excerpts on the homepage
 sass:
   sass_dir: _sass
 plainwhite:
-  name: 大名软件
+  name: 首页
   tagline: 文档扫描与图像处理
   date_format: "%Y年%-m月%-d日"
   sitemap: true # set to true to generate sitemap.xml content
