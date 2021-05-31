@@ -8,7 +8,7 @@ tags: B4X 跨平台
 
 [B4X](https://www.b4x.com)是一套快速应用开发（RAD）工具，可用于为主流的移动和桌面平台开发应用。
 
-它包含四个产品：B4A、B4i、B4J和B4R，分别用于Android、iOS、Java（带有JavaFX、服务器和树莓Pi的桌面）和Arduino开发。
+它包含四个产品：B4A、B4i、B4J和B4R，分别用于Android、iOS、Java（JavaFX桌面、服务器和树莓派）和Arduino开发。
 
 除了多平台支持外，B4X还具有以下特点：
 
