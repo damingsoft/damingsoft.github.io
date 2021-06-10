@@ -27,7 +27,7 @@ Blazor Server应用与服务器具有实时连接（[SignalR](https://docs.micro
 
 1. 打开 Visual Studio，创建一个 Blazor WebAssembly 项目。记得选择.NET 5。
 
-   ![新Blazor项目](./img/2021/Blazor/new_blazor_project.jpg)
+   ![新Blazor项目](/album/2021/Blazor/new_blazor_project.jpg)
 
 2. 下载并安装 [Dynamic Web TWAIN](https://www.dynamsoft.com/web-twain/downloads)。将`Resources`文件夹复制到`wwwroot`文件夹。
 
@@ -185,7 +185,7 @@ Blazor Server应用与服务器具有实时连接（[SignalR](https://docs.micro
 
 6. 运行应用程序并查看结果。应用运行时，将检测对源代码所做的任何更改，并进行更新。
 
-   ![应用](./img/2021/Blazor/app.jpg)
+   ![应用](/album/2021/Blazor/app.jpg)
 
    应用可以从扫描仪捕获文档，也可以加载本地图像。它可以输出PDF以保存结果。
 
@@ -211,7 +211,7 @@ Blazor Server应用与服务器具有实时连接（[SignalR](https://docs.micro
    "applicationUrl": "https://+:5001;http://+:5000",
    ```
 
-   ![移动设备上](./img/2021/Blazor/mobile.jpg)
+   ![移动设备上](/album/2021/Blazor/mobile.jpg)
 
    由于移动设备不能直接控制扫描仪，不显示扫描按钮。可以使用`Dynamsoft.Lib.env.bMobile`检测设备是否是移动设备。
 
@@ -224,7 +224,7 @@ Blazor Server应用与服务器具有实时连接（[SignalR](https://docs.micro
 
 网页需要与服务器保持连接。如果失去服务器连接，页面将无法正常工作。
 
-![重新连接](./img/2021/Blazor/reconnecting.jpg)
+![重新连接](/album/2021/Blazor/reconnecting.jpg)
 
 
 ## JavaScript隔离
