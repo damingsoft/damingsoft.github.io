@@ -91,11 +91,11 @@ function getFormattedDate() {
 
 1. 在[DBX平台](https://www.dropbox.com/developers/apps/create)上创建应用程序。
 
-   ![新的Dropbox应用程序](./img/2021/sync/new_dropbox_app.jpg)
+   ![新的Dropbox应用程序](/album/2021/sync/new_dropbox_app.jpg)
 
 2. 启用文件写入（File Write）权限。
 
-   ![Dropbox权限](./img/2021/sync/dropbox_permission.jpg)
+   ![Dropbox权限](/album/2021/sync/dropbox_permission.jpg)
 
 3. 在HTML文件中，添加与授权相关的代码。
 
@@ -157,7 +157,7 @@ function getFormattedDate() {
 
    我们需要在DBX平台中定义重定向URI：
 
-   ![Dropbox重定向uri](./img/2021/sync/dropbox_redirect_uri.jpg)
+   ![Dropbox重定向uri](/album/2021/sync/dropbox_redirect_uri.jpg)
 
 5. 上传文件。
 
@@ -209,11 +209,11 @@ function getFormattedDate() {
 
    它也需要一个重定向URI。这里，我们将URI设置为<http://localhost:8000/auth_onedrive.html>。
 
-   ![新的Azure应用程序](./img/2021/sync/new_azure_app.jpg)
+   ![新的Azure应用程序](/album/2021/sync/new_azure_app.jpg)
 
 2. 转到平台配置（Platform configurations）。启用访问令牌。
 
-   ![启用访问令牌.jpg](./img/2021/sync/enable_access_token.jpg)
+   ![启用访问令牌.jpg](/album/2021/sync/enable_access_token.jpg)
 
 3. 在HTML文件中，添加与授权相关的代码。
 
