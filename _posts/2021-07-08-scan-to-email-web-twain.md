@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 邮件发送使用Dynamic Web TWAIN扫描的文档
-date: 2021-07-08 16:52:53 +0800
+date: 2021-07-08 08:52:53 +0800
 categories: 文档扫描
 tags: Email Dropbox Python Flask
 ---
@@ -40,8 +40,6 @@ Your scanned documents are large. We've uploaded to dropbox: https://www.dropbox
 * Python+Flask，用于创建后端
 * Dropbox，用于存储大文件
 
-
-{% include cta_dwt.md %}
 
 ## 环境配置
 
