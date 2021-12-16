@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 800 400" style="enable-background:new 0 0 800 400;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E0E6F1;}
+	.st1{fill:none;stroke:#E0E6F1;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#6E7079;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:#6E7079;}
+	.st4{font-family:'MicrosoftSansSerif';}
+	.st5{font-size:12px;}
+	.st6{font-size:16px;}
+	.st7{fill:#FE8E14;}
+	.st8{fill:#323234;}
+	.st9{opacity:0.6;fill:#306877;enable-background:new    ;}
+	.st10{fill:#306877;}
+	.st11{opacity:0.6;enable-background:new    ;}
+	.st12{opacity:0.2;enable-background:new    ;}
+	.st13{opacity:0.4;enable-background:new    ;}
+	.st14{fill:#666666;}
+	.st15{fill:#333333;}
+	.st16{font-size:9.2973px;}
+</style>
+<rect x="127.6" y="24.4" class="st0" width="544.2" height="316.1"/>
+<path class="st1" d="M80,302.5h640"/>
+<path class="st1" d="M80,264.5h640"/>
+<path class="st1" d="M80,225.5h640"/>
+<path class="st1" d="M80,186.5h640"/>
+<path class="st1" d="M80,148.5h640"/>
+<path class="st1" d="M80,109.5h640"/>
+<path class="st1" d="M80,71.5h640"/>
+<path class="st1" d="M80,341.5h640"/>
+<path class="st2" d="M80,341.5h640"/>
+<text transform="matrix(1 0 0 1 65.3262 341)" class="st3 st4 st5">0</text>
+<text transform="matrix(1 0 0 1 41.9707 302.4286)" class="st3 st4 st5">1,000</text>
+<text transform="matrix(1 0 0 1 41.9707 263.8571)" class="st3 st4 st5">2,000</text>
+<text transform="matrix(1 0 0 1 41.9707 225.2857)" class="st3 st4 st5">3,000</text>
+<text transform="matrix(1 0 0 1 41.9707 186.7143)" class="st3 st4 st5">4,000</text>
+<text transform="matrix(1 0 0 1 41.9707 148.1429)" class="st3 st4 st5">5,000</text>
+<text transform="matrix(1 0 0 1 41.9707 109.5714)" class="st3 st4 st5">6,000</text>
+<text transform="matrix(1 0 0 1 41.9707 71)" class="st3 st4 st5">7,000</text>
+<text transform="matrix(1 0 0 1 387.5039 53.7191)" class="st3 st4 st6">lots</text>
+<path class="st7" d="M128,341h77.7v-10.6H128V341"/>
+<path class="st8" d="M205.7,341h77.7v-32.8h-77.7V341"/>
+<path class="st9" d="M283.4,341h77.7v-4.2h-77.7L283.4,341"/>
+<path class="st10" d="M361.1,341h77.7v-41.4h-77.7L361.1,341"/>
+<path class="st11" d="M438.9,341h77.7v-57h-77.7L438.9,341"/>
+<path class="st12" d="M516.6,341h77.7V103.8h-77.7V341"/>
+<path class="st13" d="M594.3,341H672v-5.4h-77.7V341"/>
+<text transform="matrix(1 0 0 1 144.6528 320.8781)" class="st14 st4 st5">275.43</text>
+<text transform="matrix(1 0 0 1 222.3672 298.671)" class="st14 st4 st5">851.14</text>
+<text transform="matrix(1 0 0 1 300.0815 327.253)" class="st14 st4 st5">110.14</text>
+<text transform="matrix(1 0 0 1 374.459 286.7773)" class="st14 st4 st5">1073.00</text>
+<text transform="matrix(1 0 0 1 452.1729 271.1723)" class="st14 st4 st5">1477.57</text>
+<text transform="matrix(1 0 0 1 529.8877 90.9882)" class="st14 st4 st5">6149.00</text>
+<text transform="matrix(1 0 0 1 610.9385 326.1185)" class="st14 st4 st5">139.57</text>
+<g>
+	<text transform="matrix(1 0 0 1 165.5488 374.4443)" class="st15 st4 st16">DBR</text>
+	<text transform="matrix(1 0 0 1 209.3262 374.4443)" class="st15 st4 st16">Commercial SDK A</text>
+	<text transform="matrix(1 0 0 1 318.415 374.4443)" class="st15 st4 st16">Commercial SDK B</text>
+	<text transform="matrix(1 0 0 1 425.2461 374.4443)" class="st15 st4 st16">Zxing</text>
+	<text transform="matrix(1 0 0 1 473.8916 374.4443)" class="st15 st4 st16">Zbar</text>
+	<text transform="matrix(1 0 0 1 518.3018 374.4443)" class="st15 st4 st16">BoofCV</text>
+	<text transform="matrix(1 0 0 1 580.3525 374.4443)" class="st15 st4 st16">OpenCV Wechat</text>
+	<rect x="150" y="368.7" class="st7" width="10.8" height="4.6"/>
+	<rect x="195.2" y="368.7" class="st8" width="10.8" height="4.6"/>
+	<rect x="303" y="368.7" class="st9" width="10.8" height="4.6"/>
+	<rect x="411.1" y="368.7" class="st10" width="10.8" height="4.6"/>
+	<rect x="459.1" y="368.7" class="st11" width="10.8" height="4.6"/>
+	<rect x="503.6" y="368.7" class="st12" width="10.8" height="4.6"/>
+	<rect x="564.1" y="368.7" class="st13" width="10.8" height="4.6"/>
+</g>
+</svg>

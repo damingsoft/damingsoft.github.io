@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1450 400" style="enable-background:new 0 0 1450 400;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E0E6F1;}
+	.st1{fill:none;stroke:#E0E6F1;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#6E7079;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:#6E7079;}
+	.st4{font-family:'MicrosoftSansSerif';}
+	.st5{font-size:12px;}
+	.st6{font-size:16px;}
+	.st7{fill:#FE8E14;}
+	.st8{fill:#323234;}
+	.st9{opacity:0.6;fill:#306877;enable-background:new    ;}
+	.st10{fill:#306877;}
+	.st11{opacity:0.6;enable-background:new    ;}
+	.st12{opacity:0.2;enable-background:new    ;}
+	.st13{opacity:0.4;enable-background:new    ;}
+	.st14{fill:#333333;}
+	.st15{font-size:18px;}
+</style>
+<rect x="751" y="30.9" class="st0" width="135.9" height="309.1"/>
+<rect x="1070.9" y="30.9" class="st0" width="135.9" height="309.5"/>
+<rect x="590.9" y="30.9" class="st0" width="136.2" height="309.7"/>
+<rect x="1231" y="30.9" class="st0" width="136.1" height="309.3"/>
+<rect x="910.8" y="30.9" class="st0" width="136" height="308.6"/>
+<rect x="430.9" y="30.9" class="st0" width="136.1" height="309.3"/>
+<rect x="271" y="30.9" class="st0" width="135.8" height="309.4"/>
+<rect x="110.9" y="30.2" class="st0" width="136.1" height="309.4"/>
+<path class="st1" d="M99,340.5h1280"/>
+<path class="st1" d="M99,301.5h1280"/>
+<path class="st1" d="M99,263.5h1280"/>
+<path class="st1" d="M99,224.5h1280"/>
+<path class="st1" d="M99,185.5h1280"/>
+<path class="st1" d="M99,147.5h1280"/>
+<path class="st1" d="M99,108.5h1280"/>
+<path class="st1" d="M99,70.5h1280"/>
+<path class="st2" d="M99,340.5h1280"/>
+<text transform="matrix(1 0 0 1 84.3369 340)" class="st3 st4 st5">0</text>
+<text transform="matrix(1 0 0 1 70.9893 301.4286)" class="st3 st4 st5">100</text>
+<text transform="matrix(1 0 0 1 70.9893 262.8571)" class="st3 st4 st5">200</text>
+<text transform="matrix(1 0 0 1 70.9893 224.2857)" class="st3 st4 st5">300</text>
+<text transform="matrix(1 0 0 1 70.9893 185.7143)" class="st3 st4 st5">400</text>
+<text transform="matrix(1 0 0 1 70.9893 147.1429)" class="st3 st4 st5">500</text>
+<text transform="matrix(1 0 0 1 70.9893 108.5714)" class="st3 st4 st5">600</text>
+<text transform="matrix(1 0 0 1 70.9893 70)" class="st3 st4 st5">700</text>
+<text transform="matrix(1 0 0 1 154.0225 53.4181)" class="st3 st4 st6">blurred</text>
+<text transform="matrix(1 0 0 1 295.3344 53.4181)" class="st3 st4 st6">bright_spots</text>
+<text transform="matrix(1 0 0 1 461.9431 53.4181)" class="st3 st4 st6">brightness</text>
+<text transform="matrix(1 0 0 1 640.2674 53.4181)" class="st3 st4 st6">close</text>
+<text transform="matrix(1 0 0 1 794.945 53.4181)" class="st3 st4 st6">curved</text>
+<text transform="matrix(1 0 0 1 945.4683 53.4181)" class="st3 st4 st6">damaged</text>
+<text transform="matrix(1 0 0 1 1121.0327 53.4181)" class="st3 st4 st6">glare</text>
+<text transform="matrix(1 0 0 1 1253.6187 53.4181)" class="st3 st4 st6">high_version</text>
+<path class="st7" d="M111,340h19.4V225.1H111V340"/>
+<path class="st7" d="M271,340h19.4v-97.5H271V340"/>
+<path class="st7" d="M431,340h19.4v-74.3H431V340"/>
+<path class="st7" d="M591,340h19.4v-65.3H591V340"/>
+<path class="st7" d="M751,340h19.4v-72.8H751V340"/>
+<path class="st7" d="M911,340h19.4v-77.2H911V340"/>
+<path class="st7" d="M1071,340h19.4v-40.4H1071V340"/>
+<path class="st7" d="M1231,340h19.4v-40.9H1231V340"/>
+<path class="st8" d="M130.4,340h19.4V210.7h-19.4V340"/>
+<path class="st8" d="M290.4,340h19.4V98.7h-19.4V340"/>
+<path class="st8" d="M450.4,340h19.4V108.5h-19.4V340"/>
+<path class="st8" d="M610.4,340h19.4V105.8h-19.4V340"/>
+<path class="st8" d="M770.4,340h19.4V224h-19.4V340"/>
+<path class="st8" d="M930.4,340h19.4v-79.3h-19.4V340"/>
+<path class="st8" d="M1090.4,340h19.4v-83.9h-19.4V340"/>
+<path class="st8" d="M1250.4,340h19.4V205.3h-19.4V340"/>
+<path class="st9" d="M149.9,340h19.4v-15.3h-19.4V340"/>
+<path class="st9" d="M309.9,340h19.4v-18.3h-19.4V340"/>
+<path class="st9" d="M469.9,340h19.4v-18.5h-19.4V340"/>
+<path class="st9" d="M629.9,340h19.4v-30.9h-19.4V340"/>
+<path class="st9" d="M789.9,340h19.4v-16.7h-19.4V340"/>
+<path class="st9" d="M949.9,340h19.4v-16.2h-19.4V340"/>
+<path class="st9" d="M1109.9,340h19.4v-17.5h-19.4V340"/>
+<path class="st9" d="M1269.9,340h19.4v-30.8h-19.4V340"/>
+<path class="st9" d="M169.3,340h19.4v-79.8h-19.4V340"/>
+<path class="st10" d="M329.3,340h19.4V219.8h-19.4V340"/>
+<path class="st10" d="M489.3,340h19.4V216.4h-19.4V340"/>
+<path class="st10" d="M649.3,340h19.4V226.1h-19.4V340"/>
+<path class="st10" d="M809.3,340h19.4v-66.9h-19.4V340"/>
+<path class="st11" d="M969.3,340h19.4v-32.6h-19.4V340"/>
+<path class="st11" d="M1129.3,340h19.4v-50.3h-19.4V340"/>
+<path class="st10" d="M1289.3,340h19.4V226.2h-19.4V340"/>
+<path class="st11" d="M188.7,340h19.4v-68.5h-19.4V340"/>
+<path class="st11" d="M348.7,340h19.4V216.6h-19.4V340"/>
+<path class="st11" d="M508.7,340h19.4V205.1h-19.4V340"/>
+<path class="st11" d="M668.7,340h19.4V192.8h-19.4V340"/>
+<path class="st11" d="M828.7,340h19.4v-85h-19.4V340"/>
+<path class="st11" d="M988.7,340h19.4v-37.3h-19.4V340"/>
+<path class="st11" d="M1148.7,340h19.4v-60.7h-19.4V340"/>
+<path class="st11" d="M1308.7,340h19.4v-54.7h-19.4V340"/>
+<path class="st12" d="M208.2,340h19.4v-53.3h-19.4V340"/>
+<path class="st12" d="M368.2,340h19.4v-85.6h-19.4V340"/>
+<path class="st12" d="M528.2,340h19.4V234.5h-19.4V340"/>
+<path class="st12" d="M688.2,340h19.4v-58.1h-19.4V340"/>
+<path class="st12" d="M848.2,340h19.4v-39.9h-19.4V340"/>
+<path class="st12" d="M1008.2,340h19.4v-17.8h-19.4V340"/>
+<path class="st12" d="M1168.2,340h19.4v-27.3h-19.4V340"/>
+<path class="st12" d="M1328.2,340h19.4V236.5h-19.4V340"/>
+<path class="st13" d="M227.6,340H247v-48.3h-19.4V340"/>
+<path class="st13" d="M387.6,340H407v-43.3h-19.4V340"/>
+<path class="st13" d="M547.6,340H567v-52h-19.4V340"/>
+<path class="st13" d="M707.6,340H727V79.3h-19.4V340"/>
+<path class="st13" d="M867.6,340H887v-50h-19.4V340"/>
+<path class="st13" d="M1027.6,340h19.4v-53.4h-19.4V340"/>
+<path class="st13" d="M1187.6,340h19.4v-36.8h-19.4V340"/>
+<path class="st13" d="M1347.6,340h19.4V121.7h-19.4V340"/>
+<g>
+	<rect x="242.4" y="369.9" class="st7" width="14" height="6"/>
+	<text transform="matrix(1 0 0 1 265.3608 378.6564)" class="st14 st4 st15">DBR</text>
+	<text transform="matrix(1 0 0 1 355.8647 378.6564)" class="st14 st4 st15">Commercial SDK A</text>
+	<text transform="matrix(1 0 0 1 563.6655 378.6564)" class="st14 st4 st15">Commercial SDK B</text>
+	<text transform="matrix(1 0 0 1 769.5521 378.6564)" class="st14 st4 st15">Zxing</text>
+	<text transform="matrix(1 0 0 1 867.3392 378.6564)" class="st14 st4 st15">Zbar</text>
+	<text transform="matrix(1 0 0 1 957.6597 378.6564)" class="st14 st4 st15">BoofCV</text>
+	<text transform="matrix(1 0 0 1 1072.7495 378.6564)" class="st14 st4 st15">OpenCV Wechat</text>
+	<rect x="332.7" y="369.9" class="st8" width="14" height="6"/>
+	<rect x="540.8" y="369.9" class="st9" width="14" height="6"/>
+	<rect x="746.3" y="369.9" class="st10" width="14" height="6"/>
+	<rect x="843.2" y="369.9" class="st11" width="14" height="6"/>
+	<rect x="934.7" y="369.9" class="st12" width="14" height="6"/>
+	<rect x="1049.8" y="369.9" class="st13" width="14" height="6"/>
+</g>
+</svg>

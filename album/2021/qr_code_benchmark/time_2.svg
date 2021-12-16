@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1450 400" style="enable-background:new 0 0 1450 400;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#E0E6F1;}
+	.st1{fill:none;stroke:#E0E6F1;stroke-miterlimit:10;}
+	.st2{fill:none;stroke:#6E7079;stroke-linecap:round;stroke-miterlimit:10;}
+	.st3{fill:#6E7079;}
+	.st4{font-family:'MicrosoftSansSerif';}
+	.st5{font-size:12px;}
+	.st6{font-size:16px;}
+	.st7{fill:#FE8E14;}
+	.st8{fill:#323234;}
+	.st9{opacity:0.6;fill:#306877;enable-background:new    ;}
+	.st10{fill:#306877;}
+	.st11{opacity:0.6;enable-background:new    ;}
+	.st12{opacity:0.2;enable-background:new    ;}
+	.st13{opacity:0.4;enable-background:new    ;}
+	.st14{fill:#333333;}
+	.st15{font-size:18px;}
+</style>
+<rect x="1195.4" y="31.3" class="st0" width="155.7" height="309.4"/>
+<rect x="1012.5" y="31.4" class="st0" width="155.7" height="309.4"/>
+<rect x="830.1" y="31" class="st0" width="155.7" height="309.4"/>
+<rect x="647.3" y="31.2" class="st0" width="155.7" height="309.4"/>
+<rect x="464.4" y="31.3" class="st0" width="155.7" height="309.4"/>
+<rect x="281.6" y="30.9" class="st0" width="155.7" height="309.4"/>
+<rect x="98.5" y="30.5" class="st0" width="155.7" height="309.4"/>
+<path class="st1" d="M85,340.5h1280"/>
+<path class="st1" d="M85,286.5h1280"/>
+<path class="st1" d="M85,232.5h1280"/>
+<path class="st1" d="M85,178.5h1280"/>
+<path class="st1" d="M85,124.5h1280"/>
+<path class="st1" d="M85,70.5h1280"/>
+<path class="st2" d="M85,340.5h1280"/>
+<text transform="matrix(1 0 0 1 70.3262 340)" class="st3 st4 st5">0</text>
+<text transform="matrix(1 0 0 1 56.9785 286)" class="st3 st4 st5">200</text>
+<text transform="matrix(1 0 0 1 56.9785 232)" class="st3 st4 st5">400</text>
+<text transform="matrix(1 0 0 1 56.9785 178)" class="st3 st4 st5">600</text>
+<text transform="matrix(1 0 0 1 56.9785 124)" class="st3 st4 st5">800</text>
+<text transform="matrix(1 0 0 1 46.9707 70)" class="st3 st4 st5">1,000</text>
+<text transform="matrix(1 0 0 1 149.621 57.2627)" class="st3 st4 st6">monitor</text>
+<text transform="matrix(1 0 0 1 331.3215 57.2627)" class="st3 st4 st6">nominal</text>
+<text transform="matrix(1 0 0 1 494.5331 57.2627)" class="st3 st4 st6">noncompliant</text>
+<text transform="matrix(1 0 0 1 682.3126 57.2627)" class="st3 st4 st6">pathological</text>
+<text transform="matrix(1 0 0 1 867.0287 57.2627)" class="st3 st4 st6">perspective</text>
+<text transform="matrix(1 0 0 1 1059.5723 57.2627)" class="st3 st4 st6">rotations</text>
+<text transform="matrix(1 0 0 1 1241.6675 57.2627)" class="st3 st4 st6">shadows</text>
+<path class="st7" d="M98.7,340h22.2v-47.7H98.7V340"/>
+<path class="st7" d="M281.6,340h22.2v-20h-22.2V340"/>
+<path class="st7" d="M464.4,340h22.2v-15.9h-22.2V340"/>
+<path class="st7" d="M647.3,340h22.2v-2.3h-22.2V340"/>
+<path class="st7" d="M830.1,340h22.2v-6.9h-22.2V340"/>
+<path class="st7" d="M1013,340h22.2v-19.5H1013V340"/>
+<path class="st7" d="M1195.9,340h22.2v-27.6h-22.2V340"/>
+<path class="st8" d="M120.9,340h22.2V120.6h-22.2L120.9,340"/>
+<path class="st8" d="M303.8,340H326v-55h-22.2V340"/>
+<path class="st8" d="M486.6,340h22.2v-22h-22.2V340"/>
+<path class="st8" d="M669.5,340h22.2v-1.1h-22.2V340"/>
+<path class="st8" d="M852.3,340h22.2v-12.5h-22.2V340"/>
+<path class="st8" d="M1035.2,340h22.2v-46.9h-22.2V340"/>
+<path class="st8" d="M1218.1,340h22.2v-65.7h-22.2V340"/>
+<path class="st9" d="M143.1,340h22.2v-28.6h-22.2V340"/>
+<path class="st9" d="M326,340h22.2v-8.7H326V340"/>
+<path class="st9" d="M508.8,340H531v-9.3h-22.2V340"/>
+<path class="st9" d="M691.7,340h22.2v-17.8h-22.2V340"/>
+<path class="st9" d="M874.6,340h22.2v-4h-22.2V340"/>
+<path class="st9" d="M1057.4,340h22.2v-9.7h-22.2V340"/>
+<path class="st9" d="M1240.3,340h22.2v-11.4h-22.2V340"/>
+<path class="st10" d="M165.3,340h22.2v-63h-22.2V340"/>
+<path class="st10" d="M348.2,340h22.2v-38.2h-22.2V340"/>
+<path class="st10" d="M531,340h22.2v-12.9H531V340"/>
+<path class="st10" d="M713.9,340h22.2v-0.8h-22.2V340"/>
+<path class="st10" d="M896.8,340H919v-7.5h-22.2V340"/>
+<path class="st10" d="M1079.6,340h22.2v-28.8h-22.2V340"/>
+<path class="st10" d="M1262.5,340h22.2v-40.5h-22.2V340"/>
+<path class="st11" d="M187.5,340h22.2V200.8h-22.2V340"/>
+<path class="st11" d="M370.4,340h22.2v-30.2h-22.2V340"/>
+<path class="st11" d="M553.2,340h22.2v-15.4h-22.2V340"/>
+<path class="st11" d="M736.1,340h22.2v-0.5h-22.2V340"/>
+<path class="st11" d="M919,340h22.2v-6.6H919V340"/>
+<path class="st11" d="M1101.8,340h22.2v-36.4h-22.2V340"/>
+<path class="st11" d="M1284.7,340h22.2v-44.1h-22.2V340"/>
+<path class="st12" d="M209.7,340h22.2v-38.5h-22.2V340"/>
+<path class="st12" d="M392.6,340h22.2v-29.6h-22.2V340"/>
+<path class="st12" d="M575.4,340h22.2v-8.6h-22.2V340"/>
+<path class="st12" d="M758.3,340h22.2v-3.9h-22.2V340"/>
+<path class="st12" d="M941.2,340h22.2v-7.2h-22.2V340"/>
+<path class="st12" d="M1124,340h22.2v-48.2H1124V340"/>
+<path class="st12" d="M1306.9,340h22.2v-31.7h-22.2V340"/>
+<path class="st13" d="M231.9,340h22.2V225.9h-22.2V340"/>
+<path class="st13" d="M414.8,340H437v-14.7h-22.2V340"/>
+<path class="st13" d="M597.7,340h22.2v-11.7h-22.2V340"/>
+<path class="st13" d="M780.5,340h22.2v-5.2h-22.2V340"/>
+<path class="st13" d="M963.4,340h22.2v-6.6h-22.2V340"/>
+<path class="st13" d="M1146.2,340h22.2v-23.5h-22.2V340"/>
+<path class="st13" d="M1329.1,340h22.2v-23.3h-22.2V340"/>
+<g>
+	<rect x="242.4" y="369.5" class="st7" width="14" height="6"/>
+	<text transform="matrix(1 0 0 1 265.3607 378.279)" class="st14 st4 st15">DBR</text>
+	<text transform="matrix(1 0 0 1 355.8646 378.279)" class="st14 st4 st15">Commercial SDK A</text>
+	<text transform="matrix(1 0 0 1 563.6654 378.279)" class="st14 st4 st15">Commercial SDK B</text>
+	<text transform="matrix(1 0 0 1 769.5521 378.279)" class="st14 st4 st15">Zxing</text>
+	<text transform="matrix(1 0 0 1 867.3392 378.279)" class="st14 st4 st15">Zbar</text>
+	<text transform="matrix(1 0 0 1 957.6596 378.279)" class="st14 st4 st15">BoofCV</text>
+	<text transform="matrix(1 0 0 1 1072.7494 378.279)" class="st14 st4 st15">OpenCV Wechat</text>
+	<rect x="332.7" y="369.5" class="st8" width="14" height="6"/>
+	<rect x="540.8" y="369.5" class="st9" width="14" height="6"/>
+	<rect x="746.3" y="369.5" class="st10" width="14" height="6"/>
+	<rect x="843.2" y="369.5" class="st11" width="14" height="6"/>
+	<rect x="934.7" y="369.5" class="st12" width="14" height="6"/>
+	<rect x="1049.8" y="369.5" class="st13" width="14" height="6"/>
+</g>
+</svg>
