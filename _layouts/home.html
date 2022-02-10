@@ -44,7 +44,7 @@ layout: default
         </div>
         <div class="post">
           {%- if site.show_excerpts -%}
-            {{ post.excerpt  | markdownify | strip_html | }}
+            {{ post.excerpt  | markdownify | strip_html }}
           {%- endif -%}
         </div>
       </li>
