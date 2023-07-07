@@ -1,73 +1,46 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 25.4.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 800 400" style="enable-background:new 0 0 800 400;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:#E0E6F1;}
-	.st1{fill:none;stroke:#E0E6F1;stroke-miterlimit:10;}
-	.st2{fill:none;stroke:#6E7079;stroke-linecap:round;stroke-miterlimit:10;}
-	.st3{fill:#6E7079;}
-	.st4{font-family:'MicrosoftSansSerif';}
-	.st5{font-size:12px;}
-	.st6{font-size:16px;}
-	.st7{fill:#FE8E14;}
-	.st8{fill:#323234;}
-	.st9{opacity:0.6;fill:#306877;enable-background:new    ;}
-	.st10{fill:#306877;}
-	.st11{opacity:0.6;enable-background:new    ;}
-	.st12{opacity:0.2;enable-background:new    ;}
-	.st13{opacity:0.4;enable-background:new    ;}
-	.st14{fill:#666666;}
-	.st15{fill:#333333;}
-	.st16{font-size:9.2981px;}
-</style>
-<rect x="127.4" y="23.1" class="st0" width="544.2" height="324"/>
-<path class="st1" d="M80,346.5h640"/>
-<path class="st1" d="M80,307.5h640"/>
-<path class="st1" d="M80,269.5h640"/>
-<path class="st1" d="M80,230.5h640"/>
-<path class="st1" d="M80,191.5h640"/>
-<path class="st1" d="M80,153.5h640"/>
-<path class="st1" d="M80,114.5h640"/>
-<path class="st1" d="M80,76.5h640"/>
-<path class="st2" d="M80,346.5h640"/>
-<text transform="matrix(1 0 0 1 65.3262 346)" class="st3 st4 st5">0</text>
-<text transform="matrix(1 0 0 1 58.6523 307.4286)" class="st3 st4 st5">50</text>
-<text transform="matrix(1 0 0 1 51.9785 268.8571)" class="st3 st4 st5">100</text>
-<text transform="matrix(1 0 0 1 51.9785 230.2857)" class="st3 st4 st5">150</text>
-<text transform="matrix(1 0 0 1 51.9785 191.7143)" class="st3 st4 st5">200</text>
-<text transform="matrix(1 0 0 1 51.9785 153.1429)" class="st3 st4 st5">250</text>
-<text transform="matrix(1 0 0 1 51.9785 114.5714)" class="st3 st4 st5">300</text>
-<text transform="matrix(1 0 0 1 51.9785 76)" class="st3 st4 st5">350</text>
-<text transform="matrix(1 0 0 1 351.0156 49.9029)" class="st3 st4 st6">average_time</text>
-<path class="st7" d="M128,346h77.7V237.2H128V346"/>
-<path class="st8" d="M205.7,346h77.7V103.7h-77.7V346"/>
-<path class="st9" d="M283.4,346h77.7v-37.3h-77.7L283.4,346"/>
-<path class="st10" d="M361.1,346h77.7V205.8h-77.7L361.1,346"/>
-<path class="st11" d="M438.9,346h77.7V192.3h-77.7L438.9,346"/>
-<path class="st12" d="M516.6,346h77.7V187.5h-77.7V346"/>
-<path class="st13" d="M594.3,346H672V211h-77.7V346"/>
-<text transform="matrix(1 0 0 1 148.5055 226.1514)" class="st14 st4 st5">141.10</text>
-<text transform="matrix(1 0 0 1 226.2198 92.7406)" class="st14 st4 st5">314.04</text>
-<text transform="matrix(1 0 0 1 307.2711 297.7323)" class="st14 st4 st5">48.31</text>
-<text transform="matrix(1 0 0 1 381.6484 194.8469)" class="st14 st4 st5">181.68</text>
-<text transform="matrix(1 0 0 1 459.3627 181.2851)" class="st14 st4 st5">199.26</text>
-<text transform="matrix(1 0 0 1 537.077 176.4869)" class="st14 st4 st5">205.48</text>
-<text transform="matrix(1 0 0 1 614.7913 199.9537)" class="st14 st4 st5">175.06</text>
-<g>
-	<text transform="matrix(1 0 0 1 165.5045 377.4854)" class="st15 st4 st16">DBR</text>
-	<text transform="matrix(1 0 0 1 209.2863 377.4854)" class="st15 st4 st16">Commercial SDK A</text>
-	<text transform="matrix(1 0 0 1 318.3844 377.4854)" class="st15 st4 st16">Commercial SDK B</text>
-	<text transform="matrix(1 0 0 1 425.2248 377.4854)" class="st15 st4 st16">Zxing</text>
-	<text transform="matrix(1 0 0 1 473.8742 377.4854)" class="st15 st4 st16">Zbar</text>
-	<text transform="matrix(1 0 0 1 518.2892 377.4854)" class="st15 st4 st16">BoofCV</text>
-	<text transform="matrix(1 0 0 1 580.3458 377.4854)" class="st15 st4 st16">OpenCV Wechat</text>
-	<rect x="150" y="371.7" class="st7" width="10.8" height="4.6"/>
-	<rect x="195.3" y="371.7" class="st8" width="10.8" height="4.6"/>
-	<rect x="303" y="371.7" class="st9" width="10.8" height="4.6"/>
-	<rect x="411.1" y="371.7" class="st10" width="10.8" height="4.6"/>
-	<rect x="459.1" y="371.7" class="st11" width="10.8" height="4.6"/>
-	<rect x="503.6" y="371.7" class="st12" width="10.8" height="4.6"/>
-	<rect x="564.2" y="371.7" class="st13" width="10.8" height="4.6"/>
-</g>
+<svg width="600" height="400" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 600 400">
+<rect width="600" height="400" x="0" y="0" id="0" fill="none"></rect>
+<path d="M60 330.5L540 330.5" fill="none" stroke="#E0E6F1"></path>
+<path d="M60 276.5L540 276.5" fill="none" stroke="#E0E6F1"></path>
+<path d="M60 222.5L540 222.5" fill="none" stroke="#E0E6F1"></path>
+<path d="M60 168.5L540 168.5" fill="none" stroke="#E0E6F1"></path>
+<path d="M60 114.5L540 114.5" fill="none" stroke="#E0E6F1"></path>
+<path d="M60 60.5L540 60.5" fill="none" stroke="#E0E6F1"></path>
+<path d="M60 330.5L540 330.5" fill="none" stroke="#6E7079" stroke-linecap="round"></path>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:Microsoft YaHei;" transform="translate(52 330)" fill="#6E7079">0</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:Microsoft YaHei;" transform="translate(52 276)" fill="#6E7079">300</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:Microsoft YaHei;" transform="translate(52 222)" fill="#6E7079">600</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:Microsoft YaHei;" transform="translate(52 168)" fill="#6E7079">900</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:Microsoft YaHei;" transform="translate(52 114)" fill="#6E7079">1,200</text>
+<text dominant-baseline="central" text-anchor="end" style="font-size:12px;font-family:Microsoft YaHei;" transform="translate(52 60)" fill="#6E7079">1,500</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:Microsoft YaHei;" xml:space="preserve" y="6" transform="translate(300 338)" fill="#6E7079">Average Time</text>
+<path d="M96 330l58.2857 0l0 -35.1018l-58.2857 0Z" fill="#fe8e14"></path>
+<path d="M154.2857 330l58.2857 0l0 -18.891l-58.2857 0Z" fill="#323234"></path>
+<path d="M212.5714 330l58.2857 0l0 -62.3286l-58.2857 0Z" fill="#868a91"></path>
+<path d="M270.8571 330l58.2857 0l0 -32.3226l-58.2857 0Z" fill="#779aa7"></path>
+<path d="M329.1429 330l58.2857 0l0 -252.0774l-58.2857 0Z" fill="#b3b8c1"></path>
+<path d="M387.4286 330l58.2857 0l0 -28.3158l-58.2857 0Z" fill="#306877"></path>
+<path d="M445.7143 330l58.2857 0l0 -136.3878l-58.2857 0Z" fill="#5a5c60"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font: normal normal 12px Microsoft YaHei" transform="translate(125.1429 312.4491)" fill="#333">195.01ms</text>
+<text dominant-baseline="central" text-anchor="middle" style="font: normal normal 12px Microsoft YaHei" transform="translate(183.4286 320.5545)" fill="#ccc" stroke="#323234" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">104.95ms</text>
+<text dominant-baseline="central" text-anchor="middle" style="font: normal normal 12px Microsoft YaHei" transform="translate(241.7143 298.8357)" fill="#333">346.27ms</text>
+<text dominant-baseline="central" text-anchor="middle" style="font: normal normal 12px Microsoft YaHei" transform="translate(300 313.8387)" fill="#333">179.57ms</text>
+<text dominant-baseline="central" text-anchor="middle" style="font: normal normal 12px Microsoft YaHei" transform="translate(358.2857 203.9613)" fill="#333">1400.43ms</text>
+<text dominant-baseline="central" text-anchor="middle" style="font: normal normal 12px Microsoft YaHei" transform="translate(416.5714 315.8421)" fill="#eee" stroke="#306877" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">157.31ms</text>
+<text dominant-baseline="central" text-anchor="middle" style="font: normal normal 12px Microsoft YaHei" transform="translate(474.8571 261.8061)" fill="#eee" stroke="#5a5c60" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">757.71ms</text>
+<path d="M-5 -5l553.2266 0l0 48l-553.2266 0Z" transform="translate(28.3867 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0"></path>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(28.3867 5)" fill="#fe8e14"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:Microsoft YaHei;" x="30" y="7" transform="translate(28.3867 5)" fill="#333">Dynamsoft</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(130.9648 5)" fill="#323234"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:Microsoft YaHei;" x="30" y="7" transform="translate(130.9648 5)" fill="#333">BoofCV</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(213.8203 5)" fill="#868a91"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:Microsoft YaHei;" xml:space="preserve" x="30" y="7" transform="translate(213.8203 5)" fill="#333">Commercial SDK B</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(360.5371 5)" fill="#779aa7"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:Microsoft YaHei;" x="30" y="7" transform="translate(360.5371 5)" fill="#333">ZXing</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(433.9824 5)" fill="#b3b8c1"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:Microsoft YaHei;" xml:space="preserve" x="30" y="7" transform="translate(433.9824 5)" fill="#333">Commercial SDK A</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(28.3867 29)" fill="#306877"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:Microsoft YaHei;" x="30" y="7" transform="translate(28.3867 29)" fill="#333">ZBar</text>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(94.5723 29)" fill="#5a5c60"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:Microsoft YaHei;" xml:space="preserve" x="30" y="7" transform="translate(94.5723 29)" fill="#333">OpenCV WeChat</text>
 </svg>
