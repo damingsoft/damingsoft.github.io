@@ -303,10 +303,12 @@ main {
 }
 
 table {
+  display: block;
+  overflow: auto;
+  max-width: 100%;
   th, td {
     padding: 8px 13px;
     border: 1px solid #dfe2e5;
-    word-break: break-all;
   }
   th {
     background-color: #eee;
