@@ -18,7 +18,7 @@ Dynamsoft Barcode Reader是使用C++编写的[高性能](https://devblogs.daming
 * 原生应用：编写原生语言插件或者UTS插件使用Dynamsoft Barcode Reader的Android版和iOS版，或者在WebView中使用JavaScript版
 * 小程序：在支持getUserMedia和WebAssembly的WebView中运行Dynamsoft Barcode Reader的JavaScript版或者在服务器运行Dynamsoft Barcode Reader，提供API进行解码
 
-对于原生应用和小程序，本文使用WebView来集成Dynamsoft Barcode Reader。
+对于原生应用和小程序，本文将使用WebView来集成Dynamsoft Barcode Reader。
 
 [在线demo](https://delightful-lolly-ba2415.netlify.app/)
 
@@ -32,13 +32,13 @@ Dynamsoft Barcode Reader是使用C++编写的[高性能](https://devblogs.daming
 npm init -y
 ```
 
-之后安装Dynamsoft Barcode Reader。
+之后安装Dynamsoft Barcode Reader：
 
 ```bash
 npm install dynamsoft-javascript-barcode
 ```
 
-### 建立一个二维码扫码组件
+### 建立一个二维码扫描组件
 
 1. 新建一个components目录，在里面建立一个新的组件，命名为`QRCodeScannerWeb.vue`。
 
