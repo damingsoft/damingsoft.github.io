@@ -255,7 +255,7 @@ elapsedTime = int((end_time - start_time) * 1000)
   });
 </script>
 
-我们可以看到，Dynamsoft Barcode Reader在大多数类别中排名第一。它在近距离类中排名第二，在透视类中排名第一。
+我们可以看到，Dynamsoft Barcode Reader在大多数类别中排名第一。它在近距离类中排名第二，在透视类中排名第三。
 
 注:某些类别的读取率不是很高，因为里面的一些二维码本来就是不可读。
 
