@@ -560,5 +560,5 @@ npm install dynamsoft-javascript-barcode
 
 欢迎下载源代码并尝试使用：
 
-<https://github.com/tony-xlh/uniapp-qr-code-scanner>
+<https://gitee.com/xulihang/uniapp-qr-code-scanner>
 
