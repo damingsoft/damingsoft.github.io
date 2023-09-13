@@ -8,7 +8,7 @@ tags:
 
 uni-app是一个使用Vue.js开发前端应用的框架，编写的应用可以在Android、iOS、Web以及各种小程序上运行。
 
-Dynamsoft Barcode Reader是使用C++编写的[高性能](https://devblogs.damingsoft.com/qr-code-reading-benchmark-and-comparison/)二维码/条码扫描SDK，可以在Android、iOS和Web等各种平台运行。
+[Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/overview/)是使用C++编写的[高性能](https://devblogs.damingsoft.com/qr-code-reading-benchmark-and-comparison/)二维码/条码扫描SDK，可以在Android、iOS和Web等各种平台运行。
 
 下面我们会讨论如何在uni-app中集成Dynamsoft Barcode Reader来进行扫码。
 
