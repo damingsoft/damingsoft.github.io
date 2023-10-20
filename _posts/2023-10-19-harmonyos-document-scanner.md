@@ -241,7 +241,7 @@ imageSource.createPixelMap().then(pixelmap => {
 });
 ```
 
-运行文档扫描程序：
+在华为手机或者鸿蒙模拟器中运行文档扫描程序：
     
 ![鸿蒙文档扫描](https://devblogs.damingsoft.com/album/2023/10/harmonyos-document-scanner.png)
     
