@@ -40,7 +40,7 @@ tags:
 ## 鸿蒙程序开发
 在DevEco Studio中新建工程。
 
-![鸿蒙应用工程](./album/2023/10/create-harmonyos-project.png.png)
+![鸿蒙应用工程](https://devblogs.damingsoft.com/album/2023/10/create-harmonyos-project.png)
 
 在`entry/src/main/module.json5`中添加[网络权限](https://developer.harmonyos.com/cn/docs/documentation/doc-guides-V3/net-mgmt-overview-0000001478341009-V3)：
 
