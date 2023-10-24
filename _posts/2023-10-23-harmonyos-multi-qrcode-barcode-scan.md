@@ -99,7 +99,7 @@ dbr.decodeFileStreamAsync(nodeBuffer, nodeBuffer.length, dbr.formats.QRCode).the
 
 在工程的`rawfile`目录中放入一张示例图片。
 
-![鸿蒙图片资源](./album/2023/10/harmonyos-resource-image-file.png)
+![鸿蒙图片资源](https://devblogs.damingsoft.com/album/2023/10/harmonyos-resource-image-file.png)
 
 程序启动的时候，我们把图片加载到内存中，用于显示以及后续的扫码请求。在`entry/src/main/ets/pages/Index.ets`中添加如下代码：
 
