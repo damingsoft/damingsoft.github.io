@@ -194,7 +194,7 @@ Button('Read Multi QR Codes')
 
 `Content-Type`设置成`application/octet-stream`，`extraData`设置成图片的二进制数据。
 
-![鸿蒙二维码识别](./album/2023/10/harmonyos-qr-detection.png)
+![鸿蒙二维码识别](https://devblogs.damingsoft.com/album/2023/10/harmonyos-qr-detection.png)
 
 
 为了方便在模拟器里测试不同的图片，我们再创建一个输入框用来输入图片URL，然后通过HTTP GET请求来获取图片数据：
@@ -249,7 +249,7 @@ Button('Get an image')
 
 最后我们测试一张包含多个二维码的图片：
 
-![鸿蒙多码识别程序](./album/2023/10/harmonyos-multi-barcode-qrcode-scan.png)
+![鸿蒙多码识别程序](https://devblogs.damingsoft.com/album/2023/10/harmonyos-multi-barcode-qrcode-scan.png)
 
 ## 源代码
 [https://gitee.com/yushulx/harmonyos-multi-barcode-qrcode-scan](https://gitee.com/yushulx/harmonyos-multi-barcode-qrcode-scan)
