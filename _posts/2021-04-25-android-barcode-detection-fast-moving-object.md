@@ -2,7 +2,7 @@
 layout: post
 title: 针对快速移动物体的条码检测安卓应用
 date: 2021-04-25 13:21:51 +0800
-categories: 条码识别
+categories: 条码扫描
 tags: Android
 ---
 

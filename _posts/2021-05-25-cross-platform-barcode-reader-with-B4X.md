@@ -2,7 +2,7 @@
 layout: post
 title: B4X跨平台扫码应用
 date: 2021-05-25 17:11:53 +0800
-categories: 条码识别
+categories: 条码扫描
 tags: B4X 跨平台
 ---
 

@@ -2,7 +2,7 @@
 layout: post
 title: "鸿蒙HarmonyOS应用开发：多码识别"
 date: 2023-10-23 10:07:53 +0800
-categories: 条码识别
+categories: 条码扫描
 tags: 
     - 鸿蒙
     - harmonyos

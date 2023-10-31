@@ -2,7 +2,7 @@
 layout: post
 title: 基于CameraX的安卓条码扫描应用
 date: 2021-04-25 13:44:53 +0800
-categories: 条码识别
+categories: 条码扫描
 tags: Android
 ---
 

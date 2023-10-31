@@ -2,7 +2,7 @@
 layout: post
 title: 从0开始搭建Flutter条形码二维码扫描插件及应用
 date:   2021-04-23 09:57:36 +0530
-categories: 条码识别
+categories: 条码扫描
 ---
 
 Google今年推出了Flutter 2。一套Dart代码可以覆盖桌面，web和移动开发，大大降低跨平台应用开发成本。然而平台相关的逻辑还是需要用相应的本地代码去实现。这篇文章分享如何从0开始，搭建发布Flutter的条形码二维码扫描插件，以及如何使用该插件来实现一个Android的扫码应用。
