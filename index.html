@@ -1,0 +1,90 @@
+---
+layout: default
+title: 首页
+---
+
+{%- if page.title -%}
+  <h1 class="page-heading">{{ page.title }}</h1>
+{%- endif -%}
+
+{%- if site.posts.size > 0 -%}
+  <ul class="posts">
+    <li class="posts-labelgroup" id="posts-labelgroup">
+      <h1 id="posts-label">搜索</h1>
+      {% if site.plainwhite.search %}
+      <div class="search-container">
+        <div class="search-section">
+          <i class="icon-search"></i>
+          <input type="text" name="search" id="searchbar" autocomplete="off" aria-label="search in posts">
+        </div>
+        <div class="search-results" id="search-results" data-placeholder="没有结果" style="display: none;"></div>
+      </div>
+      {% endif %}
+    </li>
+
+    {%- for post in paginator.posts -%}
+      <li>
+        {%- assign date_format = site.plainwhite.date_format | default: "%Y年%-m月%-d日" -%}
+        <a class="post-link" href="{{ post.url | relative_url }}">
+          <h2 class="post-title">{{ post.title | escape }}</h2>
+        </a>
+        <div class="post-meta justify-with-space">
+          <div class="post-date">
+            <i class="icon-calendar"></i>
+            {{ post.date | date: date_format }}
+          </div>
+          {%- if post.categories.size > 0-%}
+          <ul class="post-categories">
+            {%- for tag in post.categories -%}
+            <li><a class="category-link" href="/categories#{{ tag }}">{{ tag }}</a></li>
+            {%- endfor -%}
+          </ul>
+          {%- endif -%}
+        </div>
+        <div class="post">
+          {%- if site.show_excerpts -%}
+            {{ post.excerpt  | markdownify | strip_html }}
+          {%- endif -%}
+        </div>
+      </li>
+    {%- endfor -%}
+    <li>
+      <div id="post-pagination" class="paginator">
+        {% if paginator.previous_page %}
+          {% if paginator.previous_page == 1 %}
+          <a href="/"><前页</a>
+          {% else %}
+          <a href="/page{{paginator.previous_page}}">&lt;前页</a>
+          {% endif %}
+        {% else %}
+          <span class="previous disabled">&lt;前页</span>
+        {% endif %}
+
+            {% if paginator.page == 1 %}
+            <span class="current-page">1</span>
+            {% else %}
+            <a href="/">1</a>
+            {% endif %}
+
+          {% for count in (2..paginator.total_pages) %}
+            {% if count == paginator.page %}
+            <span class="current-page">{{count}}</span>
+            {% else %}
+            <a href="/page{{count}}">{{count}}</a>
+            {% endif %}
+          {% endfor %}
+
+        {% if paginator.next_page %}
+          <a class="next" href="/page{{paginator.next_page}}">后页&gt;</a>
+        {% else %}
+          <span class="next disabled" >后页&gt;</span>
+        {% endif %}
+        (共{{ paginator.total_posts }}篇)
+      </div>
+    </li>
+  </ul>
+
+  <!-- <p class="feed-subscribe"><svg class="svg-icon orange">
+		<use xlink:href="{{ '/assets/minima-social-icons.svg#rss' | relative_url }}"></use>
+	</svg><a href="{{ "/feed.xml" | relative_url }}">Subscribe</a></p> -->
+{%- endif -%}

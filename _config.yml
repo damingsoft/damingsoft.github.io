@@ -4,7 +4,7 @@ email: support@damingsoft.com
 description: > # this means to ignore newlines until "show_exerpts:"
   大名软件的开发者博客。大名软件的主要产品是文档扫描和图像处理SDK。
 show_excerpts: true # set to true to show excerpts on the homepage
-
+paginate: 10
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
 sass:
@@ -56,4 +56,5 @@ permalink: /:title/
 
 plugins:
   - jekyll-seo-tag
+  - jekyll-paginate
 #  - jekyll-feed
