@@ -6,15 +6,13 @@ categories: 文档扫描
 tags:
 ---
 
+扫描的文档可能包含倾斜的页面。不易于阅读，也不便于OCR。在本文中，我们将使用OpenCV和Python来纠正倾斜的文档页面。
+
 <style>
 img {
   max-height:640px;
 }
 </style>
-
-扫描的文档可能包含倾斜的页面。不易于阅读，也不便于OCR。
-
-在本文中，我们将使用OpenCV和Python来纠正倾斜的文档页面。
 
 ## 使用OpenCV纠正文档图像
 
