@@ -59,7 +59,7 @@ Expo是一个开源平台，使用JavaScript和React为Android、iOS和Web制作
 
 ![文档扫描应用](/album/2023/11/expo/document-scanner.jpg)
 
-```js
+```jsx
 import { StatusBar } from 'expo-status-bar';
 import { useState,useEffect, useRef } from 'react';
 import { StyleSheet, View, Image, Text } from 'react-native';
@@ -173,7 +173,7 @@ const styles = StyleSheet.create({
 
 `components/Button.js` ：
 
-```js
+```jsx
 import { StyleSheet, View, Pressable, Text } from 'react-native';
 
 export default function Button({ label, onPress }) {
@@ -221,7 +221,7 @@ const styles = StyleSheet.create({
 
 `components/Select.js` ：
 
-```js
+```jsx
 import { StyleSheet, View, Pressable, Text } from 'react-native';
 
 export default function Select({ label, onPress }) {
@@ -259,7 +259,7 @@ const styles = StyleSheet.create({
 
 创建选取列表项目的新组件。我们可以用它来选择使用哪个设备，使用哪种颜色模式，采取哪种操作等等。
 
-```js
+```jsx
 import { View, Text, Pressable, StyleSheet } from 'react-native';
 
 export default function ItemsPicker({ items,onPress }) {
@@ -294,7 +294,7 @@ const styles = StyleSheet.create({
 
 然后，在`App.js`中，我们可以使用它配置扫描行为。
 
-```js
+```jsx
 const [showDevicePicker,setShowDevicePicker] = useState(false);
 const [showColorModePicker,setShowColorModePicker] = useState(false);
 const renderBody = () => {
@@ -324,7 +324,7 @@ const renderBody = () => {
 
 1. 在`components`下创建一个名为`DocumentScanner.js`的新组件。
 
-   ```js
+   ```jsx
    import { StyleSheet, View } from 'react-native';
    import { useEffect,useState } from 'react';
    export default function DocumentScanner(props) {
@@ -338,7 +338,7 @@ const renderBody = () => {
 
 2. 组件挂载后，使用`expo camera`请求摄像头权限。
 
-   ```js
+   ```jsx
    const [hasPermission, setHasPermission] = useState(null);
    useEffect(() => {
      (async () => {
@@ -350,7 +350,7 @@ const renderBody = () => {
 
 3. 如果授予了摄像头权限，使用react-native-webview加载基于Dynamsoft Camera Enhancer和Dynamsoft Document Normalizer编写的文档扫描Web应用。这个Web应用是为在react-native-webview中使用而构建的。它可以将扫描的文档图像作为dataURL发送给React Native。我们可以通过URL参数来配置其行为，如颜色模式和许可证。需要许可证才能使用Dynamsoft Document Normalizer。可以在[此处](https://www.dynamsoft.com/customer/license/trialLicense?product=ddn)申请一个许可证。
 
-   ```js
+   ```jsx
    const getURI = () => {
      let URI = 'https://tony-xlh.github.io/Vanilla-JS-Document-Scanner-Demos/react-native/?autoStart=true';
      if (props.colorMode == "Black&White") {
@@ -393,7 +393,7 @@ const renderBody = () => {
 
 4. 用户按下扫描按钮并且所选设备为摄像头后，显示这个扫描组件。如果连续检测到三个重叠的文档区域，它将自动捕获图像。图像将保存到应用程序的文档目录中，并显示在页面中。
 
-   ```js
+   ```jsx
    const path = useRef("");
    const [showScanner,setShowScanner] = useState(false);
    const onScanned = async (dataURL) => {
@@ -440,7 +440,7 @@ const renderBody = () => {
 2. 创建一个DynamsoftService类，用于通过REST API获取扫描仪列表并通过从扫描仪获取图像。
 
 
-   ```js
+   ```jsx
    export class DynamsoftService {
      endpoint;
      license;
@@ -516,7 +516,7 @@ const renderBody = () => {
 
 3. 在`App.js`中，通过REST API获取扫描仪列表。需要许可证才能使用它。可以在[此处](https://www.dynamsoft.com/customer/license/trialLicense?product=dwt)申请一个许可证。
 
-   ```js
+   ```jsx
    export default function App() {
      const service = useRef();
      const scanners = useRef();
@@ -539,7 +539,7 @@ const renderBody = () => {
 
 4. 按下扫描按钮后获取文档图像。
 
-   ```js
+   ```jsx
    const scan = async () => {
      if (selectedDeviceIndex == 0) {
        setShowScanner(true);
@@ -557,7 +557,7 @@ const renderBody = () => {
 5. 扫描过程中将显示一个模态框，表示正在扫描。
 
 
-   ```js
+   ```jsx
    const [modalVisible, setModalVisible] = useState(false);
    return (
      <View style={styles.home}>
@@ -583,7 +583,7 @@ const renderBody = () => {
 
 新建一个`components/HistoryBrowser.js`组件文件，用于管理扫描的文档。
 
-```js
+```jsx
 import { Alert, StyleSheet, View, Text, FlatList, Image,Button,Pressable,Dimensions } from 'react-native';
 import { useEffect,useState,useRef } from 'react';
 import ItemsPicker from './ItemsPicker';
