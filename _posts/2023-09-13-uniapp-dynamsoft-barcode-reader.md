@@ -122,7 +122,7 @@ npm install dynamsoft-javascript-barcode
 5. 在`index.vue`中，使用这个扫码组件，扫到码后关闭扫描界面并显示结果。
 
    ```html
-   <template>
+   {% raw %}<template>
      <view class="content">
        <button @click="startScan">Start Scanning</button>
        <view class="fullscreen" v-if="scanning">
@@ -188,7 +188,7 @@ npm install dynamsoft-javascript-barcode
        width: 100%;
        height: 100%;
      }
-   </style>
+   </style>{% endraw %}
    ```
 
 ## 集成到原生应用

@@ -260,7 +260,7 @@ const styles = StyleSheet.create({
 创建选取列表项目的新组件。我们可以用它来选择使用哪个设备，使用哪种颜色模式，采取哪种操作等等。
 
 ```jsx
-import { View, Text, Pressable, StyleSheet } from 'react-native';
+{% raw %}import { View, Text, Pressable, StyleSheet } from 'react-native';
 
 export default function ItemsPicker({ items,onPress }) {
   return (
@@ -289,7 +289,7 @@ const styles = StyleSheet.create({
     fontSize: 18,
     height: 44,
   },
-});
+});{% endraw %}
 ```
 
 然后，在`App.js`中，我们可以使用它配置扫描行为。
@@ -351,7 +351,7 @@ const renderBody = () => {
 3. 如果授予了摄像头权限，使用react-native-webview加载基于Dynamsoft Camera Enhancer和Dynamsoft Document Normalizer编写的文档扫描Web应用。这个Web应用是为在react-native-webview中使用而构建的。它可以将扫描的文档图像作为dataURL发送给React Native。我们可以通过URL参数来配置其行为，如颜色模式和许可证。需要许可证才能使用Dynamsoft Document Normalizer。可以在[此处](https://www.dynamsoft.com/customer/license/trialLicense?product=ddn)申请一个许可证。
 
    ```jsx
-   const getURI = () => {
+   {% raw %}const getURI = () => {
      let URI = 'https://tony-xlh.github.io/Vanilla-JS-Document-Scanner-Demos/react-native/?autoStart=true';
      if (props.colorMode == "Black&White") {
        URI = URI + "&colorMode="+0;
@@ -388,7 +388,7 @@ const renderBody = () => {
      );
    }else{
      return <Text>No permission.</Text>
-   }
+   }{% endraw %}
    ```
 
 4. 用户按下扫描按钮并且所选设备为摄像头后，显示这个扫描组件。如果连续检测到三个重叠的文档区域，它将自动捕获图像。图像将保存到应用程序的文档目录中，并显示在页面中。
@@ -584,7 +584,7 @@ const renderBody = () => {
 新建一个`components/HistoryBrowser.js`组件文件，用于管理扫描的文档。
 
 ```jsx
-import { Alert, StyleSheet, View, Text, FlatList, Image,Button,Pressable,Dimensions } from 'react-native';
+{% raw %}import { Alert, StyleSheet, View, Text, FlatList, Image,Button,Pressable,Dimensions } from 'react-native';
 import { useEffect,useState,useRef } from 'react';
 import ItemsPicker from './ItemsPicker';
 import * as Sharing from 'expo-sharing';
@@ -721,7 +721,7 @@ const styles = StyleSheet.create({
     left: 0,
     zIndex: 10,
   }
-});
+});{% endraw %}
 ```
 
 ## 源代码

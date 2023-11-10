@@ -175,7 +175,7 @@ export default QRCodeScanner;
 2. 在`App.tsx`中，用`IonReactRouter`管理导航。
 
 ```js
-const App: React.FC = () => {
+{% raw %}const App: React.FC = () => {
   return (
     <IonApp style={{zIndex:999}}>
     <IonReactRouter>
@@ -189,7 +189,7 @@ const App: React.FC = () => {
   );
 }
 
-export default App;
+export default App;{% endraw %}
 ```
 
 我们需要为`IonApp`设置`z-index`，因为Web端的扫描界面将显示一个会覆盖其他元素的全屏元素，它是绝对位置定位的。
@@ -238,7 +238,7 @@ const startScan = () => {
 如果禁用连续扫描，扫描页面将在检测到二维码时将码的结果返回主页。我们可以将它们显示在列表中，并使其可复制。
 
 ```js
-const [present, dismiss] = useIonToast();
+{% raw %}const [present, dismiss] = useIonToast();
 const [barcodeResults, setBarcodeResults] = useState([] as TextResult[]);
 const copyBarcode = (text:string) => {
   if (copy(text)){
@@ -258,7 +258,7 @@ const copyBarcode = (text:string) => {
     <IonLabel>{tr.barcodeFormat + ": " + tr.barcodeText}</IonLabel>
     <IonLabel style={{color:"green"}} slot="end" onClick={() =>{copyBarcode(tr.barcodeText)}}>copy</IonLabel>
   </IonItem>
-))}
+))}{% endraw %}
 ```
 
 ![主页](/album/2022/ionic/ionic-home.png)
