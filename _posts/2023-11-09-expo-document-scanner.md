@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 基于Expo构建文档扫描应用 Component
+title: 基于Expo构建文档扫描应用
 date: 2023-11-09 10:01:53 +0800
 categories: 文档扫描
 tags:
