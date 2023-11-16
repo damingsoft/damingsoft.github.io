@@ -8,7 +8,7 @@ tags:
   - HTML5
 ---
 
-Remix是一个全栈Web框架，可以让开着专注于用户界面，并通过Web标准来提供快速、流畅和弹性的用户体验。它已被Shopify收购，也是React文档中推荐的框架。
+Remix是一个全栈Web框架，可以让开发者专注于用户界面，并通过Web标准来提供快速、流畅和弹性的用户体验。它已被Shopify收购，也是React文档中推荐的框架。
 
 在本文中，我们将使用Remix构建一个条码扫描应用。使用[Dynamsoft Camera Enhancer](https://www.dynamsoft.com/camera-enhancer/docs/introduction/)在浏览器中访问相机，[Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/overview/)从相机视频帧中读取条形码。
 
