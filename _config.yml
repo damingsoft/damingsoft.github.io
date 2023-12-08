@@ -1,8 +1,8 @@
-title: 大名软件开发者博客
-author: 大名软件
+title: 大名维森软件开发者博客
+author: 大名维森软件
 email: support@damingsoft.com
 description: > # this means to ignore newlines until "show_exerpts:"
-  大名软件的开发者博客。大名软件的主要产品是文档扫描和图像处理SDK。
+  大名维森软件的开发者博客。大名维森软件的主要产品是文档扫描和图像处理SDK。
 show_excerpts: true # set to true to show excerpts on the homepage
 paginate: 10
 # Minima date format
