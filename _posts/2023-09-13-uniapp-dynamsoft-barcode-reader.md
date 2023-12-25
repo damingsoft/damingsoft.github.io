@@ -15,10 +15,8 @@ uni-app是一个使用Vue.js开发前端应用的框架，编写的应用可以�
 针对不同平台，在uni-app里集成Dynamsoft Barcode Reader有多种方式。
 
 * Web：可以直接使用Dynamsoft Barcode Reader的JavaScript版
-* 原生应用：编写原生语言插件或者UTS插件使用Dynamsoft Barcode Reader的Android版和iOS版，或者在WebView中使用JavaScript版
-* 小程序：在支持getUserMedia和WebAssembly的WebView中运行Dynamsoft Barcode Reader的JavaScript版或者在服务器运行Dynamsoft Barcode Reader，提供API进行解码
-
-对于原生应用和小程序，本文将使用WebView来集成Dynamsoft Barcode Reader。
+* 原生应用：编写原生语言插件或者UTS插件使用Dynamsoft Barcode Reader的Android版和iOS版，或者在WebView中使用JavaScript版。本文会使用WebView
+* 小程序：使用相机插件打开相机，传送视频帧给服务端解码
 
 [在线demo](https://delightful-lolly-ba2415.netlify.app/)
 
@@ -499,62 +497,140 @@ npm install dynamsoft-javascript-barcode
 
 ## 集成到小程序
 
-小程序也支持WebView，可以用集成到原生移动应用一样的方法。
+小程序也支持WebView，可以用集成到原生移动应用一样的方法。但在微信小程序中，postMessage需要使用复制链接、分享等操作触发，扫描到结果后需要在执行上述操作之一才能返回主界面。所以，我们采用服务端解码的方案。
 
-我们需要做以下改动：
+### 新建一个小程序用的扫码组件
 
-1. 在网页应用中集成小程序的SDK。
+1. 建立一个新的组件，命名为`QRCodeScannerMP.vue`。
+
+2. 使用相机插件打开相机。
 
    ```html
-   <script type="text/javascript">
-     var userAgent = navigator.userAgent;
-     if (userAgent.indexOf('AlipayClient') > -1) {
-       // 支付宝小程序的 JS-SDK 防止 404 需要动态加载，如果不需要兼容支付宝小程序，则无需引用此 JS 文件。
-       document.writeln('<script src="https://appx/web-view.min.js"' + '>' + '<' + '/' + 'script>');
-     } else if (/QQ/i.test(userAgent) && /miniProgram/i.test(userAgent)) {
-       // QQ 小程序
-       document.write(
-         '<script type="text/javascript" src="https://qqq.gtimg.cn/miniprogram/webview_jssdk/qqjssdk-1.0.0.js"><\/script>'
-       );
-     } else if (/miniProgram/i.test(userAgent) && /micromessenger/i.test(userAgent)) {
-       // 微信小程序 JS-SDK 如果不需要兼容微信小程序，则无需引用此 JS 文件。
-       document.write('<script type="text/javascript" src="https://res.wx.qq.com/open/js/jweixin-1.4.0.js"><\/script>');
-     } else if (/toutiaomicroapp/i.test(userAgent)) {
-       // 头条小程序 JS-SDK 如果不需要兼容头条小程序，则无需引用此 JS 文件。
-       document.write(
-         '<script type="text/javascript" src="https://s3.pstatp.com/toutiao/tmajssdk/jssdk-1.0.1.js"><\/script>');
-     } else if (/swan/i.test(userAgent)) {
-       // 百度小程序 JS-SDK 如果不需要兼容百度小程序，则无需引用此 JS 文件。
-       document.write(
-         '<script type="text/javascript" src="https://b.bdstatic.com/searchbox/icms/searchbox/js/swan-2.0.18.js"><\/script>'
-       );
-     } else if (/quickapp/i.test(userAgent)) {
-       // quickapp
-       document.write('<script type="text/javascript" src="https://quickapp/jssdk.webview.min.js"><\/script>');
-     }
-     if (!/toutiaomicroapp/i.test(userAgent)) {
-       document.querySelector('.post-message-section').style.visibility = 'visible';
+   <template>
+     <view>
+         <camera device-position="back" flash="off" @error="error" style="width: 100%; height: 300px;"></camera>
+     </view>
+   </template>
+
+   <script>
+     export default {
+       name:"QRCodeScannerMP",
+       setup(props,context){
+       },
+       data() {
+         return {
+           
+         };
+       }
      }
    </script>
+
+   <style>
+
+   </style>
    ```
    
-2. 在基于WebView的组件中，如果是小程序，将hasPermission值默认设成true，因为不需要申请相机权限。
+3. 新建一个解码函数，获取视频帧，将其转换为base64后发送给服务端解码，并将扫码结果返回给父组件。这里我们使用[之前一篇文章](https://www.dynamsoft.com/codepool/python-barcode-reading-server.html)写的Python后端提供解码API。这一服务部署在Vercel上，国内可能需要翻墙。小程序正式上架的话，需要部署在国内已经备案的主机上。
 
-   ```
-   //#ifdef MP
-   hasPermission.value = true;
-   //#endif
+   ```js
+   const ctx = uni.createCameraContext();
+   const scanning = ref(false);
+   const captureAndScan = () => {
+     if (scanning.value === true) {
+       console.log("skip");
+       return;
+     }
+     scanning.value === true;
+     ctx.takePhoto({
+       quality: 'high',
+       success: (res) => {
+         let url = res.tempImagePath;
+         uni.getFileSystemManager().readFile({
+             filePath: url,
+             encoding: 'base64', 
+             success: res => {
+               let base64 = res.data 
+               decode(base64);
+             },fail: (e) => {
+               console.log("Failed");
+               scanning.value = false;
+             },
+           }
+         )
+       },
+       fail: ()=> {
+         scanning.value = false;
+       }
+     });
+   }
+   
+   const decode = async (base64) =>  {
+     uni.request({
+         url: 'https://barcode-reading-server.vercel.app/',
+         method: 'POST',
+         data: {
+             base64: base64
+         },
+         header: {
+           'content-type': 'application/json'
+         },
+         success: (res) => {
+           console.log(res.data);
+           let results = [];
+           let parsedResults = res.data.results;
+           for (var i = 0; i < parsedResults.length; i++) {
+             let parsedResult = parsedResults[i];
+             let result = {};
+             result.barcodeText = parsedResult.barcodeText;
+             result.barcodeFormatString = parsedResult.barcodeFormat;
+             result.localizationResult = {};
+             result.localizationResult.x1 = parsedResult.x1;
+             result.localizationResult.x2 = parsedResult.x2;
+             result.localizationResult.x3 = parsedResult.x3;
+             result.localizationResult.x4 = parsedResult.x4;
+             result.localizationResult.y1 = parsedResult.y1;
+             result.localizationResult.y2 = parsedResult.y2;
+             result.localizationResult.y3 = parsedResult.y3;
+             result.localizationResult.y4 = parsedResult.y4;
+             results.push(result);
+           }
+           context.emit("scanned", results);
+         },
+         complete: (res) => {
+           scanning.value = false;
+         }
+     });
+   }
    ```
    
-3. 在条件编译中，添加小程序的判定。
+   这里用`scanning`这一变量控制扫码，如果上一次解码没有完成，则等待它完成。
 
+4. 组件挂载时，开启一个interval进行实时扫描。
+
+   ```js
+   onMounted(() => {
+     startScanning();
+   });
    ```
-   <!--  #ifdef APP || MP -->
-   <QRCodeScanner @scanned="scanned" license="DLS2eyJoYW5kc2hha2VDb2RlIjoiMjAwMDAxLTE2NDk4Mjk3OTI2MzUiLCJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSIsInNlc3Npb25QYXNzd29yZCI6IndTcGR6Vm05WDJrcEQ5YUoifQ=="></QRCodeScanner>
+
+5. 组件卸载时，则停止扫描。
+
+   ```js
+   const interval = ref<any>(null);
+   onBeforeUnmount(() => {
+     stopScanning();
+   });
+   ```
+   
+6. 在`index.vue`的条件编译中，添加小程序的判定。
+
+   ```html
+   <!--  #ifdef MP -->
+   <QRCodeScannerMP @scanned="scanned"></QRCodeScannerMP>
    <!--  #endif -->
    ```
-
-局限：在微信小程序中，postMessage需要使用复制链接、分享等操作触发，扫描到结果后需要在执行上述操作之一才能返回主界面。
+   
+测试下来，服务端扫码的性能还可以，对准后一秒内就能扫出码。
 
 ## 源代码
 
