@@ -12,8 +12,8 @@ tags:
 
 在本文中，我们将构建一个demo web应用，以说明在浏览器中拍摄高分辨率照片的方法。它主要使用以下方式：
 
-1. 使用WebRTC的[getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)在`video`元素中开启相机预览，并使用`canvas`元素捕获帧。有一个[Image Capture API](https://w3c.github.io/mediacapture-image/)，可以拍摄分辨率高于相机预览的照片。但该API的浏览器的支持有限。
-2. 使用`input`元素调用[HTML Media Capture API](https://w3c.github.io/html-media-capture/)，即`<input type=“file”name=“image”accept=“image/*”Capture>`。它能调用系统的相机应用来拍照。<input type="file" name="image" accept="image/*" capture>
+1. 使用WebRTC的[getUserMedia](https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia)在`video`元素中开启相机预览，并使用`canvas`元素捕获帧。此外有一个[Image Capture API](https://w3c.github.io/mediacapture-image/)，可以拍摄分辨率高于相机预览的照片。但该API的浏览器的支持有限。
+2. 使用`input`元素调用[HTML Media Capture API](https://w3c.github.io/html-media-capture/)，即`<input type="file" name="image" accept="image/*" capture>`。它能调用系统的相机应用来拍照。
 
 ## 新建HTML文件
 
