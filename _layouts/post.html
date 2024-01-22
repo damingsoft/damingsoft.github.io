@@ -30,7 +30,9 @@ layout: default
     {%- endfor -%}
     </div>
   {%- endif -%}
-  
+  <div class="edit" style="float:right">
+    <a href="https://github.com/damingsoft/damingsoft.github.io/edit/main/{{ page.path }}" target="_blank" title="编辑页面">编辑本页</a>
+  </div>
   {%- if site.plainwhite.disqus_shortname -%}
   <div id="disqus_thread" style="margin-top:25px"></div>
   <script>
