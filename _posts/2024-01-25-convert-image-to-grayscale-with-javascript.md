@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "如何使用JavaScript生成灰度图"
+title: "如何使用JavaScript灰度化图像"
 date: 2024-01-25 10:00:53 +0800
 categories: 文档扫描
 tags: 
