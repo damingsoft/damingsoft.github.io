@@ -110,115 +110,115 @@ HTML5提供了一个`canvas`标签，我们可以用它操作图像数据。我�
 
 1. 向页面添加一个隐藏的`canvas`元素。
 
-   ```html
-   <canvas id="canvasHidden"></canvas>
-   <style>
-     #canvasHidden {
-       display: none;
-     }
-   </style>
-   ```
+    ```html
+    <canvas id="canvasHidden"></canvas>
+    <style>
+      #canvasHidden {
+        display: none;
+      }
+    </style>
+    ```
 
 2. 添加用于指定旋转阈值的`input`元素。
 
-   ```html
-   <div class="thresholdControls" style="display:inline">
-     <label>
-       Threshold (0-255):
-       <input id="threshold" type="number" min="0" max="255" value="127">
-     </label>
-   </div>
-   ```
+    ```html
+    <div class="thresholdControls" style="display:inline">
+      <label>
+        Threshold (0-255):
+        <input id="threshold" type="number" min="0" max="255" value="127">
+      </label>
+    </div>
+    ```
 
 3. 将canvas的大小设置为图像的大小。
 
-   ```js
-   const image = document.getElementById("image");
-   const canvas = document.getElementById("canvasHidden");
-   canvas.width = image.naturalWidth;
-   canvas.height = image.naturalHeight;
-   ```
+    ```js
+    const image = document.getElementById("image");
+    const canvas = document.getElementById("canvasHidden");
+    canvas.width = image.naturalWidth;
+    canvas.height = image.naturalHeight;
+    ```
 
 4. 获取canvas的context以执行操作。
 
-   ```js
-   const context = canvas.getContext("2d");
-   ```
+    ```js
+    const context = canvas.getContext("2d");
+    ```
 
 5. 将图像绘制到canvas上。
 
-   ```js
-   context.drawImage(image, 0, 0);
-   ```
+    ```js
+    context.drawImage(image, 0, 0);
+    ```
 
 
 6. 获取图像的`ImageData`：
 
-   ```js
-   const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
-   ```
+    ```js
+    const imageData = context.getImageData(0, 0, canvas.width, canvas.height);
+    ```
 
-   `ImageData`以RGBA顺序将像素值存储在`Uint8ClampedArray`中，取值范围是0到255。像素从左上角到右下角逐行排列。
+    `ImageData`以RGBA顺序将像素值存储在`Uint8ClampedArray`中，取值范围是0到255。像素从左上角到右下角逐行排列。
 
 7. 创建一个函数以根据RGB值计算灰度值。
 
-   ```js
-   //https://github.com/image-js/image-js/blob/9ab86a86f6c13a9a7d14c62566c1396c3c6f54f4/src/image/transform/greyAlgorithms.js
-   function RGBToGrayScale(red,green,blue){
-     //return red * 0.2126 + green * 0.7152 + blue * 0.0722;
-     return (red * 6966 + green * 23436 + blue * 2366) >> 15;
-   }
-   ```
+    ```js
+    //https://github.com/image-js/image-js/blob/9ab86a86f6c13a9a7d14c62566c1396c3c6f54f4/src/image/transform/greyAlgorithms.js
+    function RGBToGrayScale(red,green,blue){
+      //return red * 0.2126 + green * 0.7152 + blue * 0.0722;
+      return (red * 6966 + green * 23436 + blue * 2366) >> 15;
+    }
+    ```
 
-   计算灰度值的方法有很多。这里，我们使用`Rec. 709亮度系数`进行转换。使用基于整数的乘法计算和移位优化了计算速度。
+    计算灰度值的方法有很多。这里，我们使用`Rec. 709亮度系数`进行转换。使用基于整数的乘法计算和移位优化了计算速度。
 
 
 8. 创建一个函数以根据阈值确定像素值应该为黑色还是白色。
 
-   ```js
-   //return true if the value should be black. return false if the value should be white
-   function threshold(grayscale){
-     const thresholdValue = parseInt(document.getElementById("threshold").value);
-     if (grayscale < thresholdValue) {
-       return true;
-     }else{
-       return false;
-     }
-   }
-   ```
+    ```js
+    //return true if the value should be black. return false if the value should be white
+    function threshold(grayscale){
+      const thresholdValue = parseInt(document.getElementById("threshold").value);
+      if (grayscale < thresholdValue) {
+        return true;
+      }else{
+        return false;
+      }
+    }
+    ```
 
 9. 遍历所有像素，将RGB值设置为我们计算出的黑白值，黑色是0，白色是255。
 
-   ```js
-   const pixels = imageData.data; //[r,g,b,a,...]
-   for (var i = 0; i < pixels.length; i += 4) {
-     const red = pixels[i];
-     const green = pixels[i + 1];
-     const blue = pixels[i + 2];
-     const grayscale = RGBToGrayScale(red, green, blue)
-     if (threshold(grayscale)) {
-       pixels[i] = 0;
-       pixels[i + 1] = 0;
-       pixels[i + 2] = 0;
-     }else{
-       pixels[i] = 255;
-       pixels[i + 1] = 255;
-       pixels[i + 2] = 255;
-     }
-   }
-   ```
+    ```js
+    const pixels = imageData.data; //[r,g,b,a,...]
+    for (var i = 0; i < pixels.length; i += 4) {
+      const red = pixels[i];
+      const green = pixels[i + 1];
+      const blue = pixels[i + 2];
+      const grayscale = RGBToGrayScale(red, green, blue)
+      if (threshold(grayscale)) {
+        pixels[i] = 0;
+        pixels[i + 1] = 0;
+        pixels[i + 2] = 0;
+      }else{
+        pixels[i] = 255;
+        pixels[i + 1] = 255;
+        pixels[i + 2] = 255;
+      }
+    }
+    ```
 
 10. 放回`ImageData`。
 
-   ```js
-   context.putImageData(imageData, 0, 0);
-   ```
+    ```js
+    context.putImageData(imageData, 0, 0);
+    ```
 
 11. 显示转换后的图像。
 
-   ```js
-   image.src = canvas.toDataURL();
-   ```
+    ```js
+    image.src = canvas.toDataURL();
+    ```
 
 ### 使用OTSU方法确定阈值
 
