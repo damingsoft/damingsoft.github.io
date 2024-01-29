@@ -399,7 +399,7 @@ if (video.videoHeight>video.videoWidth){
 await scanner.updateRuntimeSettings(settings);
 ```
 
-![扫描区域](/album/2021/01/animated-qr/scan_region.jpg)
+![扫描区域](/album/2024/01/animated-qr/scan_region.jpg)
 
 ### 使用更快的定位方法
 
@@ -415,7 +415,7 @@ await scanner.updateRuntimeSettings(settings);
 
 以下是在iOS上运行的最终结果的演示视频：
 
-![视频](/album/2021/01/animated-qr/video.gif)
+![视频](/album/2024/01/animated-qr/video.gif)
 
 
 ## 测试和结论
