@@ -11,7 +11,7 @@ description: 本文分享了可以从哪些方面评估扫描文档的图像质�
 
 [在线demo](https://tony-xlh.github.io/quality-evaluation-of-scanned-document-images/)
 
-## 评估文档图像质量几个方面
+## 评估文档图像质量的几个方面
 
 以下是我们归纳的评估质量的几个方面。
 
@@ -105,7 +105,7 @@ OCR软件在给出文本结果时通常还包含置信度分数。该分数可�
    </div>
    ```
 
-   使用以下JavaScript初始化Web TWAIN的实例。可以[这里](https://www.dynamsoft.com/customer/license/trialLicense?product=dwt)申请许可证。
+   使用以下JavaScript初始化Web TWAIN的实例。可以在[这里](https://www.dynamsoft.com/customer/license/trialLicense?product=dwt)申请许可证。
 
    ```js
    let DWObject;
