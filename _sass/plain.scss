@@ -236,7 +236,11 @@ main {
   margin-bottom: 10px;
 }
 
-.posts .post-title:not(:first-child){
+.posts>:nth-child(2) .post-title {
+  margin-top: 0px;
+}
+
+.posts .post-title {
   margin-top: 30px;
 }
 
