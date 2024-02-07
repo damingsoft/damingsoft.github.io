@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "基于JSON的数据捕捉用领域特定语言"
+title: "基于JSON的数据捕获用领域特定语言"
 date: 2024-02-07 13:57:53 +0800
 categories: 数据捕获
 tags: 
@@ -17,7 +17,7 @@ Martin Fowler对内部DSL和外部DSL进行了定义和区分。内部DSL是使�
 
 让我们首先讨论下不使用DSL和使用DSL的用法。
 
-假设我们要扫描文档并读取下图中的条形码：
+假设我们要扫描下图中的文档并读取条形码：
 
 ![驾驶执照](/album/2024/02/DSL/drivers-license.jpg)
 
@@ -128,7 +128,7 @@ PS：Dynamsoft Capture Vision需要Dynamsoft Document Normalizer v2+和Dynamsoft
 
 为了克服这些缺点， Dynamsoft Capture Vision做了以下工作：
 
-1. 用于修改设置的编程接口： [SimplifiedCaptureVisionSettings](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/interfaces/simplified-capture-vision-settings.html)
+1. 用于修改设置的编程接口： [SimplifiedCaptureVisionSettings](https://www.dynamsoft.com/capture-vision/docs/web/programming/javascript/api-reference/capture-vision-router/interfaces/simplified-capture-vision-settings.html)。
 2. 帮助您学习的详细[文档](https://www.dynamsoft.com/capture-vision/docs/core/architecture/index.html)。
 
 
