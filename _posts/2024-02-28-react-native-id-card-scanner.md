@@ -2,7 +2,7 @@
 layout: post
 title: "构建一个React Native身份证扫描应用"
 date: 2024-02-28 10:16:53 +0800
-categories: 相机
+categories: 文字识别
 tags: 
 description: 本文讨论了如何使用React Native、Vision Camera和Dynamsoft Label Recognizer构建一个身份证扫描应用。
 ---
