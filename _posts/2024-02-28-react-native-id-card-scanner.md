@@ -12,7 +12,7 @@ description: 本文讨论了如何使用React Native、Vision Camera和Dynamsoft
 
 ![荷兰身份证](/album/2023/09/ionic/dutch-id-card.jpg)
 
-在本文中，我们将讨论如何使用React Native编写一个身份证扫描应用。它可以捕获身份证的正面和背面，并通过使用OCR识别MRZ来提取持卡人的信息。使用[Dynamsoft Label Recognizer](https://www.dynamsoft.com/label-recognition/overview/)提供OCR功能。
+在本文中，我们将讨论如何使用React Native编写一个身份证扫描应用。它可以捕获身份证的正面和背面，并通过使用OCR识别MRZ来提取持卡人的信息。本文使用[Dynamsoft Label Recognizer](https://www.dynamsoft.com/label-recognition/overview/)提供OCR功能。
 
 演示视频：
 
@@ -34,7 +34,7 @@ npx react-native@latest init IDCardScanner
    npm install react-native-vision-camera
    ```
 
-2. 安装`vision-camera-dynamsoft-label-recognizer`以识别 MRZ。
+2. 安装`vision-camera-dynamsoft-label-recognizer`以识别MRZ。
 
    ```bash
    npm install vision-camera-dynamsoft-label-recognizer
@@ -154,7 +154,7 @@ export interface ScannedIDCard {
 }
 ```
 
-编写了一个`IDCardManager` 用于使用`async-storage`存储身份证。使用时间戳作键值。
+编写了一个`IDCardManager`用于使用`async-storage`存储身份证。使用时间戳作键值。
 
 ```ts
 import AsyncStorage from '@react-native-async-storage/async-storage';
@@ -780,9 +780,9 @@ export class IDCardManager {
 
 1. 将MRZ模型文件放入项目中。可以在[此处](https://github.com/tony-xlh/react-native-id-card-scanner/tree/main/android/app/src/main/assets/MRZ)找到文件。
 
-   对于Android ，需要将MRZ模型文件放在`assets`下。
+   对于Android，需要将MRZ模型文件放在`assets`下。
 
-   对于iOS ，将MRZ模型文件夹以reference的形式添加。
+   对于iOS，将MRZ模型文件夹以reference的形式添加。
 
    ![给iOS添加模型1](/album/2023/09/ionic/add-model-ios-1.jpg)
 
