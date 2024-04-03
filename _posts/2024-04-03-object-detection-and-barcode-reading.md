@@ -252,4 +252,4 @@ description: 本文讨论了如何将目标检测应用到条码识别中。
 
 ## 参考
 
-[^paper]： Dasiopoulou, Stamatia, et al. "Knowledge-assisted semantic video object detection." IEEE Transactions on Circuits and Systems for Video Technology 15.10 (2005): 1210–1224.
+[^paper]: Dasiopoulou, Stamatia, et al. "Knowledge-assisted semantic video object detection." IEEE Transactions on Circuits and Systems for Video Technology 15.10 (2005): 1210–1224.
