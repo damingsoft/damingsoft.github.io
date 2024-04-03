@@ -43,7 +43,7 @@ title: 首页
         </div>
         <div class="post">
           {%- if site.show_excerpts -%}
-            {{ post.excerpt  | markdownify | strip_html }}
+            {{ post.content | markdownify | strip_html | truncate: 50, "..." }}
           {%- endif -%}
         </div>
       </li>
