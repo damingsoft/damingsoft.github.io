@@ -401,7 +401,7 @@ description: 这篇文章讲述了如何构建一个网页应用来从平板扫�
 
 接下来，让我们使用Dynamic Web TWAIN扫描文档。
 
-1. 配置相关设置并创建Dynamic Web TWAIN 的新实例。将实例绑定到容器，以显示文档查看器。
+1. 配置相关设置并创建Dynamic Web TWAIN的新实例。将实例绑定到容器，以显示文档查看器。
 
    ```js
    let DWObject;
@@ -464,7 +464,7 @@ description: 这篇文章讲述了如何构建一个网页应用来从平板扫�
    }
    ```
 
-4. 将扫描文件保存为 PDF、JPG 或 PNG 格式。
+4. 将扫描文件保存为PDF、JPG或PNG格式。
 
    ```js
    function save(){
@@ -487,7 +487,7 @@ description: 这篇文章讲述了如何构建一个网页应用来从平板扫�
 
 ## 文件裁剪
 
-扫描的文档图像可能是 A4 大小的图像。我们需要裁剪文件。
+扫描的文档图像可能是A4大小的图像。我们需要裁剪文件。
 
 例子：
 
@@ -495,7 +495,7 @@ description: 这篇文章讲述了如何构建一个网页应用来从平板扫�
 
 我们可以使用Dynamsoft Document Normalizer来实现这一功能。
 
-1. 创建一个capture vision router实例，以调用 Dynamsoft的图像处理 SDK。
+1. 创建一个capture vision router实例，以调用Dynamsoft的图像处理 SDK。
 
    ```js
    let router;
@@ -506,7 +506,7 @@ description: 这篇文章讲述了如何构建一个网页应用来从平板扫�
    }
    ```
 
-2. 将通过Web TWAIN 描的文档图像获取为blob。
+2. 将通过Web TWAIN扫描的文档图像获取为blob。
 
    ```js
    async function convertToBlob(index){
@@ -590,7 +590,7 @@ description: 这篇文章讲述了如何构建一个网页应用来从平板扫�
 
 ## 条码读取
 
-接下来，让我们使用 Dynamsoft Barcode Reader来读取驾驶执照上的 PDF417。只需使用以下代码即可：
+接下来，让我们使用Dynamsoft Barcode Reader来读取驾驶执照上的PDF417。只需使用以下代码即可：
 
 ```js
 let barcodeReadingResult = await router.capture(blob, "ReadBarcodes_Balance");
@@ -600,7 +600,7 @@ let barcodeReadingResult = await router.capture(blob, "ReadBarcodes_Balance");
 
 让我们继续使用Dynamsoft Label Recognizer来识别身份证件上的MRZ。
 
-1. 更新运行时设置以识别 MRZ。
+1. 更新运行时设置以识别MRZ。
 
    ```js
    await router.initSettings("{\"CaptureVisionTemplates\": [{\"Name\": \"mrz\",\"ImageROIProcessingNameArray\": [\"roi-mrz-passport\"]}],\"TargetROIDefOptions\": [{\"Name\": \"roi-mrz-passport\",\"TaskSettingNameArray\": [\"task-mrz-passport\"]}],\"TextLineSpecificationOptions\": [{\"Name\": \"tls-mrz-text\",\"CharacterModelName\": \"MRZ\",\"StringRegExPattern\": \"([ACI][A-Z<][A-Z<]{3}[A-Z0-9<]{9}[0-9][A-Z0-9<]{15}){(30)}|([0-9]{2}[(01-12)][(01-31)][0-9][MF<][0-9]{2}[(01-12)][(01-31)][0-9][A-Z<]{3}[A-Z0-9<]{11}[0-9]){(30)}|([A-Z<]{30}){(30)}|([ACIV][A-Z<][A-Z<]{3}[A-Z<]{31}){(36)}|([A-Z0-9<]{9}[0-9][A-Z<]{3}[0-9]{2}[(01-12)][(01-31)][0-9][MF<][0-9]{2}[(01-12)][(01-31)][0-9][A-Z0-9<]{8}){(36)}|([PV][A-Z<][A-Z<]{3}[A-Z<]{39}){(44)}|([A-Z0-9<]{9}[0-9][A-Z<]{3}[0-9]{2}[(01-12)][(01-31)][0-9][MF<][0-9]{2}[(01-12)][(01-31)][0-9][A-Z0-9<]{14}[A-Z0-9<]{2}){(44)}\",\"StringLengthRange\": [30,44],\"CharHeightRange\": [5,1000,1],\"BinarizationModes\": [{\"BlockSizeX\": 30,\"BlockSizeY\": 30,\"Mode\": \"BM_LOCAL_BLOCK\",\"MorphOperation\": \"Close\"}]},{\"Name\": \"tls-mrz-passport\",\"StringRegExPattern\": \"(P[A-Z<][A-Z<]{3}[A-Z<]{39}){(44)}|([A-Z0-9<]{9}[0-9][A-Z<]{3}[0-9]{2}[(01-12)][(01-31)][0-9][MF<][0-9]{2}[(01-12)][(01-31)][0-9][A-Z0-9<]{14}[0-9<][0-9]){(44)}\",\"StringLengthRange\": [44,44],\"BaseTextLineSpecificationName\": \"tls-mrz-text\"}],\"LabelRecognizerTaskSettingOptions\": [{\"Name\": \"mrz-text-task\",\"TextLineSpecificationNameArray\": [\"tls-mrz-text\"],\"SectionImageParameterArray\": [{\"Section\": \"ST_REGION_PREDETECTION\",\"ImageParameterName\": \"ip-mrz-text\"},{\"Section\": \"ST_TEXT_LINE_LOCALIZATION\",\"ImageParameterName\": \"ip-mrz-text\"},{\"Section\": \"ST_TEXT_LINE_RECOGNITION\",\"ImageParameterName\": \"ip-mrz-text\"}]},{\"Name\": \"task-mrz-passport\",\"TextLineSpecificationNameArray\": [\"tls-mrz-text\"],\"BaseLabelRecognizerTaskSettingName\": \"mrz-text-task\"}],\"CharacterModelOptions\": [{\"Name\": \"MRZ\"}],\"ImageParameterOptions\": [{\"Name\": \"ip-mrz-text\",\"TextureDetectionModes\": [{\"Mode\": \"TDM_GENERAL_WIDTH_CONCENTRATION\",\"Sensitivity\": 8}],\"TextDetectionMode\": {\"Mode\": \"TTDM_LINE\",\"CharHeightRange\": [20,1000,1],\"Sensitivity\": 7}}]}");
