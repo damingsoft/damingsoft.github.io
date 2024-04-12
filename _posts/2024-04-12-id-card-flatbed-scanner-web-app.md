@@ -13,11 +13,11 @@ description: 这篇文章讲述了如何构建一个网页应用来从平板扫�
 
 加拿大驾照示例：
 
-![驾驶执照](/ablum/2024/04/id-card-scanner/driver-license.jpg)
+![驾驶执照](/album/2024/04/id-card-scanner/driver-license.jpg)
 
 荷兰身份证示例：
 
-![身份证](/ablum/2024/04/id-card-scanner/formal-id-card.jpg)
+![身份证](/album/2024/04/id-card-scanner/formal-id-card.jpg)
 
 身份证通常通过摄像头或平板扫描仪进行扫描。在本文中，我们将创建一个网络应用，用于从平板扫描仪扫描身份证。
 
@@ -70,17 +70,17 @@ description: 这篇文章讲述了如何构建一个网页应用来从平板扫�
 
 我们将采用以下设计：
 
-![设计](/ablum/2024/04/id-card-scanner/screenshot.jpg)
+![设计](/album/2024/04/id-card-scanner/screenshot.jpg)
 
 左侧有一个侧边栏，用于配置和执行文档扫描。右侧有一个扫描文档查看器和几个执行操作的按钮。
 
 页面打开后，会提示用户填写使用产品的许可证。可以在[此处](https://www.dynamsoft.com/customer/license/trialLicense)申请许可证。
 
-![许可证模态框](/ablum/2024/04/id-card-scanner/license-modal.jpg)
+![许可证模态框](/album/2024/04/id-card-scanner/license-modal.jpg)
 
 提取证件信息后，使用模态框显示结果。
 
-![结果模态框](/ablum/2024/04/id-card-scanner/result-modal.jpg)
+![结果模态框](/album/2024/04/id-card-scanner/result-modal.jpg)
 
 代码：
 
@@ -491,7 +491,7 @@ description: 这篇文章讲述了如何构建一个网页应用来从平板扫�
 
 例子：
 
-![扫描文件](/ablum/2024/04/id-card-scanner/scanned_document.jpg)
+![扫描文件](/album/2024/04/id-card-scanner/scanned_document.jpg)
 
 我们可以使用Dynamsoft Document Normalizer来实现这一功能。
 
