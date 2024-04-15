@@ -21,6 +21,10 @@ description: 这篇文章讲述了如何构建一个网页应用来从平板扫�
 
 身份证件通常通过摄像头或平板扫描仪进行扫描。在本文中，我们将创建一个网络应用，用于从平板扫描仪扫描身份证件。
 
+下图为一台身份证件平板扫描仪（富士通fi-65F）:
+
+![fujitsu scanner](/album/2024/04/id-card-scanner/fujitsu_scanner.jpg)
+
 使用了Dynamsoft的以下SDK：
 
 * [Dynamic Web TWAIN](https://www.dynamsoft.com/web-twain/overview)：从文档扫描仪获取图像。
