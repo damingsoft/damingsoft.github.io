@@ -20,7 +20,7 @@ description: 本文讨论了如何使用JavaScript来检测重复的文档图像
 
 在本文中，我们将使用文档图像最明显的特征：文本。我们将使用OCR提取图像的文本，并使用编辑距离来计算相似度。
 
-## JavaScript Implementation
+## JavaScript实现
 
 以下是执行此操作的关键的JavaScript代码段。
 
