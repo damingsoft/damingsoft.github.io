@@ -16,7 +16,7 @@ description: 本文讨论了如何使用JavaScript来检测重复的文档图像
 计算两张图像之间相似度的方法有很多。主要可分为两类。
 
 1. 计算像素差异（例如[pixelmatch](https://github.com/mapbox/pixelmatch)、[MSE](https://pyimagesearch.com/2014/09/15/python-compare-two-images/) ）。
-2. 提取特征并检查特征是否匹配（例如，[SIFT](https://github.com/adumrewal/SIFTImageSimilarity)、[卷积神经网络](https://github.com/ryanfwy/image-similarity)）。
+2. 提取特征并检查特征是否匹配（例如[SIFT](https://github.com/adumrewal/SIFTImageSimilarity)、[卷积神经网络](https://github.com/ryanfwy/image-similarity)）。
 
 在本文中，我们将使用文档图像最明显的特征：文本。我们将使用OCR提取图像的文本，并使用编辑距离来计算相似度。
 
