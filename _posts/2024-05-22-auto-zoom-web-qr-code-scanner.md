@@ -2,7 +2,7 @@
 layout: post
 title: "给前端扫码应用添加自动变焦功能"
 date: 2024-05-22 11:12:53 +0800
-categories: 文档扫描
+categories: 条码扫描
 tags: 
 description: 本文介绍了如何在Web应用中控制摄像头自动变焦以扫描二维码。
 ---

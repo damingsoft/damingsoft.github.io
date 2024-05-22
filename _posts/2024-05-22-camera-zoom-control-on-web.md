@@ -2,7 +2,7 @@
 layout: post
 title: "如何使用JavaScript控制摄像头变焦"
 date: 2024-05-22 11:10:53 +0800
-categories: 文档扫描
+categories: 摄像头
 tags: 
 description: 本文讨论了如何在Web应用程序中基于getUserMedia API使用JavaScript控制摄像头变焦。
 ---
