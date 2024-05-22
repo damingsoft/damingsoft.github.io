@@ -7,7 +7,7 @@ tags:
 description: 本文介绍了如何在Web应用中控制摄像头自动变焦以扫描二维码。
 ---
 
-在[上一篇文章](./camera-zoom-control-on-web/)中，我们谈到了如何在Web前端应用中控制摄像头变焦。在本文中，我们将编写一个Web扫码应用，并添加自动控制摄像头变焦以扫描远处微小二维码的功能。
+在[上一篇文章](/camera-zoom-control-on-web/)中，我们谈到了如何在Web前端应用中控制摄像头变焦。在本文中，我们将编写一个Web扫码应用，并添加自动控制摄像头变焦以扫描远处微小二维码的功能。
 
 使用[Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/overview/)读取二维码，检测视频流中是否有二维码。
 
