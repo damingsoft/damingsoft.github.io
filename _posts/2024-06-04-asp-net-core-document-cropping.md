@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "编写一个用于裁剪文档图像的ASP.NET应用"
+title: "编写一个用于裁剪文档图像的ASP.NET Core应用"
 date: 2024-06-04 14:29:53 +0800
 categories: 文档扫描
 tags: 
