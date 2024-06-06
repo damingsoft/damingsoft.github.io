@@ -9,11 +9,11 @@ description: 本文介绍了如何编写一个Lightning Web Component来在Sales
 
 Salesforce是一个著名的CRM平台。我们可以用它来管理我们的销售和客户。
 
-Salesforce具有强大的自定义功能。我们可以编写应用来扩展其功能。它的最新技术是Lightning Web Component。我们可以使用现代Web技术去构建应用。
+Salesforce具有强大的自定义功能。我们可以编写应用来扩展其功能。它的最新技术是Lightning Web Component，便于我们用现代Web技术去构建应用。
 
 在本文中，我们将编写一个Lightning Web Component来访问Salesforce中的摄像头。访问摄像头是捕获文档图像或从条形码和文本获取信息的第一步。
 
-为了说明如何访问Salesforce的数据，这个组件还可以将图像上传到服务器（见[前一篇文章](./asp-net-core-document-cropping/)），获取裁剪的文档图像的URL ，将URL添加到线索账户并显示文档图像。如果我们需要附加身份证件图像，这一功能会很有用。
+为了说明如何访问Salesforce的数据，这个组件还可以将图像上传到服务器（见[前一篇文章](/asp-net-core-document-cropping/)），获取裁剪的文档图像的URL ，将URL添加到线索账户并显示文档图像。如果我们需要附加身份证件图像，这一功能会很有用。
 
 
 演示视频：
@@ -33,7 +33,7 @@ Salesforce具有强大的自定义功能。我们可以编写应用来扩展其�
 
 ![新项目](/album/2024/06/salesforce/new_project.jpg)
 
-在此，我们使用标准选项，并使用 `documentScanner` 作为名称。
+在此，我们使用标准选项，并使用`documentScanner`作为名称。
 
 ## 在Salesforce中使用该组件
 
