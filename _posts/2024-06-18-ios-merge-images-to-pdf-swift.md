@@ -160,7 +160,7 @@ DispatchQueue.main.async {
    
    ```
 
-3. 处理图像并将其保存为PDF文件。它使用Capture Vision Router处理图像，使用Image Manager保存结果为PDF文件，然后再分享它，以便我们可以保存它到本地文件中。``
+3. 处理图像并将其保存为PDF文件。它使用Capture Vision Router处理图像，使用Image Manager保存结果为PDF文件，然后再分享它，以便我们可以保存它到本地文件中。
 
    如果`enableAutoCroppingUISwitch`打开，它将检测文档边界并获取裁剪后的图像。否则，处理整个图像。
 
