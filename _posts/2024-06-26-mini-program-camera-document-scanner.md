@@ -868,6 +868,8 @@ CSS：
 </script>
 ```
 
+![保存为PDF](/album/2024/06/mini-program/mwc/save-as-pdf.jpg)
+
 ## 源代码
 
 欢迎下载源代码并尝试使用：
