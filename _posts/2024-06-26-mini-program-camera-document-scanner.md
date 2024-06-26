@@ -171,7 +171,7 @@ CSS：
    );
    ```
 
-2. 初始化Dynamsoft Document Viewer，配置其CaptureViewer、PerspectiveViewer和EditViewer。
+2. 初始化Dynamsoft Document Viewer，配置其CaptureViewer、PerspectiveViewer和EditViewer。（Dynamsoft Document Viewer是Mobile Web Capture的组件之一）
 
    ```js
    await Dynamsoft.DDV.Core.init();
