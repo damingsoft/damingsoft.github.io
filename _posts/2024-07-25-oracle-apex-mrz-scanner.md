@@ -364,7 +364,7 @@ Demo截图：
 
 4. 上传`script.js`文件并将其添加到要加载的文件URL列表中。
 
-   ![脚本文件](/album/2024/07/apex/script-files.jpg)
+   ![脚本文件](/album/2024/07/oracle-apex/script-files.jpg)
 
 
 5. 在PL/SQL代码中，运行下面的代码进行初始化。
