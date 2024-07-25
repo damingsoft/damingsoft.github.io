@@ -242,70 +242,70 @@ Demo截图：
 
 10. 注册camera enhancer的`played`事件，以便在更改分辨率或相机后重新开始扫描。
 
-   ```js
-   this.enhancer.on("played", (playCallbackInfo) => {
-     if (this.interval) {
-       this.startScanning();
-     }
-   });
-   ```
+    ```js
+    this.enhancer.on("played", (playCallbackInfo) => {
+      if (this.interval) {
+        this.startScanning();
+      }
+    });
+    ```
 
 11. 添加使用Dynamsoft Code Parser从MRZ字符串中提取信息的函数。
 
-   ```js
-   init():function(){
-     await Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD1_ID");
-     await Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD2_FRENCH_ID");
-     await Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD2_ID");
-     await Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD2_VISA");
-     await Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD3_PASSPORT");
-     await Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD3_VISA");
-     this.parser = await Dynamsoft.DCP.CodeParser.createInstance();
-   },
-   getParsedString: async function(mrzString){
-     let str = "";
-     let parsedResultItem = await this.parser.parse(mrzString);
-     console.log(parsedResultItem);
-     let MRZFields = ["documentNumber","passportNumber","issuingState","name","sex","nationality","dateOfExpiry","dateOfBirth"];
-     for (let index = 0; index < MRZFields.length; index++) {
-       const field = MRZFields[index];
-       const value = parsedResultItem.getFieldValue(field);
-       if (value){
-         str = str + field + ": " + value + "\n";
-       }
-     }
-     return str;
-   },
-   getMRZString: function(items){
-     let str = "";
-     for (let index = 0; index < items.length; index++) {
-       const item = items[index];
-       str = str + item.text;
-       if (index != items.length - 1) {
-         str = str + "\n";
-       }
-     }
-     return str;
-   },
-   ```
+    ```js
+    init():function(){
+      await Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD1_ID");
+      await Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD2_FRENCH_ID");
+      await Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD2_ID");
+      await Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD2_VISA");
+      await Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD3_PASSPORT");
+      await Dynamsoft.DCP.CodeParserModule.loadSpec("MRTD_TD3_VISA");
+      this.parser = await Dynamsoft.DCP.CodeParser.createInstance();
+    },
+    getParsedString: async function(mrzString){
+      let str = "";
+      let parsedResultItem = await this.parser.parse(mrzString);
+      console.log(parsedResultItem);
+      let MRZFields = ["documentNumber","passportNumber","issuingState","name","sex","nationality","dateOfExpiry","dateOfBirth"];
+      for (let index = 0; index < MRZFields.length; index++) {
+        const field = MRZFields[index];
+        const value = parsedResultItem.getFieldValue(field);
+        if (value){
+          str = str + field + ": " + value + "\n";
+        }
+      }
+      return str;
+    },
+    getMRZString: function(items){
+      let str = "";
+      for (let index = 0; index < items.length; index++) {
+        const item = items[index];
+        str = str + item.text;
+        if (index != items.length - 1) {
+          str = str + "\n";
+        }
+      }
+      return str;
+    },
+    ```
 
 12. 在HTML文件中添加以下内容，以启动MRZ扫描。
 
-   ```js
-   window.onload = async function(){
-     let styles = {width:"100%",height:"100%",left:0,top:0,position:"absolute"}
-     await DLRExtension.load({});
-     await DLRExtension.init({styles:JSON.stringify(styles)});
-     await DLRExtension.open();
-     await DLRExtension.setCallback(async function(items){
-       DLRExtension.close();
-       let mrzString = await DLRExtension.getMRZString(items);
-       let parsedString = await DLRExtension.getParsedString(mrzString);
-       alert(parsedString);
-     });
-     DLRExtension.startScanning();
-   }
-   ```
+    ```js
+    window.onload = async function(){
+      let styles = {width:"100%",height:"100%",left:0,top:0,position:"absolute"}
+      await DLRExtension.load({});
+      await DLRExtension.init({styles:JSON.stringify(styles)});
+      await DLRExtension.open();
+      await DLRExtension.setCallback(async function(items){
+        DLRExtension.close();
+        let mrzString = await DLRExtension.getMRZString(items);
+        let parsedString = await DLRExtension.getParsedString(mrzString);
+        alert(parsedString);
+      });
+      DLRExtension.startScanning();
+    }
+    ```
 
 好的，我们已经完成了网页的编写。接下来，我们将针对APEX插件进行调整。
 
