@@ -96,7 +96,7 @@ import "../configure"
    const MRZScanner: React.FC<MRZScannerProps> = (props:MRZScannerProps) => {
      const container:MutableRefObject<HTMLDivElement|null>  = useRef(null);
      return (
-       <div ref={container} style={{width:"100%",height:"100%"}}></div>
+       <div ref={container} style={% raw %}{{width:"100%",height:"100%"}}{% endraw %}></div>
      )
    }
 
