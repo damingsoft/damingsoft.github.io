@@ -160,7 +160,7 @@ import "../configure"
    }
    ```
 
-   使用以下代码更改capture vision router的运行时设置以读取MRZ。
+   使用以下代码更改capture vision router的运行时设置以读取MRZ。（注：label recognizer需要使用capture vision router去调用）
 
    ```ts
    router.current.initSettings("/template.json");
