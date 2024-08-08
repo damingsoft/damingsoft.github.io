@@ -23,9 +23,9 @@ description: 本文介绍了如何使用JavaScript在一个图片查看器中选
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
      <title>Browse Viewer</title>
+     <style>
+     </style>
    </head>
-   <style>
-   </style>
    <body>
    </body>
    <script>
