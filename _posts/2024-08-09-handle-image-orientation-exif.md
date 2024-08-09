@@ -96,5 +96,5 @@ static func normalizedImage(_ image:UIImage) -> UIImage {
 * [iOS文档扫描](https://github.com/tony-xlh/iOS-Document-Scanner/)
 
 
-使用了Dynamsoft Document Normalizer SDK来执行文档检测和裁剪操作。[](https://www.dynamsoft.com/document-normalizer/overview/)
+使用了[Dynamsoft Document Normalizer](https://www.dynamsoft.com/document-normalizer/overview/) SDK来执行文档检测和裁剪操作。
 
