@@ -134,7 +134,7 @@ description: 本文分享了如何使用JavaScript平移和缩放图像。使用
 
 
 
-然后，我们可以按住控制键，使用鼠标滚轮放大、缩小和平移图像。在移动设备上，我们可以通过双指实现缩放。
+然后，我们可以按住控制键，使用鼠标滚轮放大、缩小和平移图像。在移动设备上，我们可以通过双指实现缩放。下面的视频中，可以看到图片还会跟随鼠标或者触摸点。
 
 <video src="https://github.com/user-attachments/assets/d1416d22-06cf-4c37-8593-2a6002dd45d0" controls="controls" muted="muted" style="max-width:100%;max-height:640px;"></video>
 
