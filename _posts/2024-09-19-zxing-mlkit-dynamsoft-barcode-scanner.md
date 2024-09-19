@@ -298,7 +298,7 @@ Dynamsoft可以返回有关条码的更多详细信息，如原始字节、码�
 
 ### 设置
 
-ZXing、ML Kit和Dynamsoft都有能力设置要使用的条码格式，而Dynamssoft有更多的设置，如下所示：
+ZXing、ML Kit和Dynamsoft都有能力设置要使用的条码格式，而Dynamsoft有更多的设置，如下所示：
 
 1. 扫描区域。
 2. 预期条码数。
