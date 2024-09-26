@@ -181,7 +181,7 @@ const pdfSettings = {
 const blob = await doc.saveToPdf(pdfSettings);
 ```
 
-使用`saveAnnotation`设置，可以指定如何保存注释。它有以下选项：
+使用`saveAnnotation`设置，可以指定如何保存标注。它有以下选项：
 
 * `none`：不保存标注。
 * `image`：将标注融合到图像中。
