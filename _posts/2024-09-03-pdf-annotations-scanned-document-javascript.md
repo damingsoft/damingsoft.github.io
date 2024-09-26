@@ -186,7 +186,7 @@ const blob = await doc.saveToPdf(pdfSettings);
 * `none`：不保存标注。
 * `image`：将标注以图像保存。
 * `annotation`：将标注以PDF标注格式保存。
-* `flatten`：将标注融合到页面图像中。
+* `flatten`：将标注以不可编辑的信息保存。
 
 
 如果我们选择`annotation`选项，导出后，我们可以用Dynamsoft Document Viewer或Adobe Acrobat等其他PDF编辑器继续编辑标注。
