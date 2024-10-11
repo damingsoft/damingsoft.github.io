@@ -2,7 +2,7 @@
 layout: post
 title: "前端生成快递单PDF"
 date: 2024-09-29 10:10:53 +0800
-categories: 文档扫描
+categories: 文档
 tags: 
 description: 本文介绍了如何使用JavaScript创建一个在线快递单PDF生成器。可以直接在浏览器上生成PDF文件进行打印。
 ---
