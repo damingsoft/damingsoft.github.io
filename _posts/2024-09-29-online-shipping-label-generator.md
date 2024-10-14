@@ -39,7 +39,7 @@ description: 本文介绍了如何使用JavaScript创建一个在线快递单PDF
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rotate an Image with JavaScript</title>
+  <title>Online Shipping Label Generator</title>
   <style>
   h2 {
     text-align: center;
