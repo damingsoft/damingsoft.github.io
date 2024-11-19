@@ -16,7 +16,7 @@ img {
 
 使用`getUserMedia` API ，我们可以使用JavaScript在Web应用中调用摄像头。大多数浏览器都支持此功能， Chrome Android还额外支持控制摄像头的`缩放`、`手电筒`、`对焦`等能力，为制作摄像头网页应用提供了更多可能性。
 
-在本文中，我们将讨论如何在Web应用中控制摄像头对焦。会编写两个demo，一个直接调用`getUserMedia`，一个使用[Dynamsoft Camera Enhancer](https://www.dynamsoft.com/capture-vision/docs/core/introduction/?lang=javascript#dynamsoft-camera-enhancerindex.html)。
+在本文中，我们将讨论如何在Web应用中控制摄像头对焦。会编写两个demo，一个直接调用`getUserMedia`，一个使用[Dynamsoft Camera Enhancer](https://www.dynamsoft.com/capture-vision/docs/core/introduction/?lang=javascript#dynamsoft-camera-enhancer)。
 
 `getUserMedia`可以控制对焦模式和对焦距离，但不提供“触摸对焦”功能。Dynamsoft Camera Enhancer可通过计算图像对比度来实现“触摸对焦”。
 
