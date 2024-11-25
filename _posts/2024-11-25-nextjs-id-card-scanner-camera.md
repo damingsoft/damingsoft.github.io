@@ -2,7 +2,7 @@
 layout: post
 title: "编写一个从摄像头扫描身份证件的Next.js应用"
 date: 2024-11-25 15:20:53 +0800
-categories: 摄像头
+categories: 数据捕获
 tags: 
 description: 文章讨论了如何构建一个Next.js应用程序，通过摄像头扫描身份证件。它可以读取身份证、护照和驾照上的MRZ和条形码，提取持有人的信息。
 ---
