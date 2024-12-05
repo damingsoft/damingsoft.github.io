@@ -4,6 +4,7 @@ email: support@damingsoft.com
 description: > # this means to ignore newlines until "show_exerpts:"
   大名维森软件的开发者博客。大名维森软件的主要产品是文档扫描和图像处理SDK。
 show_excerpts: true # set to true to show excerpts on the homepage
+locale: zh_CN
 paginate: 10
 # Minima date format
 # refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
