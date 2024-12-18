@@ -50,7 +50,7 @@ VIN是车辆识别号码的英文的缩写。这是一个独特的17个字符的
    implementation 'com.dynamsoft:dynamsoftvin:3.4.20'
    ```
 
-## 初始化许可证。
+## 初始化许可证
 
 初始化许可证以使用Dynamsoft的SDK。可以在此处申请[许可证](https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform)。
 
