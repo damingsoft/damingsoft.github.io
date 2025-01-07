@@ -8,7 +8,7 @@ description: 本文讨论了如何使用Dynamsoft Barcode Reader构建一个HTML
 ---
 
 <style>
-article img{
+.post-container img{
   max-height:400px;
 }
 </style>
