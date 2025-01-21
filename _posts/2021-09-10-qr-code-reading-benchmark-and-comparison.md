@@ -277,5 +277,5 @@ elapsedTime = int((end_time - start_time) * 1000)
 
 我们可以看到，Dynamsoft Barcode Reader的二维码读取率是测试集中最好的，速度也相当不错。如果条件允许，最好选择它作为二维码识别的SDK。
 
-可以在[这里](https://tony-xlh.github.io/barcode-dataset/benchmark/#/project/QRCode)浏览具体的测试结果。
+可以在[这里](https://www.dynamsoft.com/barcode-dataset/benchmark/project/QRCode)浏览具体的测试结果。
 
