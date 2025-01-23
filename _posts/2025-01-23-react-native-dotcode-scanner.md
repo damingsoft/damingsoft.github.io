@@ -39,7 +39,7 @@ npm install dynamsoft-capture-vision-react-native
 
 ## 设置许可证
 
-在`App.tsx`添加以下代码以在应用启动时设置许可证。
+在`App.tsx`添加以下代码以在应用启动时设置许可证。可以在此处申请[许可证](https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform)。
 
 ```tsx
 useEffect(()=>{
