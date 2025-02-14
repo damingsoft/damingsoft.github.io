@@ -249,7 +249,7 @@ kotlin.apple.deprecated.allowUsingEmbedAndSignWithCocoaPodsDependencies=true
 
 ### Android实现
 
-1. 在`MainActivity.kt`中初始化许可证：
+1. 在`MainActivity.kt`中初始化许可证。可以在此处申请[许可证](https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform)。
 
    ```kotlin
    class MainActivity : ComponentActivity() {
