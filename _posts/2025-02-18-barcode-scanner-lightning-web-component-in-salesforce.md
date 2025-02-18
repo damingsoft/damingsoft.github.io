@@ -7,7 +7,7 @@ tags:
 description: 文章分享了如何编写一个用于扫描条码的Salesforce Lightning Web Component。
 ---
 
-在本文中，我们将创建一个Lightning Web Component（LWC），用于在著名的CRM系统Salesforce中扫描条码，以便快速输入数据。 [Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/overview/) is used for barcode scanning.
+在本文中，我们将创建一个Lightning Web Component（LWC），用于在著名的CRM系统Salesforce中扫描条码，以便快速输入数据。使用了[Dynamsoft Barcode Reader](https://www.dynamsoft.com/barcode-reader/overview/)扫码SDK。
 
 由于Dynamsoft Barcode Reader使用WASM，而WASM默认情况下无法在Salesforce LWC中运行，我们需要使用`iframe`嵌入一个条码扫描网页，使用`postMessage`在网页和组件之间进行通信。
 
@@ -26,7 +26,7 @@ description: 文章分享了如何编写一个用于扫描条码的Salesforce Li
 
 打开Visual Studio Code，按Ctrl + Shift + P（ Windows ）或Cmd + Shift + P（ macOS ）打开命令面板，然后输入SFDX，选择`Create Project`操作。
 
-![新项目](./album/2024/06/salesforce/new_project.jpg)
+![新项目](https://devblogs.damingsoft.com/album/2024/06/salesforce/new_project.jpg)
 
 在这里，我们使用标准选项。
 
