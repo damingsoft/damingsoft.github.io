@@ -8,11 +8,13 @@ code.highlighter-rouge {
 	background-color: #f4f4f4;
 }
 
-div.highlight {
-	padding: 5px 20px;
-}
 pre.highlight, code {
 	font-family: 'Consolas', Menlo, monospace;
 	line-height: 1.4em;
 	tab-size: 4;
+}
+
+pre.highlight {
+	max-height: 400px;
+	padding: 15px;
 }
