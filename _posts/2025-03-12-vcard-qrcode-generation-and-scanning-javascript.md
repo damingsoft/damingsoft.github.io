@@ -238,7 +238,7 @@ vCard可通过电子邮件、聊天应用、NFC或网络链接等方式进行分
 
 然后，初始化Dynamsoft Barcode Reader。
 
-1. 初始化许可证。可以在此处申请[许可证](https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform)。
+1. 初始化许可证。可以在[此处](https://www.dynamsoft.com/customer/license/trialLicense/?product=dcv&package=cross-platform)申请许可证。
 
    ```js
    Dynamsoft.License.LicenseManager.initLicense("LICENSE-KEY");
