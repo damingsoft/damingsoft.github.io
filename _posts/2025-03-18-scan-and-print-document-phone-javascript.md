@@ -13,31 +13,6 @@ img{
 }
 </style>
 
-
-```java
-package com.dynamsoft.scansinglebarcode;
-import android.os.Bundle;
-import android.widget.TextView;
-import com.dynamsoft.dbrbundle.ui.BarcodeScanResult;
-import com.dynamsoft.dbrbundle.ui.BarcodeScannerActivity;
-import com.dynamsoft.dbrbundle.ui.BarcodeScannerConfig;
-import com.dynamsoft.core.basic_structures.DSRect;
-import androidx.activity.result.ActivityResultLauncher;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-public class MainActivity extends AppCompatActivity {
-   private ActivityResultLauncher<BarcodeScannerConfig> launcher;
-   @Override
-   protected void onCreate(@Nullable Bundle savedInstanceState) {
-      super.onCreate(savedInstanceState);
-      setContentView(R.layout.activity_main);
-      TextView textView = findViewById(R.id.tv_result);
-      BarcodeScannerConfig config = new BarcodeScannerConfig();
-      config.setLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
-   }
-}
-```
-
 使用手机扫描文档并打印方便快捷。在本文中，我们将编写一个支持在手机浏览器中扫描和打印文档的网页应用。
 
 使用Dynamsoft的以下SDK：
