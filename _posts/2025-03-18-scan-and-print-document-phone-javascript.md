@@ -13,6 +13,31 @@ img{
 }
 </style>
 
+
+```java
+package com.dynamsoft.scansinglebarcode;
+import android.os.Bundle;
+import android.widget.TextView;
+import com.dynamsoft.dbrbundle.ui.BarcodeScanResult;
+import com.dynamsoft.dbrbundle.ui.BarcodeScannerActivity;
+import com.dynamsoft.dbrbundle.ui.BarcodeScannerConfig;
+import com.dynamsoft.core.basic_structures.DSRect;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+public class MainActivity extends AppCompatActivity {
+   private ActivityResultLauncher<BarcodeScannerConfig> launcher;
+   @Override
+   protected void onCreate(@Nullable Bundle savedInstanceState) {
+      super.onCreate(savedInstanceState);
+      setContentView(R.layout.activity_main);
+      TextView textView = findViewById(R.id.tv_result);
+      BarcodeScannerConfig config = new BarcodeScannerConfig();
+      config.setLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
+   }
+}
+```
+
 使用手机扫描文档并打印方便快捷。在本文中，我们将编写一个支持在手机浏览器中扫描和打印文档的网页应用。
 
 使用Dynamsoft的以下SDK：
@@ -24,15 +49,15 @@ img{
 
 图像捕获：
 
-![捕获查看器](/album/2025/03/scan-and-print/capture-viewer.jpg)
+![捕获查看器](https://devblogs.damingsoft.com/album/2025/03/scan-and-print/capture-viewer.jpg)
 
 扫描的图像（裁剪的）：
 
-![已扫描](/album/2025/03/scan-and-print/scanned.jpg)
+![已扫描](https://devblogs.damingsoft.com/album/2025/03/scan-and-print/scanned.jpg)
 
 用于打印的黑白图像：
 
-![黑白图](/album/2025/03/scan-and-print/black-white.jpg)
+![黑白图](https://devblogs.damingsoft.com/album/2025/03/scan-and-print/black-white.jpg)
 
 [在线demo](https://tony-xlh.github.io/scan-and-print-document-javascript/)
 
@@ -118,15 +143,15 @@ Dynamsoft Document Viewer为文档扫描提供了多个组件。
 
 Capture Viewer：
 
-![捕获查看器](/album/2025/03/scan-and-print/capture-viewer.jpg)
+![捕获查看器](https://devblogs.damingsoft.com/album/2025/03/scan-and-print/capture-viewer.jpg)
 
 Perspective Viewer：
 
-![透视查看器](/album/2025/03/scan-and-print/perspective-viewer.jpg)
+![透视查看器](https://devblogs.damingsoft.com/album/2025/03/scan-and-print/perspective-viewer.jpg)
 
 Edit Viewer：
 
-![编辑查看器](/album/2025/03/scan-and-print/edit-viewer.jpg)
+![编辑查看器](https://devblogs.damingsoft.com/album/2025/03/scan-and-print/edit-viewer.jpg)
 
 
 以下是用于设置这些组件的代码。
@@ -566,13 +591,13 @@ function createEmptyPage(width,height){
 }
 ```
 
-![调整后的图像](/album/2025/03/scan-and-print/resized-image.jpg)
+![调整后的图像](https://devblogs.damingsoft.com/album/2025/03/scan-and-print/resized-image.jpg)
 
 ## 应用图像滤镜
 
 还需要漂白图像以便打印。我们可以使用Dynamsoft Document Viewer的Edit Viewer应用图像滤镜。
 
-![图像滤镜](/album/2025/03/scan-and-print/image-filters.jpg)
+![图像滤镜](https://devblogs.damingsoft.com/album/2025/03/scan-and-print/image-filters.jpg)
 
 下面是设置图像滤镜的代码：
 
@@ -631,11 +656,11 @@ function downloadBlob(blob,filename){
 
 在iOS设备上，我们可以使用AirPrint。
 
-![airprint](/album/2025/03/scan-and-print/airprint.jpg)
+![airprint](https://devblogs.damingsoft.com/album/2025/03/scan-and-print/airprint.jpg)
 
 在安卓设备上，我们可以使用Mopria。
 
-![mopria](/album/2025/03/scan-and-print/mopria.jpg)
+![mopria](https://devblogs.damingsoft.com/album/2025/03/scan-and-print/mopria.jpg)
 
 ## 源代码
 
