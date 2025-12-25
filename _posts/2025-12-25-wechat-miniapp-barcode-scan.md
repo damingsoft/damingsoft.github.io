@@ -173,14 +173,10 @@ const listener = context.onCameraFrame(async (frame) => {
 
 ## 六、小程序演示
 
-![小程序](/album/2025/12/wechat-miniapp-barcode-scanner.jpg)
+![小程序](/album/2025/12/wechat-miniapp-barcode-scan.jpg)
 
 ![演示页面](/album/2025/12/wechat-miniapp-barcode-scanner.jpg)
 
-
-## 源代码
-
-<https://github.com/tony-xlh/Dynamic-Web-TWAIN-samples/tree/main/Windows-SANE>
 
 
 
