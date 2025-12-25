@@ -12,6 +12,8 @@ description: 本文介绍了在微信小程序中集成Dynamsoft Barcode Reader 
 
 本文将分享如何在微信小程序中集成 Dynamsoft Barcode Reader JS WebAssembly SDK，实现高性能的1D/2D多码扫描功能。
 
+![小程序开发工具](/album/2025/12/wechat-miniapp-dev-tool.png)
+
 ## 一、技术选型：为什么选择 Dynamsoft Barcode Reader
 
 ### 1.1 需求背景
