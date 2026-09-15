@@ -1,0 +1,38 @@
+{%- comment -%}
+  面包屑：首页 →（分类）→ 当前页。文章用第一个分类作为中间层级，
+  其他页面直接两级。分类锚点指向 /categories/ 里对应的分组标题。
+{%- endcomment -%}
+{%- assign crumb_title = page.title | default: site.title | strip -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "首页",
+      "item": "{{ site.url }}/"
+    }
+    {%- if page.categories and page.categories.size > 0 %},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ page.categories[0] | jsonify }},
+      "item": "{{ site.url }}/categories/#{{ page.categories[0] }}"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": {{ crumb_title | jsonify }}
+    }
+    {%- else %},
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": {{ crumb_title | jsonify }}
+    }
+    {%- endif %}
+  ]
+}
+</script>

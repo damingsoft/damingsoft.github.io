@@ -1,0 +1,37 @@
+{%- comment -%}
+  单个演示工具卡片。用法：{% include demo-card.html demo=demo %}
+  数据来自 _data/demos.yml，/demos/ 页面与首页区块共用这一个模板。
+
+  锚点 id 直接放在 <article> 上，不额外套一层 <div>：article 自己就是 grid 子项，
+  这样 .demo-card-body 的 flex:1 才有确定的高度可以撑开，
+  同一行里"打开工具"按钮才会落在同一条基线上。
+{%- endcomment -%}
+<article class="demo-card" id="{{ include.demo.slug }}">
+  <a class="demo-card-media" href="{{ include.demo.url }}" target="_blank" rel="noopener">
+    <img src="{{ include.demo.image | relative_url }}"
+         alt="{{ include.demo.title }}界面截图"
+         width="720" height="450" loading="lazy" decoding="async">
+  </a>
+  <div class="demo-card-body">
+    <h3 class="demo-card-title">
+      <a href="{{ include.demo.url }}" target="_blank" rel="noopener">{{ include.demo.title }}</a>
+    </h3>
+    <p class="demo-card-en">{{ include.demo.title_en }}</p>
+    <p class="demo-card-desc">{{ include.demo.description | strip_newlines }}</p>
+    <ul class="demo-tags">
+      {%- for capability in include.demo.capabilities %}
+      <li>{{ capability }}</li>
+      {%- endfor %}
+    </ul>
+    <p class="demo-card-actions">
+      <a class="demo-btn" href="{{ include.demo.url }}" target="_blank" rel="noopener">打开工具</a>
+      {%- if include.demo.related_posts and include.demo.related_posts.size > 0 %}
+      <a class="demo-link" href="{{ include.demo.related_posts[0] | relative_url }}">配套中文教程</a>
+      {%- endif %}
+    </p>
+    <p class="demo-card-foot">
+      <a href="{{ include.demo.tutorial }}" target="_blank" rel="noopener">英文原版教程</a>
+      <span>更新于 {{ include.demo.updated }}</span>
+    </p>
+  </div>
+</article>

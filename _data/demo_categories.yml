@@ -1,0 +1,14 @@
+# 在线演示工具的分组。key 必须与 _data/demos.yml 中的 category 对应，
+# 本文件的顺序决定页面上分组的先后顺序。没有对应工具的分组会被自动跳过。
+
+- key: scanner
+  label: 扫描类工具
+  intro: 打开摄像头或上传图片，直接看到识别结果。
+
+- key: generator
+  label: 生成类工具
+  intro: 造出可用的测试素材，用来验证自己的扫码/读码逻辑。
+
+- key: document-tools
+  label: 文档处理工具
+  intro: 围绕 PDF 与图像做标注、脱敏和导出。

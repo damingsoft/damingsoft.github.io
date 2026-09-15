@@ -1,12 +1,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
+{%- comment -%}
+  标题只由这里输出一次。
+  以前页面里有两个 <title>：手写的这个，和 jekyll-seo-tag 自己输出的那个。
+  爬虫按后者为准，于是"页标题 | 站名"和"页标题 - 站名"两套格式并存在同一份 HTML 里。
+  现在用 title=false 关掉 seo tag 的标题，全站只剩一个标题。
+
+  首页和分页页单独处理：首页原先是"首页 - 站名"，既没有关键词也不像标题；
+  分页页沿用了同一份 front matter，标题会和首页撞车。
+{%- endcomment -%}
+{%- if page.url == '/' -%}
+<title>{{ site.title }} - {{ site.plainwhite.tagline }}</title>
+{%- elsif paginator.page > 1 -%}
+<title>{{ site.title }} - 全部文章 第 {{ paginator.page }} 页</title>
+{%- elsif page.title -%}
 <title>{{ page.title }} - {{ site.title }}</title>
+{%- else -%}
+<title>{{ site.title }}</title>
+{%- endif -%}
+<link rel="icon" href="{{ '/favicon.ico' | relative_url }}">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css?family=Merriweather:300|Raleway:400,700" rel="stylesheet">
 <link rel="stylesheet" href="{{ "/assets/css/style.css" | relative_url }}">
-{% seo %}
+{%- comment -%}
+  jekyll-seo-tag 负责 canonical、description、og:、twitter:，以及它自己的
+  BlogPosting / WebSite JSON-LD。
+{%- endcomment -%}
+{% seo title=false %}
+{%- comment -%} jekyll-feed：RSS 订阅入口，也方便聚合类采集器发现新文章 {%- endcomment -%}
+{% feed_meta %}
+{%- if paginator and paginator.page > 1 %}
+{%- comment -%}
+  分页页（/page2/ 起）是同一批文章的重复视图，让它们不被收录，但保留 follow，
+  链接权重照常传递。
+{%- endcomment -%}
+<meta name="robots" content="noindex, follow">
+{%- endif %}
+{% include schemas/structured-data.html %}
 {% if site.plainwhite.dark_mode %}
 <script type="text/javascript" src="{{ "/assets/js/darkmode.js" | relative_url }}"></script>
 {% endif %}
 <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-<script>LA.init({id:"KgZN0laobrfmXkdh",ck:"KgZN0laobrfmXkdh"})</script>
+<script>if (window.LA) { LA.init({id:"KgZN0laobrfmXkdh",ck:"KgZN0laobrfmXkdh"}) }</script>

@@ -1,0 +1,386 @@
+// ---------------------------------------------------------------------------
+// AEO / 在线演示工具 相关组件样式
+//
+// 只使用站点已有的视觉语言：正文 #222、次要文字 #555/#666、分隔线 #ececec、
+// 链接色 #0a59b0，字体继承 body（微软雅黑）。这里不引入新的主色，
+// 以免工具页看起来像另一个站点。
+//
+// !default 是为了兼容导入顺序：plain.scss 里已经定义了同名变量时以它为准。
+// ---------------------------------------------------------------------------
+
+$linkColor: #0a59b0 !default;
+$mobileW: 768px !default;
+
+$aeo-border: #ececec;
+$aeo-muted: #666;
+$aeo-heading: #222;
+
+// --- 侧边栏导航 -------------------------------------------------------------
+
+.site-nav {
+  width: 100%;
+  margin-top: 16px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    width: 100%;
+    text-align: center;
+  }
+
+  a {
+    display: block;
+    padding: 8px 0;
+    font-size: 15px;
+    color: $aeo-muted;
+    text-decoration: none;
+    border-bottom: 1px solid #f2f2f2;
+    transition: color 0.2s;
+
+    &:hover {
+      color: $linkColor;
+    }
+  }
+
+  li.is-current a {
+    color: $linkColor;
+  }
+
+  // 移动端首屏很宝贵：竖排的四行链接会把正文推到屏幕下方，
+  // 这里改成横向紧凑的一排。
+  @media screen and (max-width: $mobileW) {
+    margin-top: 12px;
+
+    ul {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    li {
+      width: auto;
+    }
+
+    a {
+      padding: 4px 12px;
+      border: 1px solid #ececec;
+      border-radius: 3px;
+    }
+  }
+}
+
+// --- /demos/ 页面 -----------------------------------------------------------
+//
+// 注意选择器写法：这一页的内容渲染在 `.post` 里，而 plain.scss 有
+// `.post p { margin-top: 10px }`（优先级 0,1,1）。只用单个类名（0,1,0）写
+// 段落样式会被它压过去——「打开工具」按钮的 margin-top:auto 就是这样失效的，
+// 同一行的按钮落不到同一条基线上。所以这里一律用两级选择器。
+
+.demo-page .demo-lede {
+  font-size: 16px;
+  line-height: 2em;
+  color: #444;
+  margin: 0 0 28px;
+}
+
+.demo-page .demo-group-intro {
+  color: $aeo-muted;
+  font-size: 15px;
+  margin: 0 0 14px;
+}
+
+.demo-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 0 34px;
+  font-size: 14px;
+
+  th,
+  td {
+    text-align: left;
+    padding: 9px 10px;
+    border-bottom: 1px solid $aeo-border;
+    vertical-align: top;
+    line-height: 1.7em;
+  }
+
+  th {
+    background: #f7f7f7;
+    color: #444;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  td:last-child,
+  th:last-child {
+    white-space: nowrap;
+  }
+}
+
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(248px, 1fr));
+  gap: 18px;
+  margin: 0 0 34px;
+
+  @media screen and (max-width: $mobileW) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.demo-card {
+  display: flex;
+  flex-direction: column;
+  // grid 子项默认 stretch，卡片高度由同一行最高的一张决定；
+  // 这里不写 height:100%（百分比高度在没有确定父高度时会失效），
+  // 同一行卡片的按钮因此能对齐。
+  border: 1px solid $aeo-border;
+  border-radius: 4px;
+  background: #fff;
+  overflow: hidden;
+  transition: border-color 0.2s, box-shadow 0.2s;
+
+  &:hover {
+    border-color: #b9cfe4;
+    box-shadow: 0 2px 10px rgba(10, 89, 176, 0.08);
+  }
+}
+
+.demo-card-media {
+  display: block;
+  background: #f4f6f8;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 168px;
+    object-fit: cover;
+    object-position: top center;
+  }
+}
+
+.demo-card-body {
+  padding: 14px 16px 16px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.demo-card-title {
+  font-size: 17px;
+  font-weight: normal;
+  line-height: 1.5em;
+  margin: 0 0 2px;
+
+  a {
+    text-decoration: none;
+    color: $aeo-heading;
+
+    &:hover {
+      color: $linkColor;
+    }
+  }
+}
+
+.demo-card .demo-card-en {
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  color: #9a9a9a;
+  margin: 0 0 8px;
+}
+
+.demo-card .demo-card-desc {
+  font-size: 14px;
+  line-height: 1.85em;
+  color: #555;
+  margin: 0 0 10px;
+}
+
+.demo-tags {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+
+  li {
+    font-size: 12px;
+    color: #5a7c92;
+    background: #eef4f9;
+    border-radius: 2px;
+    padding: 2px 7px;
+    line-height: 1.6em;
+  }
+}
+
+.demo-card .demo-card-actions {
+  margin: auto 0 0;
+  padding-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.demo-btn {
+  display: inline-block;
+  padding: 6px 16px;
+  font-size: 14px;
+  color: $linkColor;
+  border: 1px solid $linkColor;
+  border-radius: 3px;
+  text-decoration: none;
+  transition: background-color 0.2s, color 0.2s;
+
+  &:hover {
+    background: $linkColor;
+    color: #fff;
+  }
+}
+
+.demo-link {
+  font-size: 13px;
+  color: $aeo-muted;
+}
+
+.demo-card .demo-card-foot {
+  margin: 12px 0 0;
+  padding-top: 10px;
+  border-top: 1px solid #f4f4f4;
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  color: #9a9a9a;
+
+  a {
+    color: #9a9a9a;
+
+    &:hover {
+      color: $linkColor;
+    }
+  }
+}
+
+.demo-page .demo-notes {
+  font-size: 15px;
+  line-height: 2em;
+  color: #444;
+
+  li {
+    margin-bottom: 4px;
+  }
+
+  strong {
+    color: $aeo-heading;
+  }
+}
+
+.demo-page .demo-contact {
+  margin-top: 30px;
+  padding: 14px 18px;
+  background: #fafbfc;
+  border: 1px solid $aeo-border;
+  border-radius: 4px;
+  font-size: 15px;
+  line-height: 1.9em;
+  color: #444;
+}
+
+// --- 文章页：本文要点 --------------------------------------------------------
+
+.post-summary {
+  border-left: 3px solid $linkColor;
+  background: #f5f8fb;
+  padding: 14px 18px;
+  margin: 0 0 24px;
+}
+
+.post-summary-label {
+  margin: 0 0 6px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: $linkColor;
+  font-weight: bold;
+}
+
+.post-summary-text {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.95em;
+  color: #333;
+}
+
+// --- 文章页：相关在线演示 ----------------------------------------------------
+
+.related-demos {
+  margin-top: 36px;
+  padding-top: 22px;
+  border-top: 1px solid $aeo-border;
+}
+
+.related-demos-title {
+  font-size: 19px;
+  font-weight: normal;
+  color: $aeo-heading;
+  margin: 0 0 8px;
+}
+
+.related-demos-intro {
+  font-size: 15px;
+  line-height: 1.9em;
+  color: $aeo-muted;
+  margin: 0 0 14px;
+}
+
+.related-demos-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 14px;
+
+  li {
+    margin: 0 0 8px;
+  }
+}
+
+.related-demo {
+  display: block;
+  padding: 12px 16px;
+  border: 1px solid $aeo-border;
+  border-radius: 4px;
+  background: #fff;
+  text-decoration: none;
+  transition: border-color 0.2s;
+
+  &:hover {
+    border-color: #b9cfe4;
+  }
+}
+
+.related-demo-title {
+  display: block;
+  font-size: 15px;
+  color: $linkColor;
+  margin-bottom: 4px;
+}
+
+.related-demo-desc {
+  display: block;
+  font-size: 13px;
+  line-height: 1.8em;
+  color: $aeo-muted;
+}
+
+.related-demos-more {
+  margin: 0;
+  font-size: 15px;
+}

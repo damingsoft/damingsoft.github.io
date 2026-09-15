@@ -1,0 +1,31 @@
+{%- comment -%}
+  文章/列表的 ItemList。
+  用法：{% include schemas/item-list.html posts=paginator.posts %}
+  posts 为空时回退到全站文章，用于 /categories/ 与 /tags/ 这类汇总页。
+{%- endcomment -%}
+{%- if include.posts -%}
+  {%- assign sd_posts = include.posts -%}
+{%- else -%}
+  {%- assign sd_posts = site.posts -%}
+{%- endif -%}
+{%- assign sd_name = page.title | default: site.title | strip -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": {{ sd_name | jsonify }},
+  "description": {{ page.description | default: site.description | strip_newlines | jsonify }},
+  "itemListOrder": "https://schema.org/ItemListOrderDescending",
+  "numberOfItems": {{ sd_posts | size }},
+  "itemListElement": [
+    {%- for post in sd_posts %}
+    {
+      "@type": "ListItem",
+      "position": {{ forloop.index }},
+      "name": {{ post.title | jsonify }},
+      "url": "{{ site.url }}{{ post.url }}"
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>

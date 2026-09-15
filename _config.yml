@@ -3,6 +3,17 @@ author: 大名维森软件
 email: support@damingsoft.com
 description: > # this means to ignore newlines until "show_exerpts:"
   大名维森软件的开发者博客。大名维森软件的主要产品是文档扫描和图像处理SDK。
+# Absolute site URL. Required by jekyll-seo-tag (canonical / og:url) and by
+# sitemap.xml. Without it those tags were emitted relative ("/post/") or dropped
+# entirely, which is why the sitemap used to contain an empty <loc></loc>.
+url: "https://devblogs.damingsoft.com"
+# Feeds <meta property="og:locale"> and the RSS channel language.
+lang: zh-CN
+# Organization logo, used by the JSON-LD Organization node.
+logo: /assets/portfolio.png
+# Share cards: /assets/og/ holds the 1200x630 covers.
+twitter:
+  card: summary_large_image
 show_excerpts: true # set to true to show excerpts on the homepage
 locale: zh_CN
 paginate: 10
@@ -23,6 +34,17 @@ plainwhite:
     #- home
     - page
     - post
+  # Navigation is rendered once, at the top of the sidebar
+  # (see _includes/site-nav.html). It is deliberately not repeated in the footer.
+  navigation:
+    - title: 首页
+      url: /
+    - title: 在线演示工具
+      url: /demos/
+    - title: 分类
+      url: /categories/
+    - title: 标签
+      url: /tags/
   # generate social links in footer
   social_links:
     #twitter: samarsault
@@ -33,12 +55,12 @@ plainwhite:
     #flickr:   jekyll
     #instagram: jekyll
     #pinterest: jekyll
-    #youtube: jekyll
-    #facebook: jekyll
+    #youtube:   jekyll
+    #facebook:  jekyll
     #soundcloud: jekyll
-    #telegram: jekyll
-    #gitlab: jekyll
-    #email: jekyll
+    #telegram:  jekyll
+    #gitlab:    jekyll
+    #email:     jekyll
 
     # Mastodon instances
     # mastodon:
@@ -52,10 +74,20 @@ plainwhite:
 #header_pages:
 # - about.md
 permalink: /:title/
+
+# Default social cover for every post. Posts carry no `image` of their own, so
+# without this every share card and every Article rich result was imageless.
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      image: /assets/og/og-default.png
+
 # Build settings
 # theme: plainwhite
 
 plugins:
   - jekyll-seo-tag
   - jekyll-paginate
-#  - jekyll-feed
+  - jekyll-feed

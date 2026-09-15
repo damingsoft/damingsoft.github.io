@@ -1,6 +1,8 @@
 ---
 title: 标签
 layout: page
+description: 按标签浏览大名维森软件开发者博客的全部文章。
+image: /assets/og/og-default.png
 ---
 
 标签：

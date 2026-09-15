@@ -1,0 +1,13 @@
+{%- comment -%}
+  站内导航。数据来自 _config.yml 的 plainwhite.navigation，
+  由 _layouts/default.html 渲染在侧边栏标题下方。
+{%- endcomment -%}
+<nav class="site-nav" aria-label="站内导航">
+  <ul>
+    {%- for link in site.plainwhite.navigation %}
+    <li{% if page.url == link.url %} class="is-current"{% endif %}>
+      <a href="{{ link.url | relative_url }}">{{ link.title }}</a>
+    </li>
+    {%- endfor %}
+  </ul>
+</nav>

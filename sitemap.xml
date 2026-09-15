@@ -1,25 +1,49 @@
 ---
 layout: null
 ---
-{%-if site.plainwhite.sitemap -%}
-    <?xml version="1.0" encoding="UTF-8"?>
-    <urlset
-        xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-        <url>
-            <loc>{{ site.url }}</loc>
-	    <lastmod>{{ 'now' | date_to_xmlschema }}</lastmod>
-            <priority>1.00</priority>
-        </url>
-        {%- for post in site.posts -%}
-            <url>
-                <loc>{{ site.url }}{{ post.url }}</loc>
-                <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
-                <changefreq>weekly</changefreq>
-                <priority>0.80</priority>
-            </url>
-        {%- endfor -%}
-    </urlset>    
+{%- comment -%}
+  手写 sitemap。原来是 {{ site.url }}，但 _config.yml 里没有配置 url，于是生成结果里
+  <loc> 是空的或者相对路径（/post-title/），搜索引擎读不了。现在 url 已经在
+  _config.yml 里配置好，这里补上工具页 / 分类页 / 标签页，并且不再收录 /page2/ 之后
+  的分页页（那些页面已经在 head 里标了 noindex）。
+{%- endcomment -%}
+{%- if site.plainwhite.sitemap -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>{{ site.url }}/</loc>
+        <lastmod>{{ site.posts.first.date | date_to_xmlschema }}</lastmod>
+        <changefreq>daily</changefreq>
+        <priority>1.00</priority>
+    </url>
+    {%- assign newest_demo = site.data.demos | sort: 'updated' | last %}
+    <url>
+        <loc>{{ site.url }}/demos/</loc>
+        <lastmod>{{ newest_demo.updated | date_to_xmlschema }}</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/categories/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.60</priority>
+    </url>
+    <url>
+        <loc>{{ site.url }}/tags/</loc>
+        <changefreq>weekly</changefreq>
+        <priority>0.50</priority>
+    </url>
+    {%- for post in site.posts %}
+    <url>
+        <loc>{{ site.url }}{{ post.url }}</loc>
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.80</priority>
+    </url>
+    {%- endfor %}
+</urlset>
 {%- endif -%}

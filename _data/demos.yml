@@ -1,0 +1,210 @@
+# 在线演示工具注册表 —— 中文站唯一数据源
+#
+# 页面、首页区块、JSON-LD（ItemList）、llms.txt、sitemap.xml 都从本文件读取，
+# 新增一个工具只需要在这里加一条记录。
+#
+# 字段说明：
+#   slug            英文目录名，与 https://www.dynamsoft.com/codepool/demos/<slug>/ 对应
+#   title           中文名称（用于页面标题与卡片）
+#   title_en        英文名称（用于对照，便于读者在英文文档中检索）
+#   category        _data/demo_categories.yml 中的 key，决定分组
+#   url             工具线上地址（绝对路径，托管在 Dynamsoft CDN）
+#   image           卡片缩略图（本站本地副本，避免中国读者加载境外大图）
+#   description     中文一句话说明，写给读者，也方便 AI 引擎直接引用
+#   capabilities    中文能力标签
+#   updated         上游更新时间，YYYY-MM-DD
+#   tutorial        英文版配套教程（codepool 原文）
+#   related_posts   本站中文教程的 URL 列表；第一条作为卡片主推教程，
+#                   同时让这些文章页底部自动出现「在线演示」入口
+#
+# 注意：这些工具使用 Dynamsoft SDK，许可证绑定域名，因此本站以「导航 + 中文说明」
+# 的方式引入，不复制工具本体。这样既不会破坏许可证校验，也避免维护重复代码。
+
+- slug: barcode-scanner
+  title: 在线条码扫描器
+  title_en: Online Barcode Scanner
+  category: scanner
+  url: https://www.dynamsoft.com/codepool/demos/barcode-scanner/
+  image: /assets/demos/barcode-scanner.jpg
+  description: >-
+    从摄像头实时画面、JPG/PNG/GIF 图片或 MP4/WebM/MOV 视频文件中识别一维码与二维码，
+    支持识别结果框选标记、自定义扫描模板，并提供批量图片的识别率与准确率基准测试模式。
+  capabilities:
+    - 条码
+    - 视频识别
+    - 基准测试
+  updated: '2026-09-11'
+  tutorial: https://www.dynamsoft.com/codepool/web-html5-app-javascript-barcode-scanner.html
+  related_posts:
+    - /remix-barcode-qr-code-scanner/
+    - /qr-code-reading-benchmark-and-comparison/
+    - /scan-ean-upc-and-its-add-on-javascript/
+    - /Dynamsoft-Fast-Barcode-Scanning/
+
+- slug: barcode-mrz-document-scanner
+  title: 条码 / MRZ / 文档综合扫描器
+  title_en: Online Barcode, MRZ and Document Scanner
+  category: scanner
+  url: https://www.dynamsoft.com/codepool/demos/barcode-mrz-document-scanner/
+  image: /assets/demos/barcode-mrz-document-scanner.jpg
+  description: >-
+    上传一张图片或打开摄像头，同时完成三件事：解码条码、解析护照与身份证的 MRZ 机读区、
+    检测并矫正文档边框。适合一次性验证多种数据采集能力。
+  capabilities:
+    - 条码
+    - MRZ
+    - 文档检测
+  updated: '2026-09-11'
+  tutorial: https://www.dynamsoft.com/codepool/javascript-scan-barcode-mrz-document.html
+  related_posts:
+    - /vin-scanner-in-html5-barcode-ocr/
+    - /scan-id-card-via-camera-web-app/
+    - /id-card-flatbed-scanner-web-app/
+
+- slug: mrz-scanner
+  title: 在线 MRZ 与护照扫描器
+  title_en: Online MRZ & Passport Scanner
+  category: scanner
+  url: https://www.dynamsoft.com/codepool/demos/mrz-scanner/
+  image: /assets/demos/mrz-scanner.jpg
+  description: >-
+    识别护照与身份证件上的 MRZ 机读区文字，解析成姓名、国籍、证件号码、有效期等结构化字段，
+    同时检测证件边框并裁剪出证件照，支持上传图片或摄像头实时取景。
+  capabilities:
+    - MRZ
+    - 护照
+    - 证件照提取
+  updated: '2026-09-11'
+  tutorial: https://www.dynamsoft.com/codepool/extract-structured-data-photos-from-passports-javascript.html
+  related_posts:
+    - /nextjs-mrz-scanner/
+    - /electron-passport-scanner-desktop-app/
+    - /usb-camera-android-mrz-scanner/
+    - /oracle-apex-mrz-scanner/
+
+- slug: multi-document-capture
+  title: 在线多页文档扫描器
+  title_en: Online Multi-Page Document Scanner
+  category: scanner
+  url: https://www.dynamsoft.com/codepool/demos/multi-document-capture/
+  image: /assets/demos/multi-document-capture.jpg
+  description: >-
+    用摄像头或图片文件连续采集多页文档：实时边缘检测、基于画面稳定度的自动拍摄、透视校正、
+    页面重新排序与色彩滤镜，最后导出为 PDF 或图片，全过程在浏览器内完成。
+  capabilities:
+    - 文档扫描
+    - 自动拍摄
+    - 导出 PDF
+  updated: '2026-09-11'
+  tutorial: https://www.dynamsoft.com/codepool/build-multi-page-document-scanner-web-app.html
+  related_posts:
+    - /efficient-bulk-document-scanning-web-app/
+    - /scan-to-pdf-camera-react/
+    - /vue-scan-to-pdf-camera/
+    - /mobile-document-scanning-in-html5/
+
+- slug: pdf-image-annotation
+  title: 在线 PDF 与图像标注工作台
+  title_en: Online PDF & Image Annotation Studio
+  category: document-tools
+  url: https://www.dynamsoft.com/codepool/demos/pdf-image-annotation/
+  image: /assets/demos/pdf-image-annotation.jpg
+  description: >-
+    打开 PDF 与图片，追加扫描页或拍照页，自动检测文档边缘、读取条码与 MRZ，用原生文档工具栏
+    做标注与涂黑脱敏，最后导出为可编辑或扁平化的 PDF、PNG、JPEG 或多页 TIFF。
+  capabilities:
+    - PDF
+    - 标注
+    - 涂黑脱敏
+    - 条码
+    - MRZ
+  updated: '2026-09-14'
+  tutorial: https://www.dynamsoft.com/codepool/build-pdf-image-annotation-document-viewer.html
+  related_posts:
+    - /pdf-annotations-scanned-document-javascript/
+    - /burn-annotation-to-pdf-page-javascript/
+    - /pdf-creating-viewing-and-annotating-in-react/
+    - /pdf-creating-viewing-and-annotating-in-vue/
+    - /how-to-embed-pdf-in-html/
+
+- slug: driver-license-scanner
+  title: 在线驾照条码扫描器
+  title_en: Online Driver License Scanner
+  category: scanner
+  url: https://www.dynamsoft.com/codepool/demos/driver-license-scanner/
+  image: /assets/demos/driver-license-scanner.jpg
+  description: >-
+    用摄像头或图片扫描驾照上的 PDF417 条码，按 AAMVA 规范解析出姓名、出生日期、住址、
+    驾照号码和有效期等结构化字段，解析过程全部在浏览器本地完成。
+  capabilities:
+    - 条码
+    - PDF417
+    - AAMVA
+    - 证件解析
+  updated: '2026-09-11'
+  tutorial: https://www.dynamsoft.com/codepool/javascript-driver-license-pdf417-scanner-web.html
+  related_posts:
+    - /scan-id-card-via-camera-web-app/
+    - /react-native-id-card-scanner/
+    - /nextjs-id-card-scanner-camera/
+
+- slug: driver-license-generator
+  title: 在线驾照条码生成器
+  title_en: Online Driver License Generator
+  category: generator
+  url: https://www.dynamsoft.com/codepool/demos/driver-license-generator/
+  image: /assets/demos/driver-license-generator.jpg
+  description: >-
+    为美国、加拿大和墨西哥共 71 个辖区生成符合 AAMVA 规范的合成 PDF417 驾照条码，
+    可预览证件正反面并下载 PNG，用于测试驾照扫描器的解析逻辑。
+  capabilities:
+    - 生成器
+    - PDF417
+    - AAMVA
+    - 测试数据
+  updated: '2026-09-11'
+  tutorial: https://www.dynamsoft.com/codepool/generate-aamva-driver-license-barcode-javascript.html
+  related_posts:
+    - /generate-and-decode-vector-pdf-barcode/
+    - /online-shipping-label-generator/
+
+- slug: mrz-generator
+  title: 在线 MRZ 机读区生成器
+  title_en: Online MRZ Generator
+  category: generator
+  url: https://www.dynamsoft.com/codepool/demos/mrz-generator/
+  image: /assets/demos/mrz-generator.jpg
+  description: >-
+    生成符合 ICAO 9303 标准的护照、身份证和签证 MRZ 字符串（含正确校验位），
+    可一键填入随机示例数据，并在 HTML5 canvas 上渲染模拟证件预览。
+  capabilities:
+    - MRZ
+    - 生成器
+    - ICAO 9303
+    - 测试数据
+  updated: '2026-09-11'
+  tutorial: https://www.dynamsoft.com/codepool/free-online-mrz-generator.html
+  related_posts:
+    - /nextjs-mrz-scanner/
+    - /mrz-text-scanner-in-jetpack-compose/
+
+- slug: barcode-qrcode-generator
+  title: 在线条码与二维码生成器
+  title_en: Online Barcode & QR Code Generator
+  category: generator
+  url: https://www.dynamsoft.com/codepool/demos/barcode-qrcode-generator/
+  image: /assets/demos/barcode-qrcode-generator.jpg
+  description: >-
+    把文本编码为 QR Code、Data Matrix、PDF417、Aztec、MaxiCode、DotCode、EAN-13、
+    Code 128、Code 39 等条码，最多可在同一张画布上排布 36 个符号，并下载 PNG 用于测试扫码应用。
+  capabilities:
+    - 生成器
+    - 二维码
+    - 批量排布
+    - 测试数据
+  updated: '2026-09-11'
+  tutorial: https://www.dynamsoft.com/codepool/chrome-extension-barcode-qr-code-generator.html
+  related_posts:
+    - /online-qr-code-generator/
+    - /vcard-qrcode-generation-and-scanning-javascript/
+    - /python-qr-code-generator/

@@ -1,0 +1,49 @@
+---
+permalink: /llms.txt
+layout: null
+sitemap: false
+---
+# 大名维森软件开发者博客
+
+> 大名维森软件开发者博客（devblogs.damingsoft.com）是面向中文开发者的技术博客，内容以文档扫描、
+> 图像处理、条码识别、护照与证件 MRZ 解析、Web TWAIN 和 PDF 处理为主，配套 Dynamsoft SDK 的
+> 分步教程、可运行示例代码与在线演示工具。全部文章为中文原创或经中文改写，代码示例可直接使用。
+
+> 本站还提供 {{ site.data.demos | size }} 个免费的在线演示工具，全部在浏览器本地运行（WebAssembly
+> 与 JavaScript），图片、视频帧和 PDF 不上传服务器，无需安装与注册。
+
+## 在线演示工具（{{ site.data.demos | size }} 个）
+
+> 每个工具都对应一篇教程。工具托管在 www.dynamsoft.com，本站提供中文说明与教程入口。
+
+{% for demo in site.data.demos -%}
+- [{{ demo.title }}]({{ demo.url }})：{{ demo.description | strip_newlines }}
+{% endfor %}
+
+## 本站中文教程（按时间倒序，共 {{ site.posts | size }} 篇）
+
+{% for post in site.posts -%}
+- [{{ post.title | strip_newlines }}]({{ site.url }}{{ post.url }}): {{ post.description | default: post.excerpt | strip_html | strip_newlines | truncate: 150 }}
+{% endfor %}
+
+## 分类入口
+
+{% for category in site.categories -%}
+- {{ category[0] }}（{{ category[1] | size }} 篇）: {{ site.url }}/categories/#{{ category[0] }}
+{% endfor %}
+
+## 关于
+
+- 站点：{{ site.url }}/
+- 在线演示工具：{{ site.url }}/demos/
+- 全部文章：{{ site.url }}/categories/
+- 标签索引：{{ site.url }}/tags/
+- 开发者博客所有者：大名维森软件（Damingsoft），Dynamsoft 相关产品在中国区的技术支持与销售
+- 联系方式：{{ site.email }}
+- 源码（本站）：https://github.com/damingsoft/damingsoft.github.io
+- 源码（示例代码）：https://github.com/damingsoft
+- RSS 订阅：{{ site.url }}/feed.xml
+
+## 引用说明
+
+转载或引用本站内容时，请保留原文链接与作者信息。文章中涉及的 SDK 名称、商标归其各自所有者。

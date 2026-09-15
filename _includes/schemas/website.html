@@ -1,0 +1,46 @@
+{%- comment -%}
+  首页实体：Organization（谁在写）+ WebSite（站点本身，带站内搜索）。
+
+  SearchAction 指向 /?q={search_term_string}，这里不是"声明了就算"：首页的搜索框
+  确实实现了 ?q= 参数（见 assets/js/search.js），所以这个声明是真实可用的，
+  读者从搜索结果直接跳到站内搜索结果页也能用。
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "{{ site.url }}/#organization",
+      "name": "大名维森软件",
+      "alternateName": "Damingsoft",
+      "url": "https://www.damingsoft.com/",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "{{ site.url }}{{ site.logo }}"
+      },
+      "email": {{ site.email | jsonify }},
+      "sameAs": [
+        "https://github.com/damingsoft"
+      ]
+    },
+    {
+      "@type": "WebSite",
+      "@id": "{{ site.url }}/#website",
+      "url": "{{ site.url }}/",
+      "name": {{ site.title | jsonify }},
+      "description": {{ site.description | strip_newlines | jsonify }},
+      "inLanguage": "zh-CN",
+      "publisher": { "@id": "{{ site.url }}/#organization" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "{{ site.url }}/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
+    }
+  ]
+}
+</script>

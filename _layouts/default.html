@@ -31,6 +31,8 @@
       {%- if site.plainwhite.tagline -%}
       <p class="tagline">{{ site.plainwhite.tagline }}</p>
       {%- endif -%}
+      {%- comment -%} 导航只在侧边栏出现一次（见 _includes/site-nav.html）。 {%- endcomment -%}
+      {%- include site-nav.html -%}
       </div>
       {% capture footer %}
       {%- if site.plainwhite.social_links != '' -%}
@@ -135,17 +137,11 @@
         {%- endif -%}
       </ul>
       {%- endif -%}
-      {%- if site.plainwhite.navigation -%}
-      <nav class="navigation about-footer {{condensed_class}}">
-        <ul>
-          {% for link in site.plainwhite.navigation %}
-          <li>
-            <a href="{{ link.url }}">{{ link.title }}</a>
-          </li>
-          {% endfor %}
-        </ul>
-      </nav>
-      {%- endif -%}
+      {%- comment -%}
+        导航原来渲染在这个 footer 片段里，而该片段在侧边栏和页面底部各输出一次，
+        于是导航会重复两遍。现在导航统一由 _includes/site-nav.html 在侧边栏渲染，
+        这里不再输出。
+      {%- endcomment -%}
       <p class="about-footer {{condensed_class}}">&copy;
         {{ "now" | date: "%Y" }}</p>
       {%- if site.plainwhite.dark_mode -%}

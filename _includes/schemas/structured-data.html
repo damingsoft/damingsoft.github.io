@@ -1,0 +1,34 @@
+{%- comment -%}
+  JSON-LD 调度器 —— 由 _includes/head.html 引入。
+
+  为什么是「只补不重」：
+  jekyll-seo-tag 已经为文章输出 BlogPosting、为首页输出 WebSite，但它不知道
+  面包屑、列表、FAQ 和工具清单。这个调度器只输出 gem 没有输出的实体
+  （BreadcrumbList / ItemList / Organization+WebSite+SearchAction / FAQPage），
+  避免出现两份互相矛盾的同一实体。可以同时存在多个 ld+json 脚本块，这是合法的。
+
+  为什么不写 _plugins/*.rb：
+  这个仓库由 GitHub Pages 以 safe 模式构建，自定义插件不会执行。CodePool 里
+  用 _plugins/aeo.rb 从正文里自动抽取 FAQ/HowTo、用 seo_tag_patch.rb 关掉 gem
+  自带的 JSON-LD，那两个文件在这里都是死代码，所以这里一律用纯 Liquid 实现。
+  FAQ 因此改为显式 front matter（page.faq），需要哪篇加哪篇，可控且不会误抽。
+{%- endcomment -%}
+{%- comment -%} 404 页面是独立 HTML，不参与结构化数据 {%- endcomment -%}
+{%- unless page.url == '/404.html' -%}
+{%- if page.url == '/' -%}
+{% include schemas/website.html %}
+{% include schemas/item-list.html posts=paginator.posts %}
+{%- elsif page.url == '/demos/' -%}
+{% include schemas/breadcrumb.html %}
+{% include schemas/demo-list.html %}
+{% include schemas/faq.html %}
+{%- elsif page.url == '/categories/' or page.url == '/tags/' -%}
+{% include schemas/breadcrumb.html %}
+{% include schemas/item-list.html posts=site.posts %}
+{%- elsif page.layout == 'post' -%}
+{% include schemas/breadcrumb.html %}
+{% include schemas/faq.html %}
+{%- elsif page.title -%}
+{% include schemas/breadcrumb.html %}
+{%- endif -%}
+{%- endunless -%}

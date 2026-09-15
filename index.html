@@ -1,34 +1,84 @@
 ---
 layout: default
-title: 首页
+# 不设 title：head.html 对首页单独输出"站点名 - 一句话定位"，
+# 分页页输出"站点名 - 第 N 页"，都比"首页 - 站点名"更像一个标题。
+# og:title 会自然回退到 site.title。
+image: /assets/og/og-default.png
 ---
 
-{%- if page.title -%}
-  <h1 class="page-heading">{{ page.title }}</h1>
-{%- endif -%}
+{%- comment -%}
+  首页头部 + 在线工具区块。
+
+  两点是刻意这么写的：
+
+  1. 这里不再输出"首页"字样的 H1。侧边栏已经在标识站点身份，再来一行"首页"是纯粹的
+     重复；换成站点名 + 一句话说明，H1 才承载了关键词，也更像首页该有的样子。
+  2. .home-top 自己做 30px 的水平内缩，是为了和下面的 .posts 对齐
+     （plain.scss 里 .posts 用的是 margin: 45px 30px）。不这样做，页面会出现两条左边界，
+     工具区块比文章标题往左凸出 30px，看起来就是"没对齐"。
+
+  只在第 1 页渲染这一块：分页页（/page2/ 起）再铺一遍工具清单没有意义，只会把正文推下去。
+{%- endcomment -%}
+{%- assign demo_count = site.data.demos | size -%}
+
+{% if paginator.page == 1 %}
+<div class="home-top">
+  <h1 class="home-title">{{ site.title }}</h1>
+  <p class="home-lede">
+    面向中文开发者的技术博客：文档扫描、图像处理、条码识别、护照与证件 MRZ 解析、Web TWAIN
+    与 PDF 处理，配套可运行的示例代码和 {{ demo_count }} 个免安装的在线工具。
+  </p>
+
+  <section class="home-demos" aria-label="在线演示工具">
+    <div class="home-demos-head">
+      <h2>在线演示工具</h2>
+      <a class="home-demos-all" href="{{ '/demos/' | relative_url }}">全部 {{ demo_count }} 个 &rarr;</a>
+    </div>
+    <p class="home-demos-intro">
+      全部在浏览器本地运行，无需安装、无需注册，图片和摄像头画面不会上传到服务器。
+    </p>
+    {%- for category in site.data.demo_categories -%}
+    {%- assign category_demos = site.data.demos | where: "category", category.key -%}
+    {%- if category_demos.size > 0 %}
+    <p class="home-demos-row">
+      <span class="home-demos-label">{{ category.label }}</span>
+      {%- for demo in category_demos -%}
+      <a href="{{ demo.url }}" target="_blank" rel="noopener">{{ demo.title }}</a>
+      {%- unless forloop.last %}<span class="home-demos-sep">·</span>{% endunless -%}
+      {%- endfor -%}
+    </p>
+    {%- endif -%}
+    {%- endfor -%}
+  </section>
+</div>
+{% elsif paginator.page > 1 %}
+<h1 class="home-title home-title-sub">全部文章 · 第 {{ paginator.page }} 页</h1>
+{% endif %}
 
 {%- if site.posts.size > 0 -%}
   <ul class="posts">
-    <li class="posts-labelgroup" id="posts-labelgroup">
-      <h1 id="posts-label">搜索</h1>
+    <li class="home-search">
       {% if site.plainwhite.search %}
+      {%- comment -%}
+        搜索框改成常驻可见。原来是折叠的：不点开就只剩"搜索"两个字和一个图标悬在
+        一条长横线上，看起来像没加载完。
+      {%- endcomment -%}
       <div class="search-container">
-        <div class="search-section">
-          <i class="icon-search"></i>
-          <input type="text" name="search" id="searchbar" autocomplete="off" aria-label="search in posts">
-        </div>
+        <i class="icon-search" aria-hidden="true"></i>
+        <input type="text" name="search" id="searchbar" autocomplete="off"
+               placeholder="搜索文章…" aria-label="搜索文章">
         <div class="search-results" id="search-results" data-placeholder="没有结果" style="display: none;"></div>
       </div>
       {% endif %}
     </li>
 
     {%- for post in paginator.posts -%}
-      <li>
+      <li class="post-item">
         {%- assign date_format = site.plainwhite.date_format | default: "%Y年%-m月%-d日" -%}
         <a class="post-link" href="{{ post.url | relative_url }}">
           <h2 class="post-title">{{ post.title | escape }}</h2>
         </a>
-        <div class="post-meta justify-with-space">
+        <div class="post-meta">
           <div class="post-date">
             <i class="icon-calendar"></i>
             {{ post.date | date: date_format }}
@@ -41,7 +91,7 @@ title: 首页
           </ul>
           {%- endif -%}
         </div>
-        <div class="post">
+        <div class="post-excerpt">
           {%- if site.show_excerpts -%}
             {{ post.content | markdownify | strip_html | truncate: 100, "..." }}
           {%- endif -%}

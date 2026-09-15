@@ -1,0 +1,36 @@
+{%- comment -%}
+  文章底部的「相关在线演示」入口。
+  对应关系不写在文章里，而是写在 _data/demos.yml 每个工具的 related_posts 列表里：
+  这样一篇文章和哪个工具相关，是在注册表里一眼能看全的，改一处就同步到所有页面。
+
+  先扫一遍再决定要不要渲染整个 <section>，避免出现一个空标题。
+{%- endcomment -%}
+{%- assign related_count = 0 -%}
+{%- for demo in site.data.demos -%}
+  {%- if demo.related_posts contains page.url -%}
+    {%- assign related_count = related_count | plus: 1 -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if related_count > 0 -%}
+<section class="related-demos" aria-label="相关在线演示">
+  <h2 class="related-demos-title">在线试用本文用到的能力</h2>
+  <p class="related-demos-intro">
+    下面这些工具全部在浏览器本地运行，无需安装、无需注册，打开即可验证效果。
+  </p>
+  <ul class="related-demos-list">
+    {%- for demo in site.data.demos -%}
+      {%- if demo.related_posts contains page.url -%}
+    <li>
+      <a class="related-demo" href="{{ demo.url }}" target="_blank" rel="noopener">
+        <span class="related-demo-title">{{ demo.title }}</span>
+        <span class="related-demo-desc">{{ demo.description | strip_newlines | truncate: 70 }}</span>
+      </a>
+    </li>
+      {%- endif -%}
+    {%- endfor -%}
+  </ul>
+  <p class="related-demos-more">
+    <a href="{{ '/demos/' | relative_url }}">查看全部 {{ site.data.demos | size }} 个在线演示工具 &rarr;</a>
+  </p>
+</section>
+{%- endif -%}

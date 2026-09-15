@@ -1,0 +1,18 @@
+{%- comment -%}
+  「本文要点」摘要块，渲染在文章正文之前。
+
+  目的有两个，且都是 AEO 层面的：一是让读者在 5 秒内知道这篇值不值得读，
+  二是给 AI 引擎一段自足的、可直接引用的答案段落。摘要有 description 就用
+  description（作者自己写的），没有就退回正文首段。
+
+  aria-label + <p> 而不是 <ul>：这是一段话，不是要点列表，别为了视觉把它
+  拆成项目符号去凑格式。
+{%- endcomment -%}
+{%- assign summary = page.description | default: page.excerpt -%}
+{%- assign summary = summary | strip_html | strip_newlines | strip -%}
+{%- if summary != '' -%}
+<aside class="post-summary" aria-label="本文要点">
+  <p class="post-summary-label">本文要点</p>
+  <p class="post-summary-text">{{ summary | truncate: 260 }}</p>
+</aside>
+{%- endif -%}

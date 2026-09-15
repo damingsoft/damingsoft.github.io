@@ -1,0 +1,30 @@
+{%- comment -%}
+  可选 FAQ 结构化数据。只有当页面 front matter 里显式写了 faq 列表时才输出：
+
+    faq:
+      - q: 这些工具是免费的吗？
+        a: 免费……
+
+  下面的可见 HTML 与这里的 JSON-LD 读的是同一份 front matter，改一处即可，
+  不会出现"页面上写着 A、结构化数据里写着 B"的情况。
+{%- endcomment -%}
+{%- if page.faq and page.faq.size > 0 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {%- for item in page.faq %}
+    {
+      "@type": "Question",
+      "name": {{ item.q | jsonify }},
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": {{ item.a | jsonify }}
+      }
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ]
+}
+</script>
+{%- endif -%}

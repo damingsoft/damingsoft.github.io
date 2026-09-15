@@ -1,8 +1,8 @@
 ---
-title: Page Not Found
+title: 页面不存在
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh">
 <head>
 	{%- include head.html -%}
 	<style>
@@ -25,10 +25,22 @@ title: Page Not Found
 		height: 80vh;
 	}
 	p {text-align: center; line-height: 2em;}
+	ul.notfound-links {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		line-height: 2.2em;
+	}
 	</style>
 </head>
 <body>
 	<h2>404</h2>
-	<p>Page not found.</p>
+	<p>这个地址下没有内容，页面可能已经移动或者改名了。</p>
+	<ul class="notfound-links">
+		<li><a href="{{ '/' | relative_url }}">返回首页</a></li>
+		<li><a href="{{ '/demos/' | relative_url }}">打开在线演示工具（{{ site.data.demos | size }} 个）</a></li>
+		<li><a href="{{ '/categories/' | relative_url }}">按分类浏览全部文章</a></li>
+	</ul>
 </body>
 </html>

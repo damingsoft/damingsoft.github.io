@@ -1,0 +1,93 @@
+# robots.txt —— 大名维森软件开发者博客
+# https://devblogs.damingsoft.com
+
+User-agent: *
+Allow: /
+# 分页页是同一批文章的重复视图，页面里已经标了 noindex，这里一并挡掉抓取
+Disallow: /page
+Disallow: /search.json
+
+# ---------------------------------------------------------------------------
+# 生成式 AI / 答案引擎爬虫
+# ---------------------------------------------------------------------------
+# 本站的教程和在线工具明确欢迎被 AI 引擎索引和引用：技术内容的价值在于被准确地
+# 引用，而不是被访问一次。逐个 UA 列出，是为了让"允许"这件事是显式的，
+# 而不是依赖默认值——很多站点的 robots 只写了 * 规则，AI 引擎无从判断你的意图。
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: DuckAssistBot
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+# ---------------------------------------------------------------------------
+# 中文搜索引擎与国内 AI 爬虫（本站主要读者在中国大陆）
+# ---------------------------------------------------------------------------
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Baiduspider-render
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+User-agent: Sogou inst spider
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+User-agent: HaosouSpider
+Allow: /
+
+User-agent: YisouSpider
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# 给 AI 引擎的站点摘要（llms.txt 约定，非标准但被主流引擎读取）
+# https://devblogs.damingsoft.com/llms.txt
+Sitemap: https://devblogs.damingsoft.com/sitemap.xml

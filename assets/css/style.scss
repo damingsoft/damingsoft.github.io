@@ -11,3 +11,10 @@
   @import "toggle";
   @import "dark";
 {%- endif -%}
+
+// AEO / 在线演示工具组件（导航、工具卡片、本文要点、相关演示）
+@import "aeo";
+
+// 首页（头部、工具区块、搜索框、文章列表节奏）
+// 放在最后：首页要覆盖 plain.scss 里 .posts / .post 的默认值。
+@import "home";

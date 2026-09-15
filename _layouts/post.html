@@ -19,9 +19,13 @@ layout: default
     </ul>
     {%- endif -%}
   </div>
+  {%- comment -%} AEO：正文之前给出一段自足的摘要，供读者速读与 AI 引用 {%- endcomment -%}
+  {%- include post-summary.html -%}
   <div class="post">
     {{ content }}
   </div>
+  {%- comment -%} 正文之后给出对应的在线工具入口，数据来自 _data/demos.yml {%- endcomment -%}
+  {%- include related-demos.html -%}
   
   {%- if page.tags.size > 0 -%}
     <div class="tags">
