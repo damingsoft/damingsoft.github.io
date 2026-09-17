@@ -99,8 +99,16 @@ $home-muted: #9a9a9a;
 }
 
 // 按分组排成一行，而不是把九个标签打散成不齐的胶囊：
-// 三行对齐的文字读起来比三行高低不一的方块安静得多。
+// 多行对齐的文字读起来比几行高低不一的方块安静得多。
+//
+// 用 flex 而不是给标签定一个宽度：标签宽度会随分组名变化
+// （"GS1 商品条码工具" 比 "扫描类工具" 宽不少），写死宽度会让长标签
+// 溢出自己的盒子、和第一个链接贴在一起。flex 会让标签列取最宽的那个，
+// 其余行自动对齐。
 .home-demos-row {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
   margin: 0 0 6px;
   font-size: 14px;
   line-height: 2em;
@@ -118,20 +126,35 @@ $home-muted: #9a9a9a;
       text-decoration: underline;
     }
   }
+
+  @media screen and (max-width: $mobileW) {
+    display: block;
+  }
 }
 
 .home-demos-label {
-  display: inline-block;
-  width: 84px;
-  margin-right: 6px;
+  // 固定一列，让四行的链接起始位置对齐。
+  // 107px = 最长分组名（"GS1 商品条码工具"，13px 字号）的实测宽度。
+  // 用 min-width 而不是 width：以后若出现更长的分组名，它是把这一行推宽，
+  // 而不是让文字溢出盒子压到第一个链接上（这正是加这一组时踩过的坑）。
+  flex: 0 0 auto;
+  min-width: 107px;
   color: $home-muted;
   font-size: 13px;
   white-space: nowrap;
 
   @media screen and (max-width: $mobileW) {
-    width: auto;
+    display: inline-block;
+    min-width: 0;
     margin-right: 8px;
   }
+}
+
+// 标签之后的所有链接要能换行，否则分组变长会撑出横向滚动。
+// flex 容器下的文字节点要包一层才能作为可换行的 flex 项。
+.home-demos-links {
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .home-demos-sep {

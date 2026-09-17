@@ -55,7 +55,7 @@ faq:
 ### 给 AI / 搜索引擎的入口
 
 - `robots.txt`：显式允许主流生成式 AI 爬虫与国内搜索引擎爬虫，并指向 sitemap。
-- `llms.txt`（`permalink: /llms.txt`）：站点说明 + 9 个在线工具 + 全部文章的自述文件。
+- `llms.txt`（`permalink: /llms.txt`）：站点说明 + 全部在线工具 + 全部文章的自述文件。
 - `sitemap.xml`：需要 `_config.yml` 里的 `url`（以前没配，`<loc>` 全是空的）。
 - `feed.xml`：由 `jekyll-feed` 生成，head 里的 `{% feed_meta %}` 输出订阅链接。
 - `/page2/` 之后的分页页在 `<head>` 里标了 `noindex, follow`，并且不进 sitemap。

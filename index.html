@@ -42,10 +42,12 @@ image: /assets/og/og-default.png
     {%- if category_demos.size > 0 %}
     <p class="home-demos-row">
       <span class="home-demos-label">{{ category.label }}</span>
-      {%- for demo in category_demos -%}
-      <a href="{{ demo.url }}" target="_blank" rel="noopener">{{ demo.title }}</a>
-      {%- unless forloop.last %}<span class="home-demos-sep">·</span>{% endunless -%}
-      {%- endfor -%}
+      <span class="home-demos-links">
+        {%- for demo in category_demos -%}
+        <a href="{{ demo.url }}" target="_blank" rel="noopener">{{ demo.title }}</a>
+        {%- unless forloop.last %}<span class="home-demos-sep">·</span>{% endunless -%}
+        {%- endfor -%}
+      </span>
     </p>
     {%- endif -%}
     {%- endfor -%}

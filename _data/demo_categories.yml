@@ -12,3 +12,9 @@
 - key: document-tools
   label: 文档处理工具
   intro: 围绕 PDF 与图像做标注、脱敏和导出。
+
+# GS1 这一组成对出现：生成器产出带真值的样本，扫描器再把它读回来。
+# 两个工具互为验证手段，所以单独成组，而不拆进 scanner / generator。
+- key: gs1
+  label: GS1 商品条码工具
+  intro: 生成符合 GS1 规范的标签并给出应有结果，再用扫描器把样本读回来核对。

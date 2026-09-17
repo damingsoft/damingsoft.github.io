@@ -208,3 +208,47 @@
     - /online-qr-code-generator/
     - /vcard-qrcode-generation-and-scanning-javascript/
     - /python-qr-code-generator/
+
+- slug: gs1-barcode-scanner
+  title: 在线 GS1 条码扫描器
+  title_en: Online GS1 Barcode Scanner
+  category: gs1
+  url: https://www.dynamsoft.com/codepool/demos/gs1-barcode-scanner/
+  image: /assets/demos/gs1-barcode-scanner.jpg
+  description: >-
+    扫描 GS1 DataBar、GS1 DataMatrix、GS1 QR Code、GS1-128 与 ITF-14 等商品条码，按应用标识符
+    （AI）表把元素串拆成 GTIN、有效期、批次、序列号、重量、价格等具名字段，并校验 GTIN / SSCC / GLN
+    的校验位。
+  capabilities:
+    - GS1
+    - 应用标识符
+    - 校验位
+    - 条码
+  updated: '2026-09-17'
+  tutorial: https://www.dynamsoft.com/codepool/scan-and-parse-gs1-barcode.html
+  related_posts:
+    - /read-binary-data-from-barcode/
+    - /zxing-mlkit-dynamsoft-barcode-scanner/
+    - /qr-code-reading-benchmark-and-comparison/
+
+- slug: gs1-barcode-generator
+  title: 在线 GS1 条码生成器
+  title_en: Online GS1 Barcode Generator
+  category: gs1
+  url: https://www.dynamsoft.com/codepool/demos/gs1-barcode-generator/
+  image: /assets/demos/gs1-barcode-generator.jpg
+  description: >-
+    按真实业务场景组合出符合规范的 GS1 元素串，自动计算 GTIN / SSCC / GLN 校验位，校验 AI 长度规则与
+    配对约束，渲染成 DataBar、DataMatrix、GS1-128 等 12 种符号并导出标签 PNG，同时列出「扫描器应该
+    返回什么」作为比对基准。
+  capabilities:
+    - GS1
+    - 生成器
+    - 校验位
+    - 测试数据
+  updated: '2026-09-17'
+  tutorial: https://www.dynamsoft.com/codepool/generate-gs1-barcode-javascript.html
+  related_posts:
+    - /online-qr-code-generator/
+    - /generate-and-decode-vector-pdf-barcode/
+    - /read-binary-data-from-barcode/
