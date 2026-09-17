@@ -36,6 +36,7 @@
   updated: '2026-09-11'
   tutorial: https://www.dynamsoft.com/codepool/web-html5-app-javascript-barcode-scanner.html
   related_posts:
+    - /javascript-barcode-scanner-online/
     - /remix-barcode-qr-code-scanner/
     - /qr-code-reading-benchmark-and-comparison/
     - /scan-ean-upc-and-its-add-on-javascript/
@@ -57,6 +58,7 @@
   updated: '2026-09-11'
   tutorial: https://www.dynamsoft.com/codepool/javascript-scan-barcode-mrz-document.html
   related_posts:
+    - /barcode-mrz-document-scanner-javascript/
     - /vin-scanner-in-html5-barcode-ocr/
     - /scan-id-card-via-camera-web-app/
     - /id-card-flatbed-scanner-web-app/
@@ -77,6 +79,7 @@
   updated: '2026-09-11'
   tutorial: https://www.dynamsoft.com/codepool/extract-structured-data-photos-from-passports-javascript.html
   related_posts:
+    - /passport-mrz-scanner-javascript/
     - /nextjs-mrz-scanner/
     - /electron-passport-scanner-desktop-app/
     - /usb-camera-android-mrz-scanner/
@@ -98,6 +101,7 @@
   updated: '2026-09-11'
   tutorial: https://www.dynamsoft.com/codepool/build-multi-page-document-scanner-web-app.html
   related_posts:
+    - /multi-page-document-scanner-web/
     - /efficient-bulk-document-scanning-web-app/
     - /scan-to-pdf-camera-react/
     - /vue-scan-to-pdf-camera/
@@ -121,6 +125,7 @@
   updated: '2026-09-14'
   tutorial: https://www.dynamsoft.com/codepool/build-pdf-image-annotation-document-viewer.html
   related_posts:
+    - /pdf-annotation-redaction-browser/
     - /pdf-annotations-scanned-document-javascript/
     - /burn-annotation-to-pdf-page-javascript/
     - /pdf-creating-viewing-and-annotating-in-react/
@@ -144,6 +149,7 @@
   updated: '2026-09-11'
   tutorial: https://www.dynamsoft.com/codepool/javascript-driver-license-pdf417-scanner-web.html
   related_posts:
+    - /driver-license-pdf417-aamva-scanner/
     - /scan-id-card-via-camera-web-app/
     - /react-native-id-card-scanner/
     - /nextjs-id-card-scanner-camera/
@@ -165,6 +171,7 @@
   updated: '2026-09-11'
   tutorial: https://www.dynamsoft.com/codepool/generate-aamva-driver-license-barcode-javascript.html
   related_posts:
+    - /aamva-driver-license-barcode-generator/
     - /generate-and-decode-vector-pdf-barcode/
     - /online-shipping-label-generator/
 
@@ -185,6 +192,7 @@
   updated: '2026-09-11'
   tutorial: https://www.dynamsoft.com/codepool/free-online-mrz-generator.html
   related_posts:
+    - /icao-9303-mrz-generator-javascript/
     - /nextjs-mrz-scanner/
     - /mrz-text-scanner-in-jetpack-compose/
 
@@ -205,6 +213,7 @@
   updated: '2026-09-11'
   tutorial: https://www.dynamsoft.com/codepool/chrome-extension-barcode-qr-code-generator.html
   related_posts:
+    - /javascript-barcode-qrcode-generator/
     - /online-qr-code-generator/
     - /vcard-qrcode-generation-and-scanning-javascript/
     - /python-qr-code-generator/
@@ -227,6 +236,7 @@
   updated: '2026-09-17'
   tutorial: https://www.dynamsoft.com/codepool/scan-and-parse-gs1-barcode.html
   related_posts:
+    - /gs1-barcode-scanner-application-identifiers/
     - /read-binary-data-from-barcode/
     - /zxing-mlkit-dynamsoft-barcode-scanner/
     - /qr-code-reading-benchmark-and-comparison/
@@ -249,6 +259,7 @@
   updated: '2026-09-17'
   tutorial: https://www.dynamsoft.com/codepool/generate-gs1-barcode-javascript.html
   related_posts:
+    - /gs1-barcode-generator-javascript/
     - /online-qr-code-generator/
     - /generate-and-decode-vector-pdf-barcode/
     - /read-binary-data-from-barcode/
