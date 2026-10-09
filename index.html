@@ -26,7 +26,7 @@ image: /assets/og/og-default.png
   <h1 class="home-title">{{ site.title }}</h1>
   <p class="home-lede">
     面向中文开发者的技术博客：文档扫描、图像处理、条码识别、护照与证件 MRZ 解析、Web TWAIN
-    与 PDF 处理，配套可运行的示例代码和 {{ demo_count }} 个免安装的在线工具。
+    与 PDF 处理，配套可运行的示例代码和 {{ demo_count }} 个在线演示工具。
   </p>
 
   <section class="home-demos" aria-label="在线演示工具">
@@ -35,7 +35,7 @@ image: /assets/og/og-default.png
       <a class="home-demos-all" href="{{ '/demos/' | relative_url }}">全部 {{ demo_count }} 个 &rarr;</a>
     </div>
     <p class="home-demos-intro">
-      全部在浏览器本地运行，无需安装、无需注册，图片和摄像头画面不会上传到服务器。
+      全部在浏览器本地运行、无需注册，图片和摄像头画面不会上传到服务器；涉及实体扫描仪的工具会提示安装本地服务。
     </p>
     {%- for category in site.data.demo_categories -%}
     {%- assign category_demos = site.data.demos | where: "category", category.key -%}

@@ -34,7 +34,7 @@ JEKYLL_NO_BUNDLER_REQUIRE=true jekyll serve --host 127.0.0.1 --port 4321
 | `schemas/website.html` | Organization + WebSite（含站内搜索 SearchAction） | 首页 |
 | `schemas/breadcrumb.html` | BreadcrumbList | 除首页外所有页面 |
 | `schemas/item-list.html` | ItemList（文章清单） | 首页、分类页、标签页 |
-| `schemas/demo-list.html` | ItemList + WebApplication × 9 | /demos/ |
+| `schemas/demo-list.html` | ItemList + WebApplication × 20 | /demos/ |
 | `schemas/faq.html` | FAQPage（读 front matter 的 `faq`） | 有 `faq` 的页面 |
 
 文章的 BlogPosting 由 `jekyll-seo-tag` 输出，这里只补它没有的实体，避免同一实体出现两份。

@@ -30,7 +30,9 @@
       {%- endif %}
     </p>
     <p class="demo-card-foot">
+      {%- if include.demo.tutorial %}
       <a href="{{ include.demo.tutorial }}" target="_blank" rel="noopener">英文原版教程</a>
+      {%- endif %}
       <span>更新于 {{ include.demo.updated }}</span>
     </p>
   </div>

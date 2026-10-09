@@ -263,3 +263,205 @@
     - /online-qr-code-generator/
     - /generate-and-decode-vector-pdf-barcode/
     - /read-binary-data-from-barcode/
+
+- slug: boarding-pass-scanner
+  title: 在线登机牌条码扫描器
+  title_en: Online Boarding Pass Scanner
+  category: scanner
+  url: https://www.dynamsoft.com/codepool/demos/boarding-pass-scanner/
+  image: /assets/demos/boarding-pass-scanner.jpg
+  description: >-
+    用摄像头或图片扫描登机牌上的 IATA BCBP 条码（PDF417、Aztec、QR Code 或 Data Matrix），
+    解析出乘客姓名、订座记录 PNR、航线、航班号、座位、行李与常旅客等字段，并对条码内容做
+    八项结构校验，解析过程全部在浏览器本地完成。
+  capabilities:
+    - 条码
+    - IATA BCBP
+    - PDF417
+    - Aztec
+    - 结构化解析
+  updated: '2026-09-18'
+  tutorial: https://www.dynamsoft.com/codepool/read-boarding-pass-barcode-javascript.html
+  related_posts:
+    - /javascript-barcode-scanner-online/
+    - /generate-and-decode-vector-pdf-barcode/
+
+- slug: boarding-pass-generator
+  title: 在线登机牌条码生成器
+  title_en: Online Boarding Pass Generator
+  category: generator
+  url: https://www.dynamsoft.com/codepool/demos/boarding-pass-generator/
+  image: /assets/demos/boarding-pass-generator.jpg
+  description: >-
+    为 1 到 4 个航段合成符合 IATA BCBP 规范的登机牌条码（乘客、PNR、航线、航班、座位、行李），
+    渲染成 PDF417、Aztec、QR Code 或 Data Matrix 并给出纸质 / 电子登机牌预览；下载 PNG 的同时
+    列出「规范扫描器应该返回什么」作为比对基准。
+  capabilities:
+    - 生成器
+    - IATA BCBP
+    - 测试数据
+    - 字段真值
+  updated: '2026-09-18'
+  tutorial: https://www.dynamsoft.com/codepool/generate-boarding-pass-barcode-javascript.html
+  related_posts:
+    - /javascript-barcode-qrcode-generator/
+    - /generate-and-decode-vector-pdf-barcode/
+
+- slug: upc-barcode-lookup
+  title: 在线 UPC 商品条码查询
+  title_en: Online UPC Barcode Lookup
+  category: scanner
+  url: https://www.dynamsoft.com/codepool/demos/upc-barcode-lookup/
+  image: /assets/demos/upc-barcode-lookup.jpg
+  description: >-
+    从图片解码 UPC-A、UPC-E、EAN-13、EAN-8 商品条码：校验校验位、把 UPC-E 还原成 UPC-A、
+    解析 GS1 前缀对应的国家或地区，并到 Open Food Facts / Open Products Facts 开放数据库查询
+    商品信息；也可以直接输入条码号走同样的流程。页面打开时会自动解码内置示例。
+  capabilities:
+    - 条码
+    - UPC / EAN
+    - 校验位
+    - GS1 前缀
+    - 商品查询
+  updated: '2026-10-09'
+  related_posts:
+    - /upc-barcode-lookup/
+    - /scan-ean-upc-and-its-add-on-javascript/
+    - /javascript-barcode-scanner-online/
+
+- slug: isbn-barcode-lookup
+  title: 在线 ISBN 图书条码查询
+  title_en: Online ISBN Barcode Lookup
+  category: scanner
+  url: https://www.dynamsoft.com/codepool/demos/isbn-barcode-lookup/
+  image: /assets/demos/isbn-barcode-lookup.jpg
+  description: >-
+    用摄像头或图片识别图书封面的 Bookland EAN-13 条码：校验 ISBN-13 校验位、在 ISBN-10 与
+    ISBN-13 之间互转（mod-11 校验与 X 校验位）、解析注册组，并到 Open Library 与 Google Books
+    查询图书信息；也支持直接输入 ISBN。页面打开时会自动解码内置示例。
+  capabilities:
+    - 条码
+    - ISBN
+    - ISBN-10 与 ISBN-13
+    - 图书查询
+  updated: '2026-10-09'
+  related_posts:
+    - /isbn-barcode-lookup/
+    - /react-native-isbn-scanner/
+    - /scan-ean-upc-and-its-add-on-javascript/
+
+- slug: document-converter
+  title: 在线文档转换工作台
+  title_en: Online Document Converter
+  category: document-tools
+  url: https://www.dynamsoft.com/codepool/demos/document-converter/
+  image: /assets/demos/document-converter.jpg
+  description: >-
+    在浏览器里合并 PDF、Word 与图片，编辑文本，按精确像素坐标旋转、加滤镜、缩放与裁剪；
+    可拍摄摄像头照片或追加扫描仪页面，最后在本地导出 PDF 或 Word。使用实体扫描仪采集时，
+    需要桌面浏览器、扫描仪驱动并安装 Dynamic Web TWAIN 本地服务。
+  capabilities:
+    - PDF
+    - Word
+    - 精确裁剪
+    - 摄像头 / 扫描仪
+  updated: '2026-10-09'
+  tutorial: https://www.dynamsoft.com/codepool/web-based-document-converter-scanner-pdf-word.html
+  related_posts:
+    - /merge-images-into-pdf-with-javascript/
+    - /scan-to-pdf-camera-react/
+    - /how-to-embed-pdf-in-html/
+    - /efficient-bulk-document-scanning-web-app/
+
+- slug: web-twain-scanner
+  title: 在线 Web TWAIN 文档扫描器
+  title_en: Online Web TWAIN Document Scanner
+  category: document-tools
+  url: https://www.dynamsoft.com/codepool/demos/web-twain-scanner/
+  image: /assets/demos/web-twain-scanner.jpg
+  description: >-
+    通过 Dynamic Web TWAIN 本地服务，从 TWAIN、WIA、ICA 或 SANE 设备扫描文档：设置分辨率、
+    色彩与双面模式，预览页面并导出 PDF、TIFF 或 PNG，文件不经过任何服务器。需要桌面浏览器，
+    并按页面提示安装本地服务。
+  capabilities:
+    - TWAIN / WIA / ICA / SANE
+    - 双面扫描
+    - PDF / TIFF / PNG
+  updated: '2026-10-08'
+  tutorial: https://www.dynamsoft.com/codepool/sane-scanner-access-javascript-linux.html
+  related_posts:
+    - /TWAIN-practice-utilize-scanner-in-web-application/
+    - /windows-sane-scanner-access-via-wsl/
+    - /Difference-between-TWAIN-and-WIA/
+    - /scan-documents-from-command-line/
+    - /uos-kylin-web-document-scan/
+
+- slug: barcode-parameter-tuner
+  title: 在线条码识别参数调优器
+  title_en: Online Barcode Reader Parameter Tuner
+  category: developer-tools
+  url: https://www.dynamsoft.com/codepool/demos/barcode-parameter-tuner/
+  image: /assets/demos/barcode-parameter-tuner.jpg
+  description: >-
+    读回 SDK 自己的扫描模板，逐项编辑条码管线里的每个参数——定位、去模糊、二值化、抗形变、
+    灰度增强、格式列表、ROI——并按管线顺序渲染每一级的中间结果：二值图、轮廓、候选区域与
+    已定位条码，用来回答「这个码为什么被漏掉」。内置 10 张真实难拍条码照片，每张都按数据集
+    标注打分，参数改得对不对，以漏掉的码有没有被找回为准。
+  capabilities:
+    - 条码
+    - 参数调优
+    - 中间结果
+    - 基准评分
+    - 测试图
+  updated: '2026-09-20'
+  related_posts:
+    - /barcode-parameter-tuner/
+    - /qr-code-reading-benchmark-and-comparison/
+    - /Dynamsoft-Fast-Barcode-Scanning/
+    - /javascript-barcode-scanner-online/
+
+- slug: barcode-scanability-analyzer
+  title: 在线条码可扫性分析器
+  title_en: Online Barcode Scanability Analyzer
+  category: developer-tools
+  url: https://www.dynamsoft.com/codepool/demos/barcode-scanability-analyzer/
+  image: /assets/demos/barcode-scanability-analyzer.jpg
+  description: >-
+    排查「这个条码为什么扫不出来」：上传或拍摄图片后框选区域，即使解码失败也能检查对比度、
+    边缘发虚、光照与留白等质量问题；可对选中区域重试识别，或带着线索跳转到条码参数调优器
+    继续分析。纯浏览器内的软件预检工具，不是 ISO 认证等级的条码检测仪。
+  capabilities:
+    - 条码诊断
+    - 图像质量
+    - 与参数调优器联动
+  updated: '2026-10-08'
+  related_posts:
+    - /barcode-scanability-analyzer/
+    - /qr-code-reading-benchmark-and-comparison/
+    - /quality-evaluation-of-scanned-document-images/
+    - /adaptive-thresholding-javascript/
+
+- slug: barcode-structure
+  title: 在线条码结构图解
+  title_en: Online Barcode Structure Diagram
+  category: developer-tools
+  url: https://www.dynamsoft.com/codepool/demos/barcode-structure/
+  image: /assets/demos/barcode-structure.jpg
+  description: >-
+    交互式条码结构教学图：悬停 EAN-13、Code 128、Code 39、ITF-14 或 QR Code 符号的任意区域
+    ——静区、保护条、起始符、数据字符、校验位、终止符、定位图形、校正图形、格式信息、纠错
+    码字——即可看到它占多少模块、起什么作用，并附每字符的点阵图案、校验位算式与 QR 分块
+    布局；输入任意内容还能实时看到它变成模块序列。
+  capabilities:
+    - 条码
+    - 结构图解
+    - 交互式
+    - EAN-13
+    - QR Code
+    - 教学
+  updated: '2026-10-04'
+  related_posts:
+    - /barcode-structure-diagram/
+    - /javascript-barcode-qrcode-generator/
+    - /scan-ean-upc-and-its-add-on-javascript/
+    - /online-qr-code-generator/
