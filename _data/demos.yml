@@ -3,6 +3,10 @@
 # 页面、首页区块、JSON-LD（ItemList）、llms.txt、sitemap.xml 都从本文件读取，
 # 新增一个工具只需要在这里加一条记录。
 #
+# 上游清单：https://www.dynamsoft.com/codepool/demos/ —— 该页面是完整列表，
+# 本文件与它一一对应。同步时逐条核对 <slug>、updated、tags 与教程链接；
+# 卡片上的描述在上游被截断，完整描述在页面的 JSON-LD（ItemList）里。
+#
 # 字段说明：
 #   slug            英文目录名，与 https://www.dynamsoft.com/codepool/demos/<slug>/ 对应
 #   title           中文名称（用于页面标题与卡片）
@@ -27,13 +31,16 @@
   url: https://www.dynamsoft.com/codepool/demos/barcode-scanner/
   image: /assets/demos/barcode-scanner.jpg
   description: >-
-    从摄像头实时画面、JPG/PNG/GIF 图片或 MP4/WebM/MOV 视频文件中识别一维码与二维码，
-    支持识别结果框选标记、自定义扫描模板，并提供批量图片的识别率与准确率基准测试模式。
+    从摄像头实时画面、JPG/PNG/GIF 图片、多页 PDF 与 TIFF 文档或 MP4/WebM/MOV 视频文件中
+    识别一维码与二维码，支持识别结果框选标记、自定义扫描模板，并提供带真值评分的基准测试模式，
+    用一批图片量出识别率与准确率。
   capabilities:
     - 条码
     - 视频识别
+    - PDF / TIFF
     - 基准测试
-  updated: '2026-09-11'
+    - 真值评分
+  updated: '2026-09-17'
   tutorial: https://www.dynamsoft.com/codepool/web-html5-app-javascript-barcode-scanner.html
   related_posts:
     - /javascript-barcode-scanner-online/
@@ -63,6 +70,57 @@
     - /scan-id-card-via-camera-web-app/
     - /id-card-flatbed-scanner-web-app/
 
+# 下面两条是上面那个综合扫描器的框架移植版：能力集合相同，换成了 Angular / Blazor
+# 的实现，多出来的两块 TWAIN 示例需要桌面浏览器和 Dynamic Web TWAIN 本地服务。
+# 放在基座后面，读者一眼能看出是同一个工具的不同技术栈版本。
+- slug: angular-barcode-mrz-document-scanner
+  title: 在线 Angular 条码 / MRZ / 文档扫描器
+  title_en: Online Angular Barcode, MRZ and Document Scanner
+  category: scanner
+  url: https://www.dynamsoft.com/codepool/demos/angular-barcode-mrz-document-scanner/
+  image: /assets/demos/angular-barcode-mrz-document-scanner.jpg
+  description: >-
+    综合扫描器的 Angular 实现：解码条码、解析护照与身份证的 MRZ 机读区、检测并矫正文档边框，
+    并支持查看与标注扫描件。其中两个 TWAIN / SANE / ICA 扫描仪示例需要桌面浏览器和
+    Dynamic Web TWAIN 本地服务，其余功能在手机上同样可用。
+  capabilities:
+    - Angular
+    - 条码
+    - MRZ
+    - 文档检测
+    - 标注
+  updated: '2026-10-13'
+  tutorial: https://www.dynamsoft.com/codepool/angular-barcode-qr-code-scanner.html
+  related_posts:
+    - /barcode-mrz-document-scanner-javascript/
+    - /pdf-annotation-redaction-browser/
+    - /passport-mrz-scanner-javascript/
+    - /scan-id-card-via-camera-web-app/
+
+- slug: blazor-barcode-mrz-document-scanner
+  title: 在线 Blazor 条码 / MRZ / 文档扫描器
+  title_en: Online Blazor Barcode, MRZ and Document Scanner
+  category: scanner
+  url: https://www.dynamsoft.com/codepool/demos/blazor-barcode-mrz-document-scanner/
+  image: /assets/demos/blazor-barcode-mrz-document-scanner.jpg
+  description: >-
+    综合扫描器的 Blazor WebAssembly 实现：解码条码、解析护照与身份证的 MRZ 机读区、
+    检测并矫正文档边框、查看与标注扫描件，并可通过 TWAIN / WIA / SANE 扫描仪把纸质件数字化。
+    其中两个 TWAIN 示例需要桌面浏览器并安装 Dynamic Web TWAIN 本地服务。
+  capabilities:
+    - Blazor
+    - C#
+    - 条码
+    - MRZ
+    - 文档检测
+  updated: '2026-10-13'
+  tutorial: https://www.dynamsoft.com/codepool/dotnet-blazor-barcode-qr-reader-scanner.html
+  related_posts:
+    - /web-document-scanner-with-blazor/
+    - /barcode-mrz-document-scanner-javascript/
+    - /asp-net-core-document-cropping/
+    - /passport-mrz-scanner-javascript/
+
 - slug: mrz-scanner
   title: 在线 MRZ 与护照扫描器
   title_en: Online MRZ & Passport Scanner
@@ -71,12 +129,15 @@
   image: /assets/demos/mrz-scanner.jpg
   description: >-
     识别护照与身份证件上的 MRZ 机读区文字，解析成姓名、国籍、证件号码、有效期等结构化字段，
-    同时检测证件边框并裁剪出证件照，支持上传图片或摄像头实时取景。
+    同时检测证件边框并裁剪出证件照；输入可以是图片、PDF、多页 TIFF 或摄像头实时取景，
+    还能把一整套合成数据集按生成时的真值跑一遍基准评测。
   capabilities:
     - MRZ
     - 护照
     - 证件照提取
-  updated: '2026-09-11'
+    - PDF / TIFF
+    - 基准测试
+  updated: '2026-09-21'
   tutorial: https://www.dynamsoft.com/codepool/extract-structured-data-photos-from-passports-javascript.html
   related_posts:
     - /passport-mrz-scanner-javascript/
@@ -114,15 +175,17 @@
   url: https://www.dynamsoft.com/codepool/demos/pdf-image-annotation/
   image: /assets/demos/pdf-image-annotation.jpg
   description: >-
-    打开 PDF 与图片，追加扫描页或拍照页，自动检测文档边缘、读取条码与 MRZ，用原生文档工具栏
-    做标注与涂黑脱敏，最后导出为可编辑或扁平化的 PDF、PNG、JPEG 或多页 TIFF。
+    打开 PDF 与图片，追加扫描页或拍照页，跨页搜索全文，自动检测文档边缘、读取条码与 MRZ，
+    用原生文档工具栏做标注与涂黑脱敏，最后导出为可编辑或扁平化的 PDF、PNG、JPEG 或多页 TIFF。
   capabilities:
     - PDF
     - 标注
     - 涂黑脱敏
+    - 全文搜索
+    - 摄像头
     - 条码
     - MRZ
-  updated: '2026-09-14'
+  updated: '2026-10-12'
   tutorial: https://www.dynamsoft.com/codepool/build-pdf-image-annotation-document-viewer.html
   related_posts:
     - /pdf-annotation-redaction-browser/
@@ -189,7 +252,7 @@
     - 生成器
     - ICAO 9303
     - 测试数据
-  updated: '2026-09-11'
+  updated: '2026-09-21'
   tutorial: https://www.dynamsoft.com/codepool/free-online-mrz-generator.html
   related_posts:
     - /icao-9303-mrz-generator-javascript/
@@ -210,7 +273,7 @@
     - 二维码
     - 批量排布
     - 测试数据
-  updated: '2026-09-11'
+  updated: '2026-09-17'
   tutorial: https://www.dynamsoft.com/codepool/chrome-extension-barcode-qr-code-generator.html
   related_posts:
     - /javascript-barcode-qrcode-generator/
@@ -233,7 +296,7 @@
     - 应用标识符
     - 校验位
     - 条码
-  updated: '2026-09-17'
+  updated: '2026-09-16'
   tutorial: https://www.dynamsoft.com/codepool/scan-and-parse-gs1-barcode.html
   related_posts:
     - /gs1-barcode-scanner-application-identifiers/
@@ -256,7 +319,7 @@
     - 生成器
     - 校验位
     - 测试数据
-  updated: '2026-09-17'
+  updated: '2026-09-16'
   tutorial: https://www.dynamsoft.com/codepool/generate-gs1-barcode-javascript.html
   related_posts:
     - /gs1-barcode-generator-javascript/
@@ -307,6 +370,55 @@
     - /javascript-barcode-qrcode-generator/
     - /generate-and-decode-vector-pdf-barcode/
 
+# VIN / EMV 生成器与上面的登机牌生成器是同一路数：造合法数据 + 给出「扫描器应该返回什么」。
+- slug: vin-barcode-generator
+  title: 在线 VIN 车架号条码生成器
+  title_en: Online VIN Barcode Generator
+  category: generator
+  url: https://www.dynamsoft.com/codepool/demos/vin-barcode-generator/
+  image: /assets/demos/vin-barcode-generator.jpg
+  description: >-
+    按北美（FMVSS 115）或欧洲（ISO 3779）标准预设构造合法的 17 位 VIN：第 9 位校验位随输入
+    实时重算并提供一键修正，也可以直接生成随机 VIN；渲染成真实 VIN 标签使用的 Code 39，
+    或 Code 128、QR Code、Data Matrix，下载 PNG 用于测试扫码逻辑。不依赖 SDK 与许可证，
+    与在线 VIN 条码扫描器配套使用。
+  capabilities:
+    - 生成器
+    - VIN
+    - Code 39
+    - 校验位
+    - 测试数据
+  updated: '2026-10-10'
+  tutorial: https://www.dynamsoft.com/codepool/vin-barcode-generator-scanner-javascript.html
+  related_posts:
+    - /vin-scanner-in-html5-barcode-ocr/
+    - /android-vin-scanner/
+    - /generate-and-decode-vector-pdf-barcode/
+
+- slug: emv-qr-generator
+  title: 在线 EMV 支付二维码生成器
+  title_en: Online EMV QR Code Generator
+  category: generator
+  url: https://www.dynamsoft.com/codepool/demos/emv-qr-generator/
+  image: /assets/demos/emv-qr-generator.jpg
+  description: >-
+    用表单构造 EMVCo 商户收款二维码——静态码或动态码，任意 ISO 4217 币种——按规范组装
+    TLV 载荷、CRC-16 校验和与升序标签。随机填充会造出合法但虚构的商户数据，每个渲染出的
+    符号都会用 Dynamsoft Barcode Reader 回读一遍，证明它确实能被扫出来。
+    仅供测试：真实钱包会拒绝这些虚构账户。
+  capabilities:
+    - 生成器
+    - EMV QR
+    - CRC-16
+    - 测试数据
+    - 回读验证
+  updated: '2026-10-13'
+  related_posts:
+    - /online-qr-code-generator/
+    - /read-binary-data-from-barcode/
+    - /javascript-barcode-qrcode-generator/
+    - /generate-and-decode-vector-pdf-barcode/
+
 - slug: upc-barcode-lookup
   title: 在线 UPC 商品条码查询
   title_en: Online UPC Barcode Lookup
@@ -349,6 +461,57 @@
     - /isbn-barcode-lookup/
     - /react-native-isbn-scanner/
     - /scan-ean-upc-and-its-add-on-javascript/
+
+# VIN 与 EMV 这两条同属「先解码、再按规范拆字段」的扫描器：除了认码，
+# 还各自带一层规范校验（VIN 校验位 / EMV 的 CRC-16），所以排在 UPC / ISBN 查询之后。
+- slug: vin-barcode-scanner
+  title: 在线 VIN 车架号条码扫描器
+  title_en: Online VIN Barcode Scanner
+  category: scanner
+  url: https://www.dynamsoft.com/codepool/demos/vin-barcode-scanner/
+  image: /assets/demos/vin-barcode-scanner.jpg
+  description: >-
+    用摄像头或图片解码车辆 VIN 条码——北美 VIN 标签上常见的 Code 39，以及 Code 128、
+    QR Code、Data Matrix——剥离带前导 I 的 18 位进口前缀写法，校验北美校验位，
+    并把 WMI、产地、车型年份、装配厂和流水号解析成结构化字段。
+    只读条码：车身钢印或铭牌上刻印的 VIN 字符不在识别范围内。
+  capabilities:
+    - VIN
+    - Code 39
+    - 校验位
+    - 结构化解析
+    - 摄像头
+  updated: '2026-10-10'
+  tutorial: https://www.dynamsoft.com/codepool/vin-barcode-generator-scanner-javascript.html
+  related_posts:
+    - /vin-scanner-in-html5-barcode-ocr/
+    - /android-vin-scanner/
+    - /read-binary-data-from-barcode/
+    - /javascript-barcode-scanner-online/
+
+- slug: emv-qr-scanner
+  title: 在线 EMV 支付二维码扫描器
+  title_en: Online EMV QR Code Scanner
+  category: scanner
+  url: https://www.dynamsoft.com/codepool/demos/emv-qr-scanner/
+  image: /assets/demos/emv-qr-scanner.jpg
+  description: >-
+    用摄像头扫描 EMVCo 商户收款二维码，也可以从图片、截图或粘贴的载荷字符串读取：
+    先校验 CRC-16 校验和，再把每个 TLV 字段逐一解析并命名——币种、商户类别码、
+    静态码与动态码、以及嵌套的商户账户模板。金额被篡改会当场校验失败，
+    并有一个模拟钱包展示这些字段驱动的付款界面，全程在浏览器内解码、不上传数据。
+  capabilities:
+    - EMV QR
+    - CRC-16
+    - TLV 解析
+    - 结构化解析
+    - 摄像头
+  updated: '2026-10-14'
+  related_posts:
+    - /javascript-barcode-scanner-online/
+    - /read-binary-data-from-barcode/
+    - /online-qr-code-generator/
+    - /qr-code-reading-benchmark-and-comparison/
 
 - slug: document-converter
   title: 在线文档转换工作台
@@ -465,3 +628,33 @@
     - /javascript-barcode-qrcode-generator/
     - /scan-ean-upc-and-its-add-on-javascript/
     - /online-qr-code-generator/
+
+# 与「条码结构图解」同属「把符号内部摊开看」的一类，所以排在一起：
+# 结构图解回答「哪一位管什么」，这一条回答「纠错码字到底能扛多少损伤」。
+- slug: qr-error-correction-visualizer
+  title: 在线 QR 纠错能力可视化工具
+  title_en: Online QR Error Correction Visualizer
+  category: developer-tools
+  url: https://www.dynamsoft.com/codepool/demos/qr-error-correction-visualizer/
+  image: /assets/demos/qr-error-correction-visualizer.jpg
+  description: >-
+    按 L / M / Q / H 纠错级别生成 QR Code，看清 Reed-Solomon 校验码字究竟买到了什么：
+    逐模块涂改、盖住定位与时序图形，或模拟噪点、模糊、低对比度、遮挡、裁切、阴影与倾斜。
+    实时仪表按分块统计损坏与可修复的码字数，同时用 Dynamsoft Barcode Reader 解码受损图像；
+    从 0 到 25% 的固定种子扫描标出每个级别停止恢复的位置，每一步都留存被解码图像的 PNG。
+    反推也成立：丢进一张不是它生成的二维码图片，页面会定位网格、读出格式信息，
+    报告 Reed-Solomon 实际修复了多少码字，并在仍可解码时把损伤折算成同一尺度的百分比。
+    全部在浏览器内完成。
+  capabilities:
+    - QR Code
+    - 纠错
+    - Reed-Solomon
+    - 结构视图
+    - 解码测试
+    - 损伤分析
+  updated: '2026-10-16'
+  related_posts:
+    - /barcode-structure-diagram/
+    - /qr-code-reading-benchmark-and-comparison/
+    - /online-qr-code-generator/
+    - /javascript-barcode-qrcode-generator/

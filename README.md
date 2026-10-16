@@ -80,6 +80,15 @@ JPEG 后约 310KB，中国读者首屏更快）。
 `related_posts` 里的 URL 必须和文章实际 URL 一致（`permalink: /:title/`，即文件名去掉日期，
 大小写保留），写错不会报错，只是文章底部不显示入口。
 
+**与上游同步**：`https://www.dynamsoft.com/codepool/demos/` 是完整清单，`_data/demos.yml`
+当前 27 条与它一一对应。逐条核对时注意：
+
+- 卡片上的描述被截断，**完整英文描述在页面内嵌的 JSON-LD（`ItemList`）里**，用那个。
+- `updated` 取卡片底部 `<span>Updated ...</span>` 的日期（上游时间，不是本站同步时间）。
+- `tutorial` 取卡片上的 `Read the tutorial` 链接；没有这一行的就是还没配套英文教程。
+- 缩略图地址是 `https://www.dynamsoft.com/codepool/demos/<slug>/thumbnail.png`，
+  下载后按上面的规格转成 720px 宽的 JPEG。
+
 ## 样式
 
 | 文件 | 负责 |
