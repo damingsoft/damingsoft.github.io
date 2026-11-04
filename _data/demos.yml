@@ -32,15 +32,17 @@
   image: /assets/demos/barcode-scanner.jpg
   description: >-
     从摄像头实时画面、JPG/PNG/GIF 图片、多页 PDF 与 TIFF 文档或 MP4/WebM/MOV 视频文件中
-    识别一维码与二维码，支持识别结果框选标记、自定义扫描模板，并提供带真值评分的基准测试模式，
-    用一批图片量出识别率与准确率。
+    识别一维码与二维码，支持识别结果框选标记、自定义扫描模板；也可以录一段摄像头画面，
+    再把这段视频回放给同一个解码器。基准测试模式对一整批图片按真值打分——召回、准确、
+    码制一致性与框重叠——也可以直接读入条码生成器导出的数据集 ZIP（里面自带期望值）。
   capabilities:
     - 条码
     - 视频识别
+    - 录制回放
     - PDF / TIFF
     - 基准测试
     - 真值评分
-  updated: '2026-09-17'
+  updated: '2026-10-21'
   tutorial: https://www.dynamsoft.com/codepool/web-html5-app-javascript-barcode-scanner.html
   related_posts:
     - /javascript-barcode-scanner-online/
@@ -240,19 +242,22 @@
 
 - slug: mrz-generator
   title: 在线 MRZ 机读区生成器
-  title_en: Online MRZ Generator
+  title_en: Online MRZ Generator & Synthetic Test Dataset
   category: generator
   url: https://www.dynamsoft.com/codepool/demos/mrz-generator/
   image: /assets/demos/mrz-generator.jpg
   description: >-
     生成符合 ICAO 9303 标准的护照、身份证和签证 MRZ 字符串（含正确校验位），
-    可一键填入随机示例数据，并在 HTML5 canvas 上渲染模拟证件预览。
+    可一键填入随机示例数据，并在 HTML5 canvas 上渲染模拟证件预览；也可以按固定种子
+    批量造一套合成证件图：旋转、透视、模糊、运动模糊、眩光、噪点与 JPEG 压缩都可调，
+    每张图都保留真值字段与校验位，最后打包成 ZIP，直接喂给 MRZ 扫描器做基准评测。
   capabilities:
     - MRZ
     - 生成器
     - ICAO 9303
-    - 测试数据
-  updated: '2026-09-21'
+    - 合成数据集
+    - 真值标注
+  updated: '2026-11-04'
   tutorial: https://www.dynamsoft.com/codepool/free-online-mrz-generator.html
   related_posts:
     - /icao-9303-mrz-generator-javascript/
@@ -267,12 +272,15 @@
   image: /assets/demos/barcode-qrcode-generator.jpg
   description: >-
     把文本编码为 QR Code、Data Matrix、PDF417、Aztec、MaxiCode、DotCode、EAN-13、
-    Code 128、Code 39 等条码，最多可在同一张画布上排布 36 个符号，并下载 PNG 用于测试扫码应用。
+    Code 128、Code 39 等条码，最多可在同一张画布上排布 36 个符号，并下载 PNG 用于测试扫码应用；
+    还能按固定种子生成一套加了模糊、运动模糊、旋转、透视、眩光、噪点与 JPEG 压缩的压力测试图，
+    每张都带真值标注，打包成 ZIP 供扫描器基准测试使用。
   capabilities:
     - 生成器
     - 二维码
     - 批量排布
-    - 测试数据
+    - 压力测试
+    - 真值标注
   updated: '2026-09-17'
   tutorial: https://www.dynamsoft.com/codepool/chrome-extension-barcode-qr-code-generator.html
   related_posts:
@@ -326,6 +334,34 @@
     - /online-qr-code-generator/
     - /generate-and-decode-vector-pdf-barcode/
     - /read-binary-data-from-barcode/
+
+# GS1 这一组的第三个工具把前面两条串起来：生成器造带真值的双标识商品，
+# 收银台演练按 2027 年零售 POS 的规则决定「这一下该算一件还是两件」，最后还能现场解码核对。
+- slug: gs1-2d-pos-test-lab
+  title: 在线 GS1 二维条码 POS 收银演练
+  title_en: Online GS1 2D Retail POS Test Lab
+  category: gs1
+  url: https://www.dynamsoft.com/codepool/demos/gs1-2d-pos-test-lab/
+  image: /assets/demos/gs1-2d-pos-test-lab.jpg
+  description: >-
+    把双标识商品放进一个可玩的二维收银台，演练零售 POS 在 2027 年前要处理的判断：五个引导关卡分别
+    覆盖只扫 EAN-13、只扫 GS1 Digital Link 二维码、两种码同时出现且内容一致、同款商品两件、
+    以及 GTIN 冲突；也可以在自己的沙盒里自由搭配商品、载体、二维码载荷与夹具数据。每一次收银台
+    的去重与放行决定都会逐步展开成决策记录，生成的标签或自己上传的图片还能现场解码核对，
+    最后导出测试标签、夹具数据与 JSON / CSV 报告。全程用画布模拟，不需要实体扫描枪。
+  capabilities:
+    - GS1 Digital Link
+    - 收银台去重
+    - 引导关卡
+    - SDK 图像解码
+    - 测试报告
+  updated: '2026-11-04'
+  tutorial: https://www.dynamsoft.com/codepool/gs1-2d-barcode-pos-readiness-2027.html
+  related_posts:
+    - /gs1-2d-pos-test-lab/
+    - /gs1-barcode-generator-javascript/
+    - /gs1-barcode-scanner-application-identifiers/
+    - /scan-ean-upc-and-its-add-on-javascript/
 
 - slug: boarding-pass-scanner
   title: 在线登机牌条码扫描器
@@ -412,7 +448,8 @@
     - CRC-16
     - 测试数据
     - 回读验证
-  updated: '2026-10-13'
+  updated: '2026-10-19'
+  tutorial: https://www.dynamsoft.com/codepool/emv-qr-code-generator-scanner-javascript.html
   related_posts:
     - /online-qr-code-generator/
     - /read-binary-data-from-barcode/
@@ -506,7 +543,8 @@
     - TLV 解析
     - 结构化解析
     - 摄像头
-  updated: '2026-10-14'
+  updated: '2026-10-19'
+  tutorial: https://www.dynamsoft.com/codepool/emv-qr-code-generator-scanner-javascript.html
   related_posts:
     - /javascript-barcode-scanner-online/
     - /read-binary-data-from-barcode/
@@ -535,6 +573,32 @@
     - /scan-to-pdf-camera-react/
     - /how-to-embed-pdf-in-html/
     - /efficient-bulk-document-scanning-web-app/
+
+# 文件查看器排在文档工具的第二个位置：它不产出任何东西，只负责在转换、标注之前
+# 先把「这个文件到底是什么」说清楚——类型、尺寸、EXIF、页数、哈希。
+- slug: file-viewer
+  title: 在线文件查看器
+  title_en: Online File Viewer
+  category: document-tools
+  url: https://www.dynamsoft.com/codepool/demos/file-viewer/
+  image: /assets/demos/file-viewer.jpg
+  description: >-
+    打开一个文件，先看清它究竟是什么：文件大小、真实类型、图像尺寸与 DPI、EXIF 与 GPS、页数，
+    以及完全在本地算出的 SHA-256；再逐页读内容——图片、多页 TIFF、PDF、Word、Excel、PowerPoint、
+    CSV、纯文本、音视频，以及 Android 相机导出的 YUV 原始帧。在预览区右键框选任意区域，
+    可以直接用 Dynamsoft Barcode Reader 扫描该区域的条码，并复制或下载标注后的结果。
+    认不出的格式只报容器类型，不画假预览。
+  capabilities:
+    - 文件元数据
+    - EXIF / GPS
+    - 原始 YUV 帧
+    - 右键扫描条码
+  updated: '2026-10-22'
+  related_posts:
+    - /file-viewer/
+    - /handle-image-orientation-exif/
+    - /pan-zoom-image-javascript-viewer/
+    - /convert-pdf-to-images-in-HTML5/
 
 - slug: web-twain-scanner
   title: 在线 Web TWAIN 文档扫描器
@@ -582,6 +646,34 @@
     - /qr-code-reading-benchmark-and-comparison/
     - /Dynamsoft-Fast-Barcode-Scanning/
     - /javascript-barcode-scanner-online/
+
+# 调优器告诉你「参数改哪一项」，对比器回答的是上一层的疑问：
+# 同一个码，经典形状规则和神经网络各自会把它定位到哪里。
+- slug: barcode-localization-comparator
+  title: 在线条码定位方式对比器
+  title_en: Online Barcode Localization Comparator
+  category: developer-tools
+  url: https://www.dynamsoft.com/codepool/demos/barcode-localization-comparator/
+  image: /assets/demos/barcode-localization-comparator.jpg
+  description: >-
+    同一张图片，两种定位策略并排看：左边是经典形状检测（连通块、直线、统计特征、直接扫描），
+    右边是神经网络，两块面板各自给出它提出的候选四边形、角度与置信度——只跑定位、不解码，
+    所以看到的是定位阶段真正的输出，同一区域被多轮二值化重复提出的也会合并计数。随后把每个
+    定位到的区域单独裁出来再解码，两边的差异就只可能来自区域本身，而不是读取器。第三组跑的
+    是生产环境实际使用的优先级列表：先试便宜的规则，读不出来再交给模型，于是能直接看到规则
+    已经读到的画面上，模型一分钱不花。两个模板都可以查看并导出为 JSON。
+  capabilities:
+    - 定位模式对比
+    - 四边形叠加
+    - 逐区域解码
+    - 优先级列表
+    - 模板导出
+  updated: '2026-11-02'
+  related_posts:
+    - /barcode-localization-comparator/
+    - /barcode-parameter-tuner/
+    - /barcode-scanability-analyzer/
+    - /Dynamsoft-Fast-Barcode-Scanning/
 
 - slug: barcode-scanability-analyzer
   title: 在线条码可扫性分析器
@@ -644,6 +736,10 @@
     从 0 到 25% 的固定种子扫描标出每个级别停止恢复的位置，每一步都留存被解码图像的 PNG。
     反推也成立：丢进一张不是它生成的二维码图片，页面会定位网格、读出格式信息，
     报告 Reed-Solomon 实际修复了多少码字，并在仍可解码时把损伤折算成同一尺度的百分比。
+    超出常规纠错预算时，只要页面还留着生成它的原件，就用擦除解码补回来；上传的码在仍可解码时，
+    页面会把纠正后的码字写回原符号（同版本、同级别、同掩码，而不是重新编码），重建出的二维码
+    可以下载为 PNG 或 SVG。默认参数读不出来时，读取器会再用条码补全与抗形变试一次，
+    仍然失败就换二值化补洞、旋转 45 度的预处理副本——被撕掉定位图形的码就是这么读出来的。
     全部在浏览器内完成。
   capabilities:
     - QR Code
@@ -652,9 +748,41 @@
     - 结构视图
     - 解码测试
     - 损伤分析
-  updated: '2026-10-16'
+    - 受损 QR 修复
+  updated: '2026-11-03'
   related_posts:
     - /barcode-structure-diagram/
     - /qr-code-reading-benchmark-and-comparison/
     - /online-qr-code-generator/
     - /javascript-barcode-qrcode-generator/
+    - /pdf417-error-correction-visualizer/
+
+# 与上面的 QR 纠错可视化配对：QR 那一条回答「百分比」，PDF417 的级别是绝对码字数
+# （0 级 2 个、8 级 512 个），所以同样一个级别在长短符号上含义完全不同，值得单独讲一遍。
+- slug: pdf417-error-correction-visualizer
+  title: 在线 PDF417 纠错与损伤可视化工具
+  title_en: Online PDF417 Error Correction & Damage Visualizer
+  category: developer-tools
+  url: https://www.dynamsoft.com/codepool/demos/pdf417-error-correction-visualizer/
+  image: /assets/demos/pdf417-error-correction-visualizer.jpg
+  description: >-
+    生成 0 到 8 级纠错的 PDF417 堆叠符号，看清 Reed-Solomon 校验码字换来了什么：0 级只有 2 个
+    校验码字，8 级有 512 个——这是绝对数量而非百分比，同一个级别在短符号上占四分之一，在长符号上
+    只占几个百分点，符号下方的柱状图按当前载荷把九个级别摊开对比。用笔刷擦掉码字、刮掉一整行或
+    一整列、盖住行指示符、打断起止符，或叠加噪点、模糊、低对比度、低分辨率、遮挡、裁切、阴影与
+    倾斜；仪表按 ⌊k/2⌋ 个未知错误与 k 个擦除两个上界同时统计损坏码字，Dynamsoft Barcode Reader
+    解码受损图像并回报它读出的行数、列数、纠错级别与码字数，等于用解码器反向校验编码器。
+    还可以跑一次固定种子的码字扫描，逐步记录成败边界，每一步都留下被解码渲染图的 PNG。
+  capabilities:
+    - PDF417
+    - 纠错
+    - Reed-Solomon
+    - 结构视图
+    - 解码测试
+    - 损伤分析
+  updated: '2026-10-21'
+  related_posts:
+    - /pdf417-error-correction-visualizer/
+    - /generate-and-decode-vector-pdf-barcode/
+    - /driver-license-pdf417-aamva-scanner/
+    - /barcode-structure-diagram/
